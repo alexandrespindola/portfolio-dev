@@ -1,0 +1,27 @@
+---
+const PROJECTS = [
+  {
+    title: "Healthysthetics",
+    description: "Lorem ipsum dolor",
+    link: "https://healthysthetics.es",
+    github: "#",
+    image: "/projects/healthysthetics.webp",
+    tags: ["WordPress", "Elementor", "Cal.com", "Bunny CDN"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <ul>
+        {tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img src={image} alt={`Project screenshot of ${title}`} />
+    </article>
+  ))
+}

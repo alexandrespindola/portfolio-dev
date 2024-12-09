@@ -7,7 +7,9 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Briefcase from "../components/icons/Briefcase.astro";
+import BriefcaseIcon from "../components/icons/BriefcaseIcon.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -21,7 +23,9 @@ import Briefcase from "../components/icons/Briefcase.astro";
         src="https://avatars.githubusercontent.com/u/104132868"
         alt="Alexandre Spindola photo"
       />
-      <h1 class="text-white text-3xl lg:text-4xl font-bold flex flex-row flex-wrap gap-x-4 gap-y-4 pb-6 lg:pb-10">
+      <h1
+        class="text-white text-3xl lg:text-4xl font-bold flex flex-row flex-wrap gap-x-4 gap-y-4 pb-6 lg:pb-10"
+      >
         Hey, I'm Alexandre <a
           href="https://www.linkedin.com/in/alexandrespindola/"
           target="_blank"
@@ -58,12 +62,21 @@ import Briefcase from "../components/icons/Briefcase.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
+
     <SectionContainer id="experience">
       <h2 class="text-2xl font-semibol mb-4 flex gap-x-2 items-center">
-        <Briefcase class="size-8" />
+        <BriefcaseIcon class="size-8" />
         Work Experience
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibol mb-4 flex gap-x-2 items-center">
+        <CodeIcon class="size-7" />
+        Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
