@@ -14,14 +14,14 @@ import Briefcase from "../components/icons/Briefcase.astro";
   title="Portfolio by Alexandre Spindola | Full Stack Web Programmer and Developer"
   description="Hire Alexandre Spindola to create your websites and web applications. Full Stack Developer and Digital Marketer. Specialized in Martech solutions."
 >
-  <main>
+  <main class="p-4">
     <SectionContainer class="py-44 pb-24">
       <img
         class="rounded-full w-12 h-12 mb-4"
         src="https://avatars.githubusercontent.com/u/104132868"
         alt="Alexandre Spindola photo"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1 class="text-white text-3xl lg:text-4xl font-bold flex flex-row flex-wrap gap-x-4 gap-y-4 pb-6 lg:pb-10">
         Hey, I'm Alexandre <a
           href="https://www.linkedin.com/in/alexandrespindola/"
           target="_blank"
@@ -30,7 +30,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
           <Badge>Available to work</Badge>
         </a>
       </h1>
-      <h2 class="text-2xl opacity-80 text-wrap">
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
         <span>+5 year's experience.</span>
         <span class="text-yellow-200/90">
           Full Stack Web Developer and Digital Marketing.</span
@@ -43,18 +43,18 @@ import Briefcase from "../components/icons/Briefcase.astro";
         </span>
       </h2>
 
-      <nav class="flex gap-x-2 mt-8">
+      <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://www.linkedin.com/in/alexandrespindola/">
-          <LinkedInIcon class="size-6" />
+          <LinkedInIcon class="size-4 lg:size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/alexandrespindola/">
-          <GitHubIcon class="size-6" />
+          <GitHubIcon class="size-4 lg:size-6" />
           GitHub
         </SocialPill>
-        <SocialPill href="https://github.com/alexandrespindola/">
-          <MailIcon class="size-6" />
-          alexandre.spindola11@gmail.com
+        <SocialPill href="mailto:alexandre@titansdev.es">
+          <MailIcon class="size-4 lg:size-6" />
+          alexandre@titansdev.es
         </SocialPill>
       </nav>
     </SectionContainer>
