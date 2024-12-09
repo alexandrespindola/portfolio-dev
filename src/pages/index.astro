@@ -4,11 +4,17 @@ import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<Layout title="Welcome to Astro">
+<Layout
+  title="Portfolio by Alexandre Spindola | Full Stack Web Programmer and Developer"
+  description="Hire Alexandre Spindola to create your websites and web applications. Full Stack Developer and Digital Marketer. Specialized in Martech solutions."
+>
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer >
       <img
         class="rounded-full w-12 h-12 mb-4"
         src="https://avatars.githubusercontent.com/u/104132868"
@@ -38,14 +44,21 @@ import GitHubIcon from "../components/icons/GitHubIcon.astro";
 
       <nav class="flex gap-x-2 mt-8">
         <SocialPill href="https://www.linkedin.com/in/alexandrespindola/">
-          <LinkedInIcon class="w-6 h-6" />
+          <LinkedInIcon class="size-6" />
           LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/alexandrespindola/">
-          <GitHubIcon class="w-6 h-6" />
+          <GitHubIcon class="size-6" />
           GitHub
         </SocialPill>
+        <SocialPill href="https://github.com/alexandrespindola/">
+          <MailIcon class="size-6" />
+          alexandre.spindola11@gmail.com
+        </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
+    <SectionContainer>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
