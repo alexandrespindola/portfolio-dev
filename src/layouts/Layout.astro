@@ -21,11 +21,6 @@ const { description, title } = Astro.props as LayoutProps;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <style>
-      @import "tailwindcss/base";
-      @import "tailwindcss/components";
-      @import "tailwindcss/utilities";
-    </style>
     <ClientRouter />
   </head>
 
