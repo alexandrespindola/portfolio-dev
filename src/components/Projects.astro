@@ -10,6 +10,7 @@ import n8n from "./icons/tags/n8n.astro";
 import Nuxt from "./icons/tags/Nuxt.astro";
 import AstroIcon from "./icons/tags/AstroIcon.astro";
 import Tailwind from "./icons/tags/Tailwind.astro";
+import Bun from "./icons/tags/Bun.astro";
 import Netlify from "./icons/tags/Netlify.astro";
 import WooCommerce from "./icons/tags/WooCommerce.astro";
 
@@ -53,6 +54,11 @@ const TAGS = {
     name: "Tailwind",
     class: "bg-blue-100 text-black",
     icon: Tailwind,
+  },
+  BUN: {
+    name: "Bun",
+    class: "bg-yellow-100 text-black",
+    icon: Bun,
   },
   NETLIFY: {
     name: "Netlify",
@@ -102,7 +108,7 @@ const PROJECTS: Project[] = [
       "The website was developed using Astro and Tailwind CSS, resulting in a modern, responsive portfolio. The use of Astro allows for optimized performance, while Tailwind CSS makes it easy to create an attractive and personalized design, reflecting the developer's expertise in contemporary technologies.",
     link: "https://alexandrespindola.netlify.es",
     image: "/projects/alexandreportfolio.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.NETLIFY]
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.BUN, TAGS.NETLIFY]
   },
   {
     title: "PejoterDay",
