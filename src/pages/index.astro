@@ -1,82 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHubIcon.astro";
-import MailIcon from "../components/icons/MailIcon.astro";
-import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/SectionContainer.astro";
+import About from "../components/About.astro";
 import BriefcaseIcon from "../components/icons/BriefcaseIcon.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
+import Experience from "../components/Experience.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../components/Hero.astro";
+import TitleSection from "../components/TitleSection.astro";
 ---
 
 <Layout
   title="Portfolio by Alexandre Spindola | Full Stack Web Programmer and Developer"
   description="Hire Alexandre Spindola to create your websites and web applications. Full Stack Developer and Digital Marketer. Specialized in Martech solutions."
 >
-  <main class="p-4">
-    <SectionContainer class="py-44 pb-24">
-      <img
-        class="rounded-full w-12 h-12 mb-4"
-        src="https://avatars.githubusercontent.com/u/104132868"
-        alt="Alexandre Spindola photo"
-      />
-      <h1
-        class="text-white text-3xl lg:text-4xl font-bold flex flex-row flex-wrap gap-x-4 gap-y-4 pb-6 lg:pb-10"
-      >
-        Hey, I'm Alexandre <a
-          href="https://www.linkedin.com/in/alexandrespindola/"
-          target="_blank"
-          class="flex justify-center items-center"
-        >
-          <Badge>Available to work</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        <span>+5 year's experience.</span>
-        <span class="text-primary">
-          Full Stack Web Developer and Digital Marketing.</span
-        >
-        <span class="text-red-200/90"
-          >Brazilian digital nomad living in Madrid, Spain 🇪🇦.</span
-        >
-        <span class="opacity-75">
-          Specialized in creating unique websites and martech systems.
-        </span>
-      </h2>
-
-      <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/alexandrespindola/">
-          <LinkedInIcon class="size-4 lg:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/alexandrespindola/">
-          <GitHubIcon class="size-4 lg:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:alexandre@titansdev.es">
-          <MailIcon class="size-4 lg:size-6" />
-          alexandre@titansdev.es
-        </SocialPill>
-      </nav>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
     </SectionContainer>
-
-    <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibol mb-4 flex gap-x-2 items-center">
+  </main>
+  <div class="space-y-24">
+    <SectionContainer id="experiencia">
+      <TitleSection>
         <BriefcaseIcon class="size-8" />
-        Work Experience
-      </h2>
+        Experiencia laboral
+      </TitleSection>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibol mb-4 flex gap-x-2 items-center">
+    <SectionContainer id="proyectos">
+      <TitleSection>
         <CodeIcon class="size-7" />
-        Projects
-      </h2>
+        Proyectos
+      </TitleSection>
       <Projects />
     </SectionContainer>
-  </main>
+
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <About />
+    </SectionContainer>
+  </div>
 </Layout>
