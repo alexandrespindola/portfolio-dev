@@ -1,12 +1,47 @@
 ---
+import WordPress from "./icons/tags/WordPress.astro";
+import Elementor from "./icons/tags/Elementor.astro";
+import Calcom from "./icons/tags/Calcom.astro";
+import BunnyCDN from "./icons/tags/BunnyCDN.astro";
+import Nuxt from "./icons/tags/Nuxt.astro";
+
+const TAGS = {
+  WORDPRESS: {
+    name: "WordPress",
+    class: "bg-cyan-100 text-black",
+    icon: WordPress,
+  },
+  ELEMENTOR: {
+    name: "Elementor",
+    class: "bg-red-100 text-black",
+    icon: Elementor,
+  },
+  CALCOM: {
+    name: "Cal.com",
+    class: "bg-white text-black",
+    icon: Calcom,
+  },
+  BUNNY: {
+    name: "Bunny CDN",
+    class: "bg-orange-100 text-black",
+    icon: BunnyCDN
+  },
+  NUXT: {
+    name: "Nuxt.js",
+    class: "bg-white text-black",
+    icon: Nuxt,
+  },
+};
+
 const PROJECTS = [
   {
     title: "Healthysthetics",
-    description: "Creation of a website from scratch for Healthysthetics Micropigmentation and Aesthetic Clinic, in Murcia, Spain. With a modern and personalized layout, fast loading with CDN, appointment scheduling system and WhatsApp notification automation.",
+    description:
+      "Creation of a website from scratch for Healthysthetics Micropigmentation and Aesthetic Clinic, in Murcia, Spain. With a modern and personalized layout, fast loading with CDN, appointment scheduling system and WhatsApp notification automation.",
     link: "https://healthysthetics.es",
     github: "#",
     image: "/projects/healthysthetics.webp",
-    tags: ["WordPress", "Elementor", "Cal.com", "Bunny CDN"],
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.CALCOM, TAGS.BUNNY],
   },
 ];
 ---
@@ -14,14 +49,25 @@ const PROJECTS = [
 {
   PROJECTS.map(({ title, description, tags, image }) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+      <h3 class="text-2xl font-semibold text-primary mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-preety">{description}</p>
+      <ul class="flex flex-row gap-x-2">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 font-medium`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={image} alt={`Project screenshot of ${title}`} />
+      <img
+        src={image}
+        alt={`Project screenshot of ${title}`}
+        class="rounded-lg shadow-2xl shadow-white/10"
+      />
     </article>
   ))
 }
