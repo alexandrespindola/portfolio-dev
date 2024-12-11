@@ -8,6 +8,7 @@ import Elementor from "./icons/tags/Elementor.astro";
 import Calcom from "./icons/tags/Calcom.astro";
 import BunnyCDN from "./icons/tags/BunnyCDN.astro";
 import Nuxt from "./icons/tags/Nuxt.astro";
+import Netlify from "./icons/tags/Netlify.astro";
 
 const TAGS = {
   WORDPRESS: {
@@ -32,8 +33,13 @@ const TAGS = {
   },
   NUXT: {
     name: "Nuxt.js",
-    class: "bg-white text-black",
+    class: "bg-green-100 text-black",
     icon: Nuxt,
+  },
+  NETLIFY: {
+    name: "Netlify",
+    class: "bg-cyan-100 text-black",
+    icon: Netlify,
   },
 };
 
@@ -58,6 +64,14 @@ const PROJECTS: Project[] = [
     link: "https://healthysthetics.es",
     image: "/projects/healthysthetics.webp",
     tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.CALCOM, TAGS.BUNNY]
+  },
+  {
+    title: "TitansDev",
+    description:
+      "Creation of a website for TitansDev - Digital Agency for Software Development and Digital Marketing, in Ourense, Spain. With a modern and bold design, it was created using Nuxt.js with Static Site Generation (SSG) technology. It includes a video call scheduling system with Cal.com and WhatsApp notification automation.",
+    link: "https://titansdev.es",
+    image: "/projects/titansdev.webp",
+    tags: [TAGS.NUXT, TAGS.CALCOM, TAGS.NETLIFY]
   },
 ];
 ---
