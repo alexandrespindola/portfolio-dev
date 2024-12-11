@@ -7,8 +7,10 @@ import WordPress from "./icons/tags/WordPress.astro";
 import Elementor from "./icons/tags/Elementor.astro";
 import Calcom from "./icons/tags/Calcom.astro";
 import BunnyCDN from "./icons/tags/BunnyCDN.astro";
+import n8n from "./icons/tags/n8n.astro";
 import Nuxt from "./icons/tags/Nuxt.astro";
 import Netlify from "./icons/tags/Netlify.astro";
+import WooCommerce from "./icons/tags/WooCommerce.astro";
 
 const TAGS = {
   WORDPRESS: {
@@ -31,6 +33,11 @@ const TAGS = {
     class: "bg-orange-100 text-black",
     icon: BunnyCDN,
   },
+  N8N: {
+    name: "n8n",
+    class: "bg-pink-100 text-black",
+    icon: n8n,
+  },
   NUXT: {
     name: "Nuxt.js",
     class: "bg-green-100 text-black",
@@ -38,8 +45,13 @@ const TAGS = {
   },
   NETLIFY: {
     name: "Netlify",
-    class: "bg-cyan-100 text-black",
+    class: "bg-teal-100 text-black",
     icon: Netlify,
+  },
+  WOOCOMMERCE: {
+    name: "WooCommerce",
+    class: "bg-purple-100 text-black",
+    icon: WooCommerce,
   },
 };
 
@@ -71,7 +83,23 @@ const PROJECTS: Project[] = [
       "Creation of a website for TitansDev - Digital Agency for Software Development and Digital Marketing, in Ourense, Spain. With a modern and bold design, it was created using Nuxt.js with Static Site Generation (SSG) technology. It includes a video call scheduling system with Cal.com and WhatsApp notification automation.",
     link: "https://titansdev.es",
     image: "/projects/titansdev.webp",
-    tags: [TAGS.NUXT, TAGS.CALCOM, TAGS.NETLIFY]
+    tags: [TAGS.NUXT, TAGS.N8N, TAGS.CALCOM, TAGS.NETLIFY]
+  },
+  {
+    title: "PejoterDay",
+    description:
+      "This website was created with WordPress and Elementor, featuring a modern, responsive design for the PejoterDay event, aimed at training professionals in the financial sector. Using WooCommerce to sell passports and n8n for process automation, the platform offers information on programming and mentoring, providing an intuitive and efficient experience for users.",
+    link: "https://pejoterday.com.br",
+    image: "/projects/pejoterday.webp",
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.WOOCOMMERCE, TAGS.N8N]
+  },
+  {
+    title: "Clínica Pélvica",
+    description:
+      "The website was developed using WordPress and Elementor, based on a design created in Adobe XD. The platform is dedicated to Clínica Pélvica, which offers physiotherapy services focused on women's health. With a modern and responsive layout, the site provides information on the treatments available, highlighting the clinic's humanized and specialized approach.",
+    link: "https://clinicapelvica.com.br",
+    image: "/projects/clinica-pelvica.webp",
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR]
   },
 ];
 ---
