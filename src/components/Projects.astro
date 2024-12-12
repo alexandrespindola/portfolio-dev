@@ -2,176 +2,62 @@
 import LinkIcon from "./icons/LinkIcon.astro";
 import LinkButton from "./LinkButton.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
-import WordPress from "./icons/tags/WordPress.astro";
-import Elementor from "./icons/tags/Elementor.astro";
-import Calcom from "./icons/tags/Calcom.astro";
-import BunnyCDN from "./icons/tags/BunnyCDN.astro";
-import n8n from "./icons/tags/n8n.astro";
-import Nuxt from "./icons/tags/Nuxt.astro";
-import AstroIcon from "./icons/tags/AstroIcon.astro";
-import Tailwind from "./icons/tags/Tailwind.astro";
-import Bun from "./icons/tags/Bun.astro";
-import Netlify from "./icons/tags/Netlify.astro";
-import WooCommerce from "./icons/tags/WooCommerce.astro";
-
-const TAGS = {
-  WORDPRESS: {
-    name: "WordPress",
-    class: "bg-cyan-100 text-black",
-    icon: WordPress,
-  },
-  ELEMENTOR: {
-    name: "Elementor",
-    class: "bg-red-100 text-black",
-    icon: Elementor,
-  },
-  CALCOM: {
-    name: "Cal.com",
-    class: "bg-gray-100 text-black dark:bg-white dark:text-black",
-    icon: Calcom,
-  },
-  BUNNY: {
-    name: "Bunny CDN",
-    class: "bg-orange-100 text-black",
-    icon: BunnyCDN,
-  },
-  N8N: {
-    name: "n8n",
-    class: "bg-pink-100 text-black",
-    icon: n8n,
-  },
-  NUXT: {
-    name: "Nuxt.js",
-    class: "bg-green-100 text-black",
-    icon: Nuxt,
-  },
-  ASTRO: {
-    name: "Astro",
-    class: "bg-red-200 text-black",
-    icon: AstroIcon,
-  },
-  TAILWIND: {
-    name: "Tailwind",
-    class: "bg-blue-100 text-black",
-    icon: Tailwind,
-  },
-  BUN: {
-    name: "Bun",
-    class: "bg-yellow-100 text-black",
-    icon: Bun,
-  },
-  NETLIFY: {
-    name: "Netlify",
-    class: "bg-teal-100 text-black",
-    icon: Netlify,
-  },
-  WOOCOMMERCE: {
-    name: "WooCommerce",
-    class: "bg-purple-100 text-black",
-    icon: WooCommerce,
-  },
-};
-
-interface Project {
-  title: string;
-  description: string;
-  link: string;
-  image: string;
-  tags: {
-    name: string;
-    class: string;
-    icon: any;
-  }[];
-  github?: string;
-}
-
-const PROJECTS: Project[] = [
-  {
-    title: "Healthysthetics",
-    description:
-      "Creation of a website from scratch for Healthysthetics Micropigmentation and Aesthetic Clinic, in Murcia, Spain. With a modern and personalized layout, fast loading with CDN, appointment scheduling system and WhatsApp notification automation.",
-    link: "https://healthysthetics.es",
-    image: "/projects/healthysthetics.webp",
-    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.CALCOM, TAGS.BUNNY]
-  },
-  {
-    title: "TitansDev",
-    description:
-      "Creation of a website for TitansDev - Digital Agency for Software Development and Digital Marketing, in Ourense, Spain. With a modern and bold design, it was created using Nuxt.js with Static Site Generation (SSG) technology. It includes a video call scheduling system with Cal.com and WhatsApp notification automation.",
-    link: "https://titansdev.es",
-    image: "/projects/titansdev.webp",
-    tags: [TAGS.NUXT, TAGS.TAILWIND, TAGS.N8N, TAGS.CALCOM, TAGS.NETLIFY]
-  },
-  {
-    title: "Portfolio Alexandre Spindola",
-    description:
-      "The website was developed using Astro and Tailwind CSS, resulting in a modern, responsive portfolio. The use of Astro allows for optimized performance, while Tailwind CSS makes it easy to create an attractive and personalized design, reflecting the developer's expertise in contemporary technologies.",
-    link: "https://alexandrespindola.netlify.es",
-    image: "/projects/alexandreportfolio.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.BUN, TAGS.NETLIFY],
-    github: "https://github.com/alexandrespindola/portfolio-dev"
-  },
-  {
-    title: "PejoterDay",
-    description:
-      "This website was created with WordPress and Elementor, featuring a modern, responsive design for the PejoterDay event, aimed at training professionals in the financial sector. Using WooCommerce to sell passports and n8n for process automation, the platform offers information on programming and mentoring, providing an intuitive and efficient experience for users.",
-    link: "https://pejoterday.com.br",
-    image: "/projects/pejoterday.webp",
-    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.WOOCOMMERCE, TAGS.N8N]
-  },
-  {
-    title: "Clínica Pélvica",
-    description:
-      "The website was developed using WordPress and Elementor, based on a design created in Adobe XD. The platform is dedicated to Clínica Pélvica, which offers physiotherapy services focused on women's health. With a modern and responsive layout, the site provides information on the treatments available, highlighting the clinic's humanized and specialized approach.",
-    link: "https://clinicapelvica.com.br",
-    image: "/projects/clinica-pelvica.webp",
-    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR]
-  },
-];
+import PROJECTS from "../data/projects";
 ---
 
 <div class="flex flex-col gap-y-16">
-  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-      <div class="w-full md:w-1/2">
-        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={title}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="w-full md:w-1/2 md:max-w-lg">
-        <h3 class="text-2xl font-bold text-secondary dark:text-primary">
-          {title}
-        </h3>
-        <div class="flex flex-col mt-2">
-          <ul class="flex flex-row flex-wrap mb-2 gap-2">
-            {tags.map((tag) => (
-              <li>
-                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                  <tag.icon class="size-4" />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-          </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-secondary dark:text-primary">
+            {title}
+          </h3>
+          <div class="flex flex-col mt-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-          <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-          <footer class="flex items-end justify-start mt-4 gap-x-4">
-            {github && (
-              <LinkButton href={github}>
-                <GitHubIcon class="size-6" />
-                Code
-              </LinkButton>
-            )}
-            {link && (
-              <LinkButton href={link}>
-                <LinkIcon class="size-4" />
-                Preview
-              </LinkButton>
-            )}
-          </footer>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHubIcon class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <LinkIcon class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
         </div>
-      </div>
-    </article>
-  ))}
+      </article>
+    ))
+  }
 </div>
