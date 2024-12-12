@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
     title: "Portfolio Alexandre Spindola",
     description:
       "The website was developed using Astro and Tailwind CSS, resulting in a modern, responsive portfolio. The use of Astro allows for optimized performance, while Tailwind CSS makes it easy to create an attractive and personalized design, reflecting the developer's expertise in contemporary technologies.",
-    link: "https://alexandrespindola.netlify.app",
+    link: "/",
     image: "https://assets-bunny-cdn.b-cdn.net/alexandreportfolio.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.BUN, TAGS.TYPESCRIPT, TAGS.NETLIFY, TAGS.BUNNY],
     github: "https://github.com/alexandrespindola/portfolio-dev",
