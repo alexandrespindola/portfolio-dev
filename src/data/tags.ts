@@ -4,7 +4,6 @@ import WordPress from "../components/icons/tags/WordPress.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
-import n8n from "../components/icons/tags/n8n.astro";
 import Nuxt from "../components/icons/tags/Nuxt.astro";
 import AstroIcon from "../components/icons/tags/AstroIcon.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
@@ -14,11 +13,15 @@ import Bun from "../components/icons/tags/Bun.astro";
 import Yarn from "../components/icons/tags/Yarn.astro";
 import Netlify from "../components/icons/tags/Netlify.astro";
 import WooCommerce from "../components/icons/tags/WooCommerce.astro";
+import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
+import Hestia from "../components/icons/tags/Hestia.astro";
+import n8n from "../components/icons/tags/n8n.astro";
+import Evolution from "../components/icons/tags/Evolution.astro";
 
 const TAGS = {
   PHP: {
     name: "PHP",
-    class: "bg-blue-600 text-white",
+    class: "bg-blue-500 text-white",
     icon: PHP,
   },
   TYPESCRIPT: {
@@ -45,11 +48,6 @@ const TAGS = {
     name: "Bunny CDN",
     class: "bg-orange-100 text-black",
     icon: BunnyCDN,
-  },
-  N8N: {
-    name: "n8n",
-    class: "bg-pink-100 text-black",
-    icon: n8n,
   },
   NUXT: {
     name: "Nuxt.js",
@@ -95,6 +93,26 @@ const TAGS = {
     name: "WooCommerce",
     class: "bg-purple-100 text-black",
     icon: WooCommerce,
+  },
+  DIGITALOCEAN: {
+    name: "DigitalOcean",
+    class: "bg-blue-200 text-black",
+    icon: DigitalOcean,
+  },
+  HESTIA: {
+    name: "HestiaCP",
+    class: "bg-pink-200 text-black",
+    icon: Hestia,
+  },
+  N8N: {
+    name: "n8n",
+    class: "bg-pink-100 text-black",
+    icon: n8n,
+  },
+  EVOLUTION: {
+    name: "Evolution API",
+    class: "bg-green-200 text-black",
+    icon: Evolution,
   },
 };
 
