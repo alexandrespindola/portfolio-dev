@@ -18,6 +18,7 @@ import Sass from "../components/icons/tags/Sass.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
+import WireUI from "../components/icons/tags/WireUI.astro";
 import WooCommerce from "../components/icons/tags/WooCommerce.astro";
 import WordPress from "../components/icons/tags/WordPress.astro";
 import Yarn from "../components/icons/tags/Yarn.astro";
@@ -122,6 +123,11 @@ const TAGS = {
     name: "TypeScript",
     class: "bg-blue-200 text-black",
     icon: TypeScript,
+  },
+  WIREUI: {
+    name: "WireUI",
+    class: "bg-green-200 text-black",
+    icon: WireUI,
   },
   WOOCOMMERCE: {
     name: "WooCommerce",
