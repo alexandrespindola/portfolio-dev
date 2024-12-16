@@ -4,7 +4,7 @@ const EXPERIENCE = [
     title: "Full-stack Developer",
     company: "Titans Dev",
     description:
-      "Web developer of websites, landing pages, e-commerce sites, and web systems using modern and scalable technologies. Expertise in Vue, Nuxt, Astro, Tailwind, WordPress, Strapi, Supabase, n8n, Digital Ocean and Google Cloud Platform (GCP).",
+      "Web developer of websites, landing pages, e-commerce sites, and web systems using modern and scalable technologies. Expertise in Vue, Nuxt, Astro, Tailwind, Laravel, WordPress, Strapi, Supabase, n8n, Digital Ocean and Google Cloud Platform (GCP).",
     link: "https://titansdev.es",
   },
 
