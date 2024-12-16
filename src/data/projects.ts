@@ -3,7 +3,7 @@ import TAGS from "./tags";
 interface Project {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   image: string;
   tags: {
     name: string;
@@ -14,6 +14,13 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+  {
+    title: "Coming soon: Gnostic Books App",
+    description:
+      "A multi-language application dedicated to the library of Gnostic books will soon be launched, developed with Astro, the Startlight template and Strapi as CMS. This innovative project will use Tailwind CSS to ensure a modern and responsive interface, while integration as a Progressive Web App (PWA) will allow offline access to the content. With the efficiency of the pnpm package manager, the application will provide a fast and fluid reading experience, making the rich Gnostic collection accessible to a global audience.",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.PNPM, TAGS.NETLIFY, TAGS.BUNNY],
+  },
   {
     title: "Healthysthetics",
     description:

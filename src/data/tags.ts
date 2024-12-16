@@ -14,7 +14,9 @@ import n8n from "../components/icons/tags/n8n.astro";
 import Netlify from "../components/icons/tags/Netlify.astro";
 import Nuxt from "../components/icons/tags/Nuxt.astro";
 import PHP from "../components/icons/tags/PHP.astro";
+import Pnpm from "../components/icons/tags/Pnpm.astro";
 import Sass from "../components/icons/tags/Sass.astro";
+import Sevalla from "../components/icons/tags/Sevalla.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
@@ -31,7 +33,7 @@ const TAGS = {
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-red-200 text-black",
+    class: "bg-slate-800 text-white",
     icon: AstroIcon,
   },
   BUNNY: {
@@ -104,10 +106,20 @@ const TAGS = {
     class: "bg-blue-500 text-white",
     icon: PHP,
   },
+  PNPM: {
+    name: "pnpm",
+    class: "bg-gray-700 text-white",
+    icon: Pnpm,
+  },
   SASS: {
     name: "Sass",
     class: "bg-pink-200 text-black",
     icon: Sass,
+  },
+  SEVALLA: {
+    name: "Sevalla",
+    class: "bg-yellow-100 text-black",
+    icon: Sevalla
   },
   STRAPI: {
     name: "Strapi",
