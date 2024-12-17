@@ -18,6 +18,7 @@ import Pnpm from "../components/icons/tags/Pnpm.astro";
 import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
+import Supabase from "../components/icons/tags/Supabase.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
 import WireUI from "../components/icons/tags/WireUI.astro";
@@ -26,7 +27,7 @@ import WordPress from "../components/icons/tags/WordPress.astro";
 import Yarn from "../components/icons/tags/Yarn.astro";
 
 const TAGS = {
-  ALPINE:{
+  ALPINE: {
     name: "Alpine.js",
     class: "bg-green-100 text-black",
     icon: Alpine,
@@ -119,12 +120,17 @@ const TAGS = {
   SEVALLA: {
     name: "Sevalla",
     class: "bg-yellow-100 text-black",
-    icon: Sevalla
+    icon: Sevalla,
   },
   STRAPI: {
     name: "Strapi",
     class: "bg-indigo-100 text-black",
     icon: Strapi,
+  },
+  SUPABASE: {
+    name: "Supabase",
+    class: "bg-slate-800 text-white",
+    icon: Supabase,
   },
   TAILWIND: {
     name: "Tailwind",

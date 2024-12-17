@@ -35,7 +35,7 @@ const PROJECTS: Project[] = [
       "Creation of a website for TitansDev - Digital Agency for Software Development and Digital Marketing, in Ourense, Spain. With a modern and bold design, it was created using Nuxt.js with Static Site Generation (SSG) technology. It includes a video call scheduling system with Cal.com and WhatsApp notification automation.",
     link: "https://titansdev.es",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/titansdev.webp",
-    tags: [TAGS.NUXT, TAGS.TAILWIND, TAGS.SASS, TAGS.STRAPI, TAGS.YARN, TAGS.TYPESCRIPT, TAGS.N8N, TAGS.CALCOM, TAGS.EVOLUTION, TAGS.NETLIFY],
+    tags: [TAGS.NUXT, TAGS.TAILWIND, TAGS.SASS, TAGS.STRAPI, TAGS.YARN, TAGS.TYPESCRIPT, TAGS.SUPABASE, TAGS.N8N, TAGS.CALCOM, TAGS.EVOLUTION, TAGS.NETLIFY],
   },
   {
     title: "Portfolio Alexandre Spindola",
@@ -52,7 +52,7 @@ const PROJECTS: Project[] = [
       "SendNotes is a simple web application developed with the TALL Stack (Tailwind CSS, Alpine.js, Laravel and Livewire), allowing create notes and share them by email. The application uses Laravel for the backend, Livewire for dynamic updates, Tailwind CSS for responsive design and Alpine.js for interactivity on the client. It also uses Blade and WireUI, a powerful toolkit designed to revolutionize the development workflow. SendNotes is hosted on Fly.io, which offers a scalable and efficient infrastructure for web applications.",
     link: "https://sendnotes-tall.fly.dev",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/sendnotes.webp",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.ALPINE, TAGS.LIVEWIRE, TAGS.WIREUI, TAGS.PHP, TAGS.FLY],
+    tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.ALPINE, TAGS.LIVEWIRE, TAGS.WIREUI, TAGS.SUPABASE, TAGS.PHP, TAGS.FLY],
     github: "https://github.com/alexandrespindola/sendnotes-tall",
   },
   {
