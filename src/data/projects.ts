@@ -18,6 +18,7 @@ const PROJECTS: Project[] = [
     title: "International Gnostic Library",
     description:
       "A 100+ multi-language application dedicated to the library of Gnostic books developed with Astro, Startlight template, Strapi as CMS and n8n for automation. This innovative project uses Tailwind CSS to ensure a modern and responsive interface. With the efficiency of the pnpm package manager, the application provides a fast and fluid reading experience, making the rich Gnostic collection accessible to a global audience.",
+    link: "https://books.gnosisdeutschland.org",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.N8N, TAGS.PNPM, TAGS.NETLIFY],
   },
