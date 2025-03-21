@@ -15,11 +15,11 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: "Coming soon: Gnostic Books App",
+    title: "International Gnostic Library",
     description:
-      "A multi-language application dedicated to the library of Gnostic books will soon be launched, developed with Astro, the Startlight template and Strapi as CMS. This innovative project will use Tailwind CSS to ensure a modern and responsive interface, while integration as a Progressive Web App (PWA) will allow offline access to the content. With the efficiency of the pnpm package manager, the application will provide a fast and fluid reading experience, making the rich Gnostic collection accessible to a global audience.",
+      "A 100+ multi-language application dedicated to the library of Gnostic books developed with Astro, Startlight template, Strapi as CMS and n8n for automation. This innovative project uses Tailwind CSS to ensure a modern and responsive interface. With the efficiency of the pnpm package manager, the application provides a fast and fluid reading experience, making the rich Gnostic collection accessible to a global audience.",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.PNPM, TAGS.NETLIFY, TAGS.BUNNY],
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.N8N, TAGS.PNPM, TAGS.NETLIFY],
   },
   {
     title: "Healthysthetics",
