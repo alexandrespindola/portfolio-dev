@@ -1,6 +1,6 @@
 const EXPERIENCE = [
   {
-    date: "Oct 2024 - Present · 3 months",
+    date: "Oct 2024 - Present",
     title: "Full-stack Developer",
     company: "Titans Dev",
     description:
