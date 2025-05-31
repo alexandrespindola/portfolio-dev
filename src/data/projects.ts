@@ -18,8 +18,7 @@ const PROJECTS: Project[] = [
     title: "Enterprise E-commerce Integration Platform",
     description:
       "Complex multi-system integration architecture connecting Magento 2, Shopify, and Holded ERP with real-time synchronization. Built with event-driven design using n8n workflows, PostgreSQL 17 with automated triggers, and Supabase Edge Functions. Features advanced inventory management with FIFO lot selection, automated invoice generation, bidirectional product sync, and custom Nuxt.js dashboard for manual interventions. The system handles 5 parallel workers with Redis queuing and RabbitMQ messaging, enabling seamless data flow between e-commerce platforms and enterprise resource planning systems.",
-    link: "https://books.gnosisdeutschland.org",
-    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/ecommerce-erp2.webp",
     tags: [TAGS.N8N, TAGS.POSTGRE, TAGS.SUPABASE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
   },
   {
