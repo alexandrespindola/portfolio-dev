@@ -4,6 +4,7 @@ import Bun from "../components/icons/tags/Bun.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
+import Docker from "../components/icons/tags/Docker.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
 import Evolution from "../components/icons/tags/Evolution.astro";
 import Fly from "../components/icons/tags/Fly.astro";
@@ -15,6 +16,8 @@ import Netlify from "../components/icons/tags/Netlify.astro";
 import Nuxt from "../components/icons/tags/Nuxt.astro";
 import PHP from "../components/icons/tags/PHP.astro";
 import Pnpm from "../components/icons/tags/Pnpm.astro";
+import Postgre from "../components/icons/tags/Postgre.astro";
+import Redis from "../components/icons/tags/Redis.astro";
 import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
@@ -56,6 +59,11 @@ const TAGS = {
     name: "DigitalOcean",
     class: "bg-blue-200 text-black",
     icon: DigitalOcean,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-blue-200 text-black",
+    icon: Docker,
   },
   ELEMENTOR: {
     name: "Elementor",
@@ -111,6 +119,16 @@ const TAGS = {
     name: "pnpm",
     class: "bg-gray-700 text-white",
     icon: Pnpm,
+  },
+  POSTGRE: {
+    name: "PostgreSQL",
+    class: "bg-blue-100 text-black",
+    icon: Postgre,
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-rose-100 text-black",
+    icon: Redis,
   },
   SASS: {
     name: "Sass",

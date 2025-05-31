@@ -15,9 +15,17 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: "Enterprise E-commerce Integration Platform",
+    description:
+      "Complex multi-system integration architecture connecting Magento 2, Shopify, and Holded ERP with real-time synchronization. Built with event-driven design using n8n workflows, PostgreSQL 17 with automated triggers, and Supabase Edge Functions. Features advanced inventory management with FIFO lot selection, automated invoice generation, bidirectional product sync, and custom Nuxt.js dashboard for manual interventions. The system handles 5 parallel workers with Redis queuing and RabbitMQ messaging, enabling seamless data flow between e-commerce platforms and enterprise resource planning systems.",
+    link: "https://books.gnosisdeutschland.org",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
+    tags: [TAGS.N8N, TAGS.POSTGRE, TAGS.SUPABASE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
+  },
+  {
     title: "International Gnostic Library",
     description:
-      "A 100+ multi-language application dedicated to the library of Gnostic books developed with Astro, Startlight template, Strapi as CMS and n8n for automation. This innovative project uses Tailwind CSS to ensure a modern and responsive interface. With the efficiency of the pnpm package manager, the application provides a fast and fluid reading experience, making the rich Gnostic collection accessible to a global audience.",
+      "Multilingual platform supporting 100+ languages with automated translation workflows. Built with Astro and Starlight template, featuring Strapi CMS for content management and n8n for intelligent automation. This innovative project integrates Google Gemini AI for automated translations, implements advanced i18n routing, and uses Tailwind CSS for a modern, responsive interface. The application leverages CDN distribution via Netlify for global performance, making the extensive Gnostic manuscript collection accessible to researchers and readers worldwide through automated content localization.",
     link: "https://books.gnosisdeutschland.org",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.N8N, TAGS.PNPM, TAGS.NETLIFY],
