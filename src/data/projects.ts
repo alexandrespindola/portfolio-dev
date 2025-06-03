@@ -22,9 +22,9 @@ const PROJECTS: Project[] = [
     tags: [TAGS.N8N, TAGS.POSTGRE, TAGS.SUPABASE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
   },
   {
-    title: "International Gnostic Library",
+    title: "AI-Powered Multilingual Automation",
     description:
-      "Multilingual platform supporting 100+ languages with automated translation workflows. Built with Astro and Starlight template, featuring Strapi CMS for content management and n8n for intelligent automation. This innovative project integrates Google Gemini AI for automated translations, implements advanced i18n routing, and uses Tailwind CSS for a modern, responsive interface. The application leverages CDN distribution via Netlify for global performance, making the extensive Gnostic manuscript collection accessible to researchers and readers worldwide through automated content localization.",
+      "Multilingual gnostic platform supporting 100+ languages with automated translation workflows. Built with Astro and Starlight template, featuring Strapi CMS for content management and n8n for intelligent automation. This innovative project integrates Google Gemini AI for automated translations, implements advanced i18n routing, and uses Tailwind CSS for a modern, responsive interface. The application leverages CDN distribution via Netlify for global performance, making the extensive Gnostic manuscript collection accessible to researchers and readers worldwide through automated content localization.",
     link: "https://books.gnosisdeutschland.org",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.N8N, TAGS.PNPM, TAGS.NETLIFY],
