@@ -64,15 +64,6 @@ const PROJECTS: Project[] = [
     github: "https://github.com/alexandrespindola/reminders",
   },
   {
-    title: "SendNotes",
-    description:
-      'Developed with the TALL Stack (Tailwind CSS, Alpine.js, Laravel and Livewire), SendNotes allow create notes and share them by email. Hosted on Fly.io. Developed with the "The Complete TALL Stack Tutorial" by Josh Cirre',
-    link: "https://sendnotes-tall.fly.dev",
-    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/sendnotes2.webp",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.ALPINE, TAGS.LIVEWIRE, TAGS.WIREUI, TAGS.SUPABASE, TAGS.PHP, TAGS.FLY],
-    github: "https://github.com/alexandrespindola/sendnotes-tall",
-  },
-  {
     title: "PejoterDay",
     description:
       "This website was created with WordPress and Elementor, featuring a modern, responsive design for the PejoterDay event, aimed at training professionals in the financial sector. Using WooCommerce to sell passports and n8n for process automation, the platform offers information on programming and mentoring, providing an intuitive and efficient experience for users.",
