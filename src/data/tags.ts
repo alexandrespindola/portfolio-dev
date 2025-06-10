@@ -9,6 +9,7 @@ import Elementor from "../components/icons/tags/Elementor.astro";
 import Evolution from "../components/icons/tags/Evolution.astro";
 import Fly from "../components/icons/tags/Fly.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
+import Hono from "../components/icons/tags/Hono.astro";
 import Laravel from "../components/icons/tags/Laravel.astro";
 import Livewire from "../components/icons/tags/Livewire.astro";
 import n8n from "../components/icons/tags/n8n.astro";
@@ -17,6 +18,8 @@ import Nuxt from "../components/icons/tags/Nuxt.astro";
 import PHP from "../components/icons/tags/PHP.astro";
 import Pnpm from "../components/icons/tags/Pnpm.astro";
 import Postgre from "../components/icons/tags/Postgre.astro";
+import Railway from "../components/icons/tags/Railway.astro";
+import React from "../components/icons/tags/React.astro";
 import Redis from "../components/icons/tags/Redis.astro";
 import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
@@ -24,6 +27,7 @@ import Strapi from "../components/icons/tags/Strapi.astro";
 import Supabase from "../components/icons/tags/Supabase.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
+import Vite from "../components/icons/tags/Vite.astro";
 import WireUI from "../components/icons/tags/WireUI.astro";
 import WooCommerce from "../components/icons/tags/WooCommerce.astro";
 import WordPress from "../components/icons/tags/WordPress.astro";
@@ -85,6 +89,11 @@ const TAGS = {
     class: "bg-pink-200 text-black",
     icon: Hestia,
   },
+  HONO: {
+    name: "Hono",
+    class: "bg-red-100 text-black",
+    icon: Hono,
+  },
   LARAVEL: {
     name: "Laravel",
     class: "bg-red-200 text-black",
@@ -125,6 +134,16 @@ const TAGS = {
     class: "bg-blue-100 text-black",
     icon: Postgre,
   },
+  RAILWAY: {
+    name: "Railway",
+    class: "bg-grey-400 text-white",
+    icon: Railway,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-blue-100 text-black",
+    icon: React,
+  },
   REDIS: {
     name: "Redis",
     class: "bg-rose-100 text-black",
@@ -159,6 +178,11 @@ const TAGS = {
     name: "TypeScript",
     class: "bg-blue-200 text-black",
     icon: TypeScript,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-yellow-100 text-black",
+    icon: Vite
   },
   WIREUI: {
     name: "WireUI",

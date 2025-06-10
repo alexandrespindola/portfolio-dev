@@ -14,6 +14,15 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
+{
+  title: "Job Tracker Deutschland - German Tech Job Search Platform",
+  description:
+    "Modern full-stack job search application built with monorepo architecture, aggregating opportunities from the German Federal Employment Agency API. Features React frontend with TypeScript, Hono backend runtime on Bun, and shared type system for end-to-end type safety. Implements advanced UI/UX with glassmorphism design, micro-interactions, and responsive grid layouts. The platform includes intelligent search filters, pagination, skeleton loading states, and alternative application pathways for jobs without direct URLs. Deployed with modern CI/CD pipeline using Railway for backend services and Netlify for frontend hosting, demonstrating enterprise-level architecture and deployment practices.",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/ecommerce-erp2.webp",
+  tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.HONO, TAGS.BUN, TAGS.VITE, TAGS.RAILWAY, TAGS.NETLIFY],
+  link: "https://german-job-tracker.netlify.app",
+  github: "https://github.com/alexandrespindola/job-tracker-mono"
+},
   {
     title: "Enterprise E-commerce Integration Platform",
     description:
