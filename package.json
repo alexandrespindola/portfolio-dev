@@ -6,9 +6,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "bun run build && deployctl deploy --project=portfolio-spindola --entrypoint=./dist/server/entry.mjs"
   },
   "dependencies": {
+    "@astrojs/deno": "^5.0.1",
     "@astrojs/tailwind": "6.0.2",
     "@fontsource-variable/onest": "^5.1.0",
     "astro": "5.8.1",

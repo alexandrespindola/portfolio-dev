@@ -1,0 +1,10 @@
+{
+  "deploy": {
+    "project": "c4c2ba2e-f2c9-4a46-97d8-57b95df61334",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "./dist/server/entry.mjs"
+  }
+}
