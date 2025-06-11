@@ -20,7 +20,7 @@ const EXPERIENCE = [
     title: "Web Developer",
     company: "Freelancer",
     description:
-      "Development of institutional websites, catalogs, portfolios, and e-commerce sites using HTML5, CSS3, JavaScript, Vue, Tailwind, Bootstrap, Bulma, Python, Django, PHP, Laravel, WordPress, and Elementor.",
+      "Development of institutional websites, catalogs, portfolios, and e-commerce sites using HTML5, CSS3, JavaScript, Vue, Nuxt, Tailwind, WordPress and Elementor.",
   },
 
   {
