@@ -1,13 +1,20 @@
 const EXPERIENCE = [
+    {
+    date: "Jan 2025 - Present",
+    title: "Integration Specialist",
+    company: "Poropo (Partner)",
+    description:
+      "Developed and maintained integration workflows for e-commerce and ERP data systems (Holded) using n8n and Supabase. Built and maintained web applications with modern frontend and backend technologies. Collaborated with stakeholders to optimize data integration processes and resolve technical issues in automated workflows.",
+    link: "https://poropo.es",
+  },
   {
     date: "Oct 2024 - Present",
     title: "Full-stack Developer",
     company: "Titans Dev",
     description:
-      "Enterprise integration specialist developing complex multi-system architectures and automation workflows. Expertise in Vue, Nuxt, Astro, Tailwind, Strapi, Supabase, n8n, PostgreSQL, WordPress, Cloudflare, Digital Ocean and Google Cloud Platform (GCP). Focus on e-commerce integrations, ERP connectivity, and AI-powered automation systems.",
+      "Developed and maintained integration workflows for e-commerce and ERP data systems using n8n and Supabase. Built and maintained web applications with modern frontend and backend technologies.",
     link: "https://titansdev.es",
   },
-
   {
     date: "Oct 2022 - Present · 2 years 3 months",
     title: "Web Developer",
