@@ -1,4 +1,4 @@
-import TAGS from "./tags";
+import TAGS from "./tags.ts";
 
 interface Project {
   title: string;
@@ -8,7 +8,7 @@ interface Project {
   tags: {
     name: string;
     class: string;
-    icon: any;
+    icon: string;
   }[];
   github?: string;
 }
@@ -62,7 +62,7 @@ const PROJECTS: Project[] = [
       "The website was developed using Astro and Tailwind CSS, resulting in a modern, responsive portfolio. The use of Astro allows for optimized performance, while Tailwind CSS makes it easy to create an attractive and personalized design, reflecting the developer's expertise in contemporary technologies.",
     link: "/",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/alexandreportfolio.webp",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.BUN, TAGS.TYPESCRIPT, TAGS.NETLIFY, TAGS.BUNNY],
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.BUN, TAGS.TYPESCRIPT, TAGS.DENO, TAGS.BUNNY],
     github: "https://github.com/alexandrespindola/portfolio-dev",
   },
   {

@@ -4,6 +4,7 @@ import Bun from "../components/icons/tags/Bun.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
+import Deno from "../components/icons/tags/Deno.astro";
 import Docker from "../components/icons/tags/Docker.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
 import Evolution from "../components/icons/tags/Evolution.astro";
@@ -58,6 +59,11 @@ const TAGS = {
     name: "Cal.com",
     class: "bg-gray-100 text-black dark:bg-white dark:text-black",
     icon: Calcom,
+  },
+  DENO: {
+    name: "Deno",
+    class: "bg-steel-700 text-white",
+    icon: Deno,
   },
   DIGITALOCEAN: {
     name: "DigitalOcean",
