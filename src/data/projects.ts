@@ -18,7 +18,7 @@ const PROJECTS: Project[] = [
   title: "Job Tracker Deutschland - German Tech Job Search Platform",
   description:
     "Modern full-stack job search application built with monorepo architecture, aggregating opportunities from the German Federal Employment Agency API. Features React frontend with TypeScript, Hono backend runtime on Bun, and shared type system for end-to-end type safety. Implements advanced UI/UX with glassmorphism design, micro-interactions, and responsive grid layouts. The platform includes intelligent search filters, pagination, skeleton loading states, and alternative application pathways for jobs without direct URLs. Deployed with modern CI/CD pipeline using Railway for backend services and Netlify for frontend hosting, demonstrating enterprise-level architecture and deployment practices.",
-    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/ecommerce-erp2.webp",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/job-tracker.webp",
   tags: [TAGS.TYPESCRIPT, TAGS.REACT, TAGS.TAILWIND, TAGS.HONO, TAGS.BUN, TAGS.VITE, TAGS.RAILWAY, TAGS.NETLIFY],
   link: "https://german-job-tracker.netlify.app",
   github: "https://github.com/alexandrespindola/job-tracker-mono"
@@ -35,6 +35,7 @@ const PROJECTS: Project[] = [
     description:
       "Multilingual gnostic platform supporting 100+ languages with automated translation workflows. Built with Astro and Starlight template, featuring Strapi CMS for content management and n8n for intelligent automation. This innovative project integrates Google Gemini AI for automated translations, implements advanced i18n routing, and uses Tailwind CSS for a modern, responsive interface. The application leverages CDN distribution via Netlify for global performance, making the extensive Gnostic manuscript collection accessible to researchers and readers worldwide through automated content localization.",
     link: "https://books.gnosisdeutschland.org",
+    github: "https://github.com/alexandrespindola/gnosisapp",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis.webp",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.STRAPI, TAGS.N8N, TAGS.PNPM, TAGS.NETLIFY],
   },
@@ -51,6 +52,7 @@ const PROJECTS: Project[] = [
     description:
       "Creation of a website for TitansDev - Digital Agency for Software Development and Digital Marketing, in Ourense, Spain. With a modern and bold design, it was created using Nuxt.js with Static Site Generation (SSG) technology. It includes a video call scheduling system with Cal.com and WhatsApp notification automation.",
     link: "https://titansdev.es",
+    github: "https://github.com/alexandrespindola/titansdev",
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/titansdev.webp",
     tags: [TAGS.NUXT, TAGS.TAILWIND, TAGS.SASS, TAGS.STRAPI, TAGS.YARN, TAGS.TYPESCRIPT, TAGS.SUPABASE, TAGS.N8N, TAGS.CALCOM, TAGS.EVOLUTION, TAGS.NETLIFY],
   },
@@ -71,6 +73,14 @@ const PROJECTS: Project[] = [
     image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/myreminders.webp",
     tags: [TAGS.LARAVEL, TAGS.TAILWIND, TAGS.ALPINE, TAGS.LIVEWIRE, TAGS.WIREUI, TAGS.SUPABASE, TAGS.PHP, TAGS.FLY],
     github: "https://github.com/alexandrespindola/reminders",
+  },
+  {
+    title: "Gnosis Deutschland Institutional Platform",
+    description:
+      "Institutional WordPress platform built with robust architecture and intelligent automation workflows, featuring multilingual support across 6 languages for global accessibility. Deployed on HestiaCP infrastructure with Digital Ocean hosting, the system implements Bunny CDN and Cloudflare for optimized content delivery and enhanced performance worldwide. Features advanced automation through n8n integration for seamless workflow management, Evolution API for WhatsApp notification systems, and integrated contact forms with automated response capabilities",
+    link: "https://gnosisdeutschland.org",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/gnosis-deutschland.webp",
+    tags: [TAGS.WORDPRESS, TAGS.ELEMENTOR, TAGS.PHP, TAGS.WOOCOMMERCE, TAGS.N8N, TAGS.EVOLUTION, TAGS.HESTIA, TAGS.DIGITALOCEAN],
   },
   {
     title: "PejoterDay",
