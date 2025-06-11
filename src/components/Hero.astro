@@ -1,7 +1,7 @@
 ---
 const personalImageAlt = "Alexandre Spindola";
 import Badge from "../components/Badge.astro";
-import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import XingIcon from "../components/icons/XingIcon.astro";
 import MailIcon from "../components/icons/MailIcon.astro";
 import SocialPill from "../components/SocialPill.astro";
 import GitHubIcon from "./icons/GitHubIcon.astro";
@@ -31,18 +31,23 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-primary [&>strong]:text-secondary [&>strong]:font-semibold dark:text-gray-300"
   >
-    <strong
-      > Full Stack Developer & Integration Architect.</strong
-    > Brazilian with Spanish citizenship (work permit in the EU), living in Cologne, Germany. Experienced in enterprise automation, AI-powered workflows and system integrations using modern technologies.
+    <strong> Full Stack Developer & Integration Architect.</strong> Brazilian with
+    Spanish citizenship (work permit in the EU), living in Cologne, Germany. Experienced
+    in enterprise automation, AI-powered workflows and system integrations using
+    modern technologies.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:alexandre@titansdev.es">
-      <MailIcon class="size-4" />
-      Contact
+    <SocialPill href="https://www.xing.com/profile/Alexandre_Spindola">
+      <XingIcon class="size-4" />
+      Xing
     </SocialPill>
     <SocialPill href="https://github.com/alexandrespindola/">
       <GitHubIcon class="size-4" />
       GitHub
+    </SocialPill>
+    <SocialPill href="mailto:alexandre.spindola11@gmail.com">
+      <MailIcon class="size-4" />
+      Contact
     </SocialPill>
   </nav>
 </div>
