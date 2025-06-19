@@ -22,21 +22,31 @@ import ResumeIcon from "./icons/ResumeIcon.astro";
   Hey, I'm Alexandre
 </h1>
 <div class="hero">
-  <p>
-    <strong
-      >Web Developer | Frontend Specialist with Full Stack Capabilities.</strong
-    > Brazilian with Spanish citizenship (work permit in the EU), living in Cologne,
-    Germany.<br /><br />Web Developer with <strong>3+ years</strong> of professional
-    experience specializing in modern web development.<br
-    /><br />Experienced in Vue.js, Nuxt.js, and Astro with strong backend
-    integration capabilities using <strong
+  <p class="green">
+    <strong>Web Developer | Frontend Specialist with Full Stack Capabilities.</strong> Brazilian with Spanish citizenship (work permit in the EU), living in Cologne,
+    Germany.
+  </p>
+  <p class="green">
+    Web Developer with <strong>3+ years</strong> of professional experience specializing
+    in modern web development.
+  </p>
+  <p class="green">
+    Experienced in <strong>Vue.js, Nuxt.js, and Astro</strong> with backend integration
+    capabilities using <strong
       >Node.js, Deno, n8n, Supabase and PostgreSQL</strong
-    >, with an <strong
-      >MBA in Software Engineering and Google Associate Cloud Engineer (GCP)
-      certification</strong
-    >.<br /><br />Proven track record in building responsive, high-performance
-    web applications with Google PageSpeed scores of 95+ and business integrations.<br /><br />I'm
-    currently training in <strong>Angular + Java/Spring Boot.</strong>
+    >
+  </p>
+  <p>
+    With an <strong>MBA in Software Engineering</strong>. and <strong
+      >Google Associate Cloud Engineer (GCP) certification</strong
+    >.
+  </p>
+  <p>
+    Proven track record in building responsive, high-performance web
+    applications with Google PageSpeed scores of 95+ and business integrations.
+  </p>
+  <p class="green">
+    I'm currently training in <strong>Angular + Java/Spring Boot.</strong>
   </p>
 </div>
 
@@ -63,6 +73,10 @@ import ResumeIcon from "./icons/ResumeIcon.astro";
 
 <style>
   .hero p {
-    @apply mt-6 text-xl text-gray-800 dark:[&>strong]:text-primary [&>strong]:text-secondary [&>strong]:font-semibold dark:text-gray-300
+    @apply mt-6 text-xl text-gray-800 [&>strong]:font-semibold dark:text-gray-300;
+  }
+
+  .green {
+    @apply dark:[&>strong]:text-primary [&>strong]:text-secondary;
   }
 </style>
