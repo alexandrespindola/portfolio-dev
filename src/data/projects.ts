@@ -23,6 +23,13 @@ const PROJECTS: Project[] = [
   link: "https://german-job-tracker.netlify.app",
   github: "https://github.com/alexandrespindola/job-tracker-mono"
 },
+{
+  title: "Enterprise E-commerce Integration Dashboard",
+  description:
+    "Custom-built administrative dashboard developed with Nuxt.js and Bun runtime for managing complex e-commerce integration workflows. Features secure authentication via Supabase Auth with role-based access control, deployed on Netlify with edge computing capabilities. The dashboard provides real-time monitoring of integration processes, manual activation controls for Supabase Edge Functions, and comprehensive oversight of automated workflows connecting Magento 2, Shopify, and Holded ERP systems.",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/dashboard.webp",
+  tags: [TAGS.TYPESCRIPT, TAGS.VUE, TAGS.NUXT, TAGS.TAILWIND, TAGS.BUN, TAGS.NETLIFY, TAGS.SUPABASE, TAGS.N8N]
+},
   {
     title: "Enterprise E-commerce Integration Platform",
     description:

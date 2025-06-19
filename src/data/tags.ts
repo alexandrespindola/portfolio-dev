@@ -29,6 +29,7 @@ import Supabase from "../components/icons/tags/Supabase.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
 import Vite from "../components/icons/tags/Vite.astro";
+import Vue from "../components/icons/tags/Vue.astro";
 import WireUI from "../components/icons/tags/WireUI.astro";
 import WooCommerce from "../components/icons/tags/WooCommerce.astro";
 import WordPress from "../components/icons/tags/WordPress.astro";
@@ -189,6 +190,11 @@ const TAGS = {
     name: "Vite",
     class: "bg-yellow-100 text-black",
     icon: Vite
+  },
+  VUE: {
+    name: "Vue.js",
+    class: "bg-green-100 text-black",
+    icon: Vue
   },
   WIREUI: {
     name: "WireUI",
