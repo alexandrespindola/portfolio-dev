@@ -3,14 +3,19 @@ import AstroIcon from "../components/icons/tags/AstroIcon.astro";
 import Bun from "../components/icons/tags/Bun.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
+import Claude from "../components/icons/tags/Claude.astro";
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
 import Deno from "../components/icons/tags/Deno.astro";
 import Docker from "../components/icons/tags/Docker.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
 import Evolution from "../components/icons/tags/Evolution.astro";
 import Fly from "../components/icons/tags/Fly.astro";
+import Gemini from "../components/icons/tags/Gemini.astro";
+import Go from "../components/icons/tags/Go.astro";
+import Heroku from "../components/icons/tags/Heroku.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
 import Hono from "../components/icons/tags/Hono.astro";
+import Json from "../components/icons/tags/Json.astro";
 import Laravel from "../components/icons/tags/Laravel.astro";
 import Livewire from "../components/icons/tags/Livewire.astro";
 import n8n from "../components/icons/tags/n8n.astro";
@@ -61,6 +66,11 @@ const TAGS = {
     class: "bg-gray-100 text-black dark:bg-white dark:text-black",
     icon: Calcom,
   },
+  CLAUDE: {
+    name: "Claude",
+    class: "bg-orange-100 text-black",
+    icon: Claude
+  },
   DENO: {
     name: "Deno",
     class: "bg-steel-700 text-white",
@@ -90,6 +100,26 @@ const TAGS = {
     name: "Fly.io",
     class: "bg-purple-100 text-black",
     icon: Fly,
+  },
+  GEMINI: {
+    name: "Gemini",
+    class: "bg-purple-200 text-black",
+    icon: Gemini,
+  },
+  GO: {
+    name: "Go",
+    class: "bg-blue-700 text-white",
+    icon: Go,
+  },
+  HEROKU: {
+    name: "Heroku",
+    class: "bg-purple-100 text-black",
+    icon: Heroku,
+  },
+  JSON: {
+    name: "JSON",
+    class: "bg-gray-100 text-black",
+    icon: Json,
   },
   HESTIA: {
     name: "HestiaCP",

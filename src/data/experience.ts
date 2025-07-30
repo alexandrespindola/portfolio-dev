@@ -4,7 +4,7 @@ const EXPERIENCE = [
     title: "Integration Specialist & Full-Stack Developer",
     company: "Poropo (Partner)",
     description:
-      "Architected and implemented complex integration workflows connecting e-commerce platforms with ERP systems (Holded). Leveraged TypeScript to develop custom web applications and advanced n8n nodes, creating event-driven patterns with Supabase. Optimized data synchronization processes in collaboration with stakeholders, significantly reducing manual data entry and resolving critical technical issues in automated systems.",
+      "Architected and implemented complex integration workflows connecting e-commerce platforms with ERP systems (Holded). Developed custom web applications and advanced n8n nodes, creating event-driven patterns with Supabase. Optimized data synchronization processes in collaboration with stakeholders, significantly reducing manual data entry and resolving critical technical issues.",
     link: "https://poropo.es",
   },
   {
@@ -12,7 +12,7 @@ const EXPERIENCE = [
     title: "Full-Stack & Automation Developer",
     company: "Titans Dev",
     description:
-      "Led the development of full-stack solutions, transitioning from previous roles to advanced TypeScript and JavaScript development. Architected and built custom backend services and dynamic frontends for client projects. Specialized in creating robust integration workflows between disparate data systems using n8n and Supabase, enabling real-time data flow and enhanced operational efficiency for client businesses.",
+      "Architected and built custom backend services and dynamic frontends for client projects, enabling real-time data flow and enhanced operational efficiency.",
     link: "https://titansdev.es",
   },
   {
@@ -20,7 +20,7 @@ const EXPERIENCE = [
     title: "WordPress Developer",
     company: "CMLO&CO",
     description:
-      "Developed and maintained high-performance, responsive, and SEO-optimized websites using WordPress and Elementor. Enhanced site functionality with custom HTML, CSS, and JavaScript. Successfully integrated key digital marketing tools like Google Analytics and Google Tag Manager to drive data-informed decisions and improve user engagement.",
+      "Development of responsive websites with WordPress and Elementor; integration of Google Analytics, GTM, and social media pixels; optimization with CDNs.",
     link: "https://cmlo.co",
   },
   {
@@ -28,21 +28,21 @@ const EXPERIENCE = [
     title: "Freelance Web Developer & Consultant",
     company: "Self-Employed",
     description:
-      "Delivered end-to-end web solutions for a diverse client base, including institutional websites, e-commerce platforms, and custom portfolios. Leveraged a modern tech stack including Vue, Nuxt, Tailwind CSS, and WordPress to build high-performance, scalable, and visually appealing web experiences.",
+      "Developed and maintained high-performance, responsive, and SEO-optimized websites, enhancing site functionality with custom HTML, CSS, and JavaScript.",
   },
   {
     date: "Feb 2021 - Jun 2023",
-    title: "Clinical Psychologist",
-    company: "Private Practice",
+    title: "Licensed Clinical Psychologist",
+    company: "Clinical Psychologist",
     description:
-      "Provided clinical care and therapy, developing strong skills in active listening, complex problem-solving, and empathetic communication. This background in understanding human behavior now informs my user-centric approach to building intuitive and effective software solutions.",
+      "Provided clinical psychological care in line with the humanistic approach of Carl Rogers, Client-Centered Therapy, Positive Psychology, and Acceptance and Commitment Therapy (ACT). This experience developed strong skills in active listening, complex problem-solving, and empathetic communication, informing a user-centric approach to building intuitive and effective software solutions.",
   },
   {
-    date: "Feb 2019 - Jun 2020 · 1 year 5 months",
+    date: "Feb 2019 - Jun 2020",
     title: "Paid Traffic Manager",
     company: "Banrisul",
     description:
-      "Managed and optimized paid advertising campaigns across Google Ads and Facebook/Instagram Ads. Developed data-driven strategies for campaign creation and optimization, resulting in significant lead generation growth and improved return on ad spend (ROAS).",
+      "Created and optimized digital campaigns on Facebook, Instagram, Google, and other traffic sources, generating leads for sales. Researched user base behavior to improve campaign performance with GA4.",
     link: "https://banrisul.com.br",
   },
 ];
