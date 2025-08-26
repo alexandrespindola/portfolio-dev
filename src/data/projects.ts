@@ -15,6 +15,14 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: "Content Alchemist - AI-Augmented Campaigns | 2025",
+    description:
+      "Built an AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram, and LinkedIn. The system orchestrates Deno Deploy (text sanitization) and Google Gemini (generation) via n8n, uses Google Sheets + Apps Script as the human interface, and delivers organized assets to Google Drive. Optional Valkey/Redis caching prevents duplicate processing and controls costs, while structured JSON prompts ensure deterministic, platform-optimized output.",
+    image: "https://assets-bunny-cdn.b-cdn.net/portfolio-dev/content-alchemist.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.N8N, TAGS.DENO, TAGS.REDIS, TAGS.TAILWIND, TAGS.JSON, TAGS.GOOGLECLOUD],
+    github: "https://github.com/alexandrespindola/content-alchemist",
+  },
+  {
     title: "HeroChat - Heroku Go Chat | 2025",
     description:
       "Developed a Go CLI tool for interacting with advanced AI models via Heroku, enabling developers to send prompts and receive real-time responses from Claude 4 Sonnet in the terminal. Features include persistent conversation history, tagging, and interactive navigation. Built with Cobra for user-friendly commands and colorized output, Heroku Go Chat showcases expertise in Go, API integration, and developer-focused tool-building.",

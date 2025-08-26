@@ -12,6 +12,7 @@ import Evolution from "../components/icons/tags/Evolution.astro";
 import Fly from "../components/icons/tags/Fly.astro";
 import Gemini from "../components/icons/tags/Gemini.astro";
 import Go from "../components/icons/tags/Go.astro";
+import GoogleCloud from "../components/icons/tags/GoogleCloud.astro";
 import Heroku from "../components/icons/tags/Heroku.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
 import Hono from "../components/icons/tags/Hono.astro";
@@ -110,6 +111,11 @@ const TAGS = {
     name: "Go",
     class: "bg-blue-700 text-white",
     icon: Go,
+  },
+  GOOGLECLOUD: {
+    name: "Google Cloud",
+    class: "bg-gray-100 text-black",
+    icon: GoogleCloud,
   },
   HEROKU: {
     name: "Heroku",
