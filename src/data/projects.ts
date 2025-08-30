@@ -8,7 +8,7 @@ interface Project {
   tags: {
     name: string;
     class: string;
-    icon: string;
+    icon: any; // Componente Astro
   }[];
   github?: string;
 }

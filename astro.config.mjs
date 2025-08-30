@@ -7,5 +7,10 @@ import deno from '@astrojs/deno';
 export default defineConfig({
   output: 'server',
   adapter: deno(),
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/noop'
+    }
+  }
 });
