@@ -1,11 +1,13 @@
 import Alpine from "../components/icons/tags/Alpine.astro";
 import AstroIcon from "../components/icons/tags/AstroIcon.astro";
+import AWS from "../components/icons/tags/AWS.astro";
 import Bun from "../components/icons/tags/Bun.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
 import Cloudflare from "../components/icons/tags/Cloudflare.astro";
 import Claude from "../components/icons/tags/Claude.astro";
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
+import Django from "../components/icons/tags/Django.astro";
 import Deno from "../components/icons/tags/Deno.astro";
 import Docker from "../components/icons/tags/Docker.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
@@ -18,14 +20,17 @@ import Heroku from "../components/icons/tags/Heroku.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
 import Hono from "../components/icons/tags/Hono.astro";
 import Json from "../components/icons/tags/Json.astro";
+import Kubernetes from "../components/icons/tags/Kubernetes.astro";
 import Laravel from "../components/icons/tags/Laravel.astro";
 import Livewire from "../components/icons/tags/Livewire.astro";
 import n8n from "../components/icons/tags/n8n.astro";
 import Netlify from "../components/icons/tags/Netlify.astro";
+import Node from "../components/icons/tags/Node.astro";
 import Nuxt from "../components/icons/tags/Nuxt.astro";
 import PHP from "../components/icons/tags/PHP.astro";
 import Pnpm from "../components/icons/tags/Pnpm.astro";
 import Postgre from "../components/icons/tags/Postgre.astro";
+import Python from "../components/icons/tags/Python.astro";
 import Railway from "../components/icons/tags/Railway.astro";
 import React from "../components/icons/tags/React.astro";
 import Redis from "../components/icons/tags/Redis.astro";
@@ -33,7 +38,9 @@ import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
 import Supabase from "../components/icons/tags/Supabase.astro";
+import Svelte from "../components/icons/tags/Svelte.astro";
 import Tailwind from "../components/icons/tags/Tailwind.astro";
+import Terraform from "../components/icons/tags/Terraform.astro";
 import TypeScript from "../components/icons/tags/TypeScript.astro";
 import Vite from "../components/icons/tags/Vite.astro";
 import Vue from "../components/icons/tags/Vue.astro";
@@ -45,13 +52,18 @@ import Yarn from "../components/icons/tags/Yarn.astro";
 const TAGS = {
   ALPINE: {
     name: "Alpine.js",
-    class: "bg-green-100 text-black",
+    class: "bg-gray-100 text-black",
     icon: Alpine,
   },
   ASTRO: {
     name: "Astro",
     class: "bg-slate-800 text-white",
     icon: AstroIcon,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-steel-100 text-white",
+    icon: AWS,
   },
   BUNNY: {
     name: "Bunny CDN",
@@ -87,6 +99,11 @@ const TAGS = {
     name: "DigitalOcean",
     class: "bg-blue-200 text-black",
     icon: DigitalOcean,
+  },
+  DJANGO: {
+    name: "Django",
+    class: "bg-green-200 text-black",
+    icon: Django,
   },
   DOCKER: {
     name: "Docker",
@@ -133,6 +150,11 @@ const TAGS = {
     class: "bg-gray-100 text-black",
     icon: Json,
   },
+  KUBERNETES: {
+    name: "Kubernetes",
+    class: "bg-blue-100 text-black",
+    icon: Kubernetes,
+  },
   HESTIA: {
     name: "HestiaCP",
     class: "bg-pink-200 text-black",
@@ -163,6 +185,11 @@ const TAGS = {
     class: "bg-teal-100 text-black",
     icon: Netlify,
   },
+  NODE: {
+    name: "Node.js",
+    class: "bg-green-100 text-black",
+    icon: Node,
+  },
   NUXT: {
     name: "Nuxt.js",
     class: "bg-green-100 text-black",
@@ -182,6 +209,11 @@ const TAGS = {
     name: "PostgreSQL",
     class: "bg-blue-100 text-black",
     icon: Postgre,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-yellow-100 text-black",
+    icon: Python,
   },
   RAILWAY: {
     name: "Railway",
@@ -218,10 +250,20 @@ const TAGS = {
     class: "bg-slate-800 text-white",
     icon: Supabase,
   },
+  SVELTE: {
+    name: "Svelte",
+    class: "bg-orange-100 text-black",
+    icon: Svelte,
+  },
   TAILWIND: {
     name: "Tailwind",
     class: "bg-blue-100 text-black",
     icon: Tailwind,
+  },
+  TERRAFORM: {
+    name: "Terraform",
+    class: "bg-blue-200 text-black",
+    icon: Terraform,
   },
   TYPESCRIPT: {
     name: "TypeScript",

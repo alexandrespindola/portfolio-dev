@@ -11,14 +11,14 @@ const SERVICES: Service[] = [
     title: "Full-Stack Web Development",
     description: "Development of modern and responsive web applications, from frontend to backend, using the latest technologies and development best practices.",
     features: [
-      "React, Vue.js and Astro applications",
+      "Svelte, React, Vue.js and Astro applications",
       "Backend with Node.js, Go and TypeScript",
       "Responsive design and SEO optimized",
       "API and database integration",
       "Deployment on modern cloud platforms"
     ],
     icon: "CodeIcon",
-    tagKeys: ["REACT", "VUE", "ASTRO", "TYPESCRIPT", "TAILWIND", "GO"]
+    tagKeys: ["SVELTE", "VUE", "ASTRO", "TYPESCRIPT", "TAILWIND", "GO"]
   },
   {
     title: "Process Automation with N8N",

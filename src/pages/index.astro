@@ -10,12 +10,14 @@ import Services from "../components/Services.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
 import TitleSection from "../components/TitleSection.astro";
+import TechStack from "../components/TechStack.astro";
 ---
 
 <Layout
   title="Alexandre Spindola | Full Stack Software Engineer | GCP Certified| AI-Powered Automation & High-Performance Systems"
   description="Portfolio of Alexandre Spindola, a Full Stack Software Engineer with an MBA specializing in AI-powered automation and high-performance systems. Discover scalable ecosystems built with Go, JavaScript/TypeScript, N8N, and Supabase."
 >
+  <a id="top" class="block"></a>
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
       <Hero />
@@ -28,6 +30,14 @@ import TitleSection from "../components/TitleSection.astro";
         Services
       </TitleSection>
       <Services />
+    </SectionContainer>
+
+    <SectionContainer id="tech-stack">
+      <TitleSection>
+        <CodeIcon class="size-7" />
+        Tech Stack
+      </TitleSection>
+      <TechStack />
     </SectionContainer>
 
     <SectionContainer id="experience">

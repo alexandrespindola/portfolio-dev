@@ -1,0 +1,97 @@
+---
+import TAGS from "../data/tags";
+---
+
+<div class="mt-16">
+  <div class="grid gap-6 md:grid-cols-3">
+    {/* Frontend */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">Frontend</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.SVELTE, TAGS.ASTRO, TAGS.VUE, TAGS.NUXT, TAGS.TAILWIND, TAGS.REACT, TAGS.ALPINE, TAGS.VITE, TAGS.TYPESCRIPT].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* Backend & APIs */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">Backend & APIs</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.NODE, TAGS.TYPESCRIPT, TAGS.GO, TAGS.N8N, TAGS.JSON, TAGS.HONO, TAGS.DJANGO, TAGS.PYTHON].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* DevOps & Infra */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">DevOps & Infra</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.DOCKER, TAGS.DIGITALOCEAN, TAGS.GOOGLECLOUD, TAGS.AWS,TAGS.TERRAFORM, TAGS.KUBERNETES, TAGS.CLOUDFLARE, TAGS.RAILWAY, TAGS.NETLIFY, ].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* Databases & Realtime */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">Databases & Realtime</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.SUPABASE, TAGS.POSTGRE, TAGS.REDIS].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* AI & Automation */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">AI & Automation</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.CLAUDE, TAGS.GEMINI, TAGS.N8N].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* Tooling */}
+    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <h3 class="mb-4 text-lg font-semibold text-white">Tooling</h3>
+      <ul class="flex flex-wrap gap-2">
+        {[TAGS.NODE, TAGS.BUN, TAGS.PNPM, TAGS.YARN].map((tag) => (
+          <li>
+            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
+              <tag.icon class="h-4 w-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</div>
