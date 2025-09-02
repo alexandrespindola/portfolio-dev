@@ -6,6 +6,7 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
 import Experience from "../components/Experience.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Projects from "../components/Projects.astro";
+import Services from "../components/Services.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
 import TitleSection from "../components/TitleSection.astro";
@@ -21,6 +22,14 @@ import TitleSection from "../components/TitleSection.astro";
     </SectionContainer>
   </main>
   <div class="space-y-24">
+    <SectionContainer id="services">
+      <TitleSection>
+        <BriefcaseIcon class="size-8" />
+        Services
+      </TitleSection>
+      <Services />
+    </SectionContainer>
+
     <SectionContainer id="experience">
       <TitleSection>
         <BriefcaseIcon class="size-8" />

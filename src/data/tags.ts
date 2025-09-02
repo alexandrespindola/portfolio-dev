@@ -3,6 +3,7 @@ import AstroIcon from "../components/icons/tags/AstroIcon.astro";
 import Bun from "../components/icons/tags/Bun.astro";
 import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
+import Cloudflare from "../components/icons/tags/Cloudflare.astro";
 import Claude from "../components/icons/tags/Claude.astro";
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
 import Deno from "../components/icons/tags/Deno.astro";
@@ -66,6 +67,11 @@ const TAGS = {
     name: "Cal.com",
     class: "bg-gray-100 text-black dark:bg-white dark:text-black",
     icon: Calcom,
+  },
+  CLOUDFLARE: {
+    name: "Cloudflare",
+    class: "bg-orange-100 text-black",
+    icon: Cloudflare,
   },
   CLAUDE: {
     name: "Claude",
