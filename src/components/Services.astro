@@ -1,115 +1,138 @@
 ---
 import SERVICES from "../data/services";
-import CodeIcon from "./icons/CodeIcon.astro";
-import BriefcaseIcon from "./icons/BriefcaseIcon.astro";
-import ProfileCheck from "./icons/ProfileCheck.astro";
-import LinkIcon from "./icons/LinkIcon.astro";
 import TAGS from "../data/tags";
 ---
 
 <div class="grid gap-8 mt-16 md:grid-cols-2">
-  {SERVICES.map((service) => {
-    const IconComponent = service.icon === "CodeIcon" ? CodeIcon : 
-                         service.icon === "BriefcaseIcon" ? BriefcaseIcon :
-                         service.icon === "ProfileCheck" ? ProfileCheck : LinkIcon;
-    
-    return (
-      <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-gray-800 dark:bg-gray-900">
-        {/* Background gradient effect */}
-        <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-green-900/20 dark:to-emerald-900/20"></div>
-        
-        {/* Content */}
-        <div class="relative z-10">
-          {/* Icon */}
-          <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg">
-            <IconComponent class="h-8 w-8" />
-          </div>
-          
-          {/* Title */}
-          <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
-            {service.title}
-          </h3>
-          
-          {/* Description */}
-          <p class="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed">
-            {service.description}
-          </p>
-          
-          {/* Features */}
-          <ul class="mb-6 space-y-3">
-            {service.features.map((feature) => (
-              <li class="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
-                <div class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0"></div>
-                <span>{feature}</span>
-              </li>
-            ))}
-          </ul>
-          
-          {/* Tags */}
-          <div class="mb-6">
-            <div class="flex flex-wrap gap-2">
-              {service.tagKeys.slice(0, 4).map((tagKey) => {
-                const tag = TAGS[tagKey as keyof typeof TAGS];
-                const TagIcon = tag.icon;
-                
-                return (
-                  <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-                    <TagIcon class="h-3 w-3" />
-                    {tag.name}
+  {
+    SERVICES.map((service) => {
+      return (
+        <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-gray-800 dark:bg-gray-900">
+          {/* Background gradient effect */}
+          <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-green-900/20 dark:to-emerald-900/20" />
+
+          {/* Content */}
+          <div class="relative z-10">
+            {/* Icon */}
+            <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg">
+              <service.icon class="h-8 w-8 text-white/95 group-hover:text-white" />
+            </div>
+
+            {/* Title */}
+            <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+              {service.title}
+            </h3>
+
+            {/* Description */}
+            <p class="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+              {service.description}
+            </p>
+
+            {/* Features */}
+            <ul class="mb-6 space-y-3">
+              {service.features.map((feature) => (
+                <li class="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
+                  <div class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Tags */}
+            <div class="mb-6">
+              <div class="flex flex-wrap gap-2">
+                {service.tagKeys.slice(0, 4).map((tagKey) => {
+                  const tag = TAGS[tagKey as keyof typeof TAGS];
+                  const TagIcon = tag.icon;
+
+                  return (
+                    <span
+                      class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}
+                    >
+                      <TagIcon class="h-3 w-3" />
+                      {tag.name}
+                    </span>
+                  );
+                })}
+                {service.tagKeys.length > 4 && (
+                  <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-gray-800 dark:text-gray-300">
+                    +{service.tagKeys.length - 4} more
                   </span>
-                );
-              })}
-              {service.tagKeys.length > 4 && (
-                <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-gray-800 dark:text-gray-300">
-                  +{service.tagKeys.length - 4} more
-                </span>
-              )}
+                )}
+              </div>
+            </div>
+
+            {/* Contact CTA */}
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
+                Let's discuss your project
+              </span>
+              <button
+                onclick="document.getElementById('services-cta').scrollIntoView({ behavior: 'smooth' })"
+                class="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110 cursor-pointer"
+              >
+                <svg
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
-          
-          {/* Contact CTA */}
-          <div class="flex items-center justify-between">
-            <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
-              Let's discuss your project
-            </span>
-            <button 
-              onclick="document.getElementById('services-cta').scrollIntoView({ behavior: 'smooth' })"
-              class="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110 cursor-pointer"
-            >
-              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
+
+          {/* Hover effect border */}
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-br from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20"
+            style="mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor;"
+          />
         </div>
-        
-        {/* Hover effect border */}
-        <div class="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-br from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20" style="mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor;"></div>
-      </div>
-    );
-  })}
+      );
+    })
+  }
 </div>
 
 <!-- Call to Action Section -->
-<div id="services-cta" class="mt-16 rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-800 dark:bg-gray-900">
+<div
+  id="services-cta"
+  class="mt-16 rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-800 dark:bg-gray-900"
+>
   <h3 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
     Ready to turn your ideas into reality?
   </h3>
   <p class="mb-6 text-gray-600 dark:text-gray-300">
-    Let's discuss how I can help boost your business with innovative technological solutions.
+    Let's discuss how I can help boost your business with innovative
+    technological solutions.
   </p>
   <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
-    <a 
-      href="mailto:alexandre@spindola.me" 
+    <a
+      href="mailto:alexandre@spindola.me"
       class="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
     >
-      <svg class="mr-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+      <svg
+        class="mr-2 h-5 w-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+        ></path>
       </svg>
       Get in Touch
     </a>
-    <a 
-      href="#projects" 
+    <a
+      href="#projects"
       class="inline-flex items-center justify-center rounded-xl border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
     >
       View Projects

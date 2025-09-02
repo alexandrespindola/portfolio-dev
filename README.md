@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Astro and deployed on Deno Dep
 
 ## 🚀 Live Demo
 
-Visit the live portfolio at: [https://portfolio-spindola-vnsa8qh0c5jc.deno.dev](https://portfolio-spindola-vnsa8qh0c5jc.deno.dev)
+Visit the live portfolio at: [https://spindola.me](https://spindola.me)
 
 ## 🛠️ Tech Stack
 
@@ -18,7 +18,6 @@ Visit the live portfolio at: [https://portfolio-spindola-vnsa8qh0c5jc.deno.dev](
 
 - ⚡ **Lightning Fast**: Built with Astro for optimal performance
 - 📱 **Responsive Design**: Looks great on all devices
-- 🌙 **Dark/Light Mode**: Theme toggle with system preference detection
 - 🎨 **Modern UI**: Clean and professional design
 - 🔧 **Interactive Components**: Smooth animations and transitions
 - 📊 **Experience Timeline**: Detailed work experience showcase

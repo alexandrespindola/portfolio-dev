@@ -1,8 +1,19 @@
+import FullStackIcon from "../components/icons/services/FullStackIcon.astro";
+import AutomationIcon from "../components/icons/services/AutomationIcon.astro";
+import DashboardIcon from "../components/icons/services/DashboardIcon.astro";
+import IntegrationIcon from "../components/icons/services/IntegrationIcon.astro";
+import AIIcon from "../components/icons/services/AIIcon.astro";
+import APIIcon from "../components/icons/services/APIIcon.astro";
+import DistributedIcon from "../components/icons/services/DistributedIcon.astro";
+import ConsultingIcon from "../components/icons/services/ConsultingIcon.astro";
+
+type AstroIconComponent = (props: { class?: string }) => unknown;
+
 interface Service {
   title: string;
   description: string;
   features: string[];
-  icon: string;
+  icon: AstroIconComponent; // Astro component
   tagKeys: string[];
 }
 
@@ -17,7 +28,7 @@ const SERVICES: Service[] = [
       "API and database integration",
       "Deployment on modern cloud platforms"
     ],
-    icon: "CodeIcon",
+    icon: FullStackIcon,
     tagKeys: ["SVELTE", "VUE", "ASTRO", "TYPESCRIPT", "TAILWIND", "GO"]
   },
   {
@@ -30,7 +41,7 @@ const SERVICES: Service[] = [
       "Custom and scalable workflows",
       "Monitoring and automatic alerts"
     ],
-    icon: "BriefcaseIcon",
+    icon: AutomationIcon,
     tagKeys: ["N8N", "SUPABASE", "POSTGRE", "REDIS", "DOCKER"]
   },
   {
@@ -43,7 +54,7 @@ const SERVICES: Service[] = [
       "Integration with multiple data sources",
       "Access control and permissions"
     ],
-    icon: "ProfileCheck",
+    icon: DashboardIcon,
     tagKeys: ["VUE", "NUXT", "TAILWIND", "SUPABASE", "TYPESCRIPT"]
   },
   {
@@ -56,7 +67,7 @@ const SERVICES: Service[] = [
       "Complex data mapping",
       "Error handling and automatic retry"
     ],
-    icon: "LinkIcon",
+    icon: IntegrationIcon,
     tagKeys: ["N8N", "SUPABASE", "REDIS", "DOCKER", "TYPESCRIPT"]
   },
   {
@@ -69,7 +80,7 @@ const SERVICES: Service[] = [
       "Natural language processing",
       "Integration with modern AI models"
     ],
-    icon: "CodeIcon",
+    icon: AIIcon,
     tagKeys: ["N8N", "CLAUDE", "GEMINI", "TYPESCRIPT", "DENO"]
   },
   {
@@ -82,7 +93,7 @@ const SERVICES: Service[] = [
       "Real-time communication protocols",
       "Performance monitoring and optimization"
     ],
-    icon: "CodeIcon",
+    icon: APIIcon,
     tagKeys: ["GO", "DOCKER", "REDIS", "TYPESCRIPT", "RAILWAY"]
   },
   {
@@ -95,7 +106,7 @@ const SERVICES: Service[] = [
       "Load balancing and auto-scaling",
       "Cross-platform deployment strategies"
     ],
-    icon: "BriefcaseIcon",
+    icon: DistributedIcon,
     tagKeys: ["DOCKER", "GO", "TYPESCRIPT", "CLOUDFLARE", "REDIS"]
   },
   {
@@ -108,7 +119,7 @@ const SERVICES: Service[] = [
       "Performance optimization",
       "Development mentoring"
     ],
-    icon: "ProfileCheck",
+    icon: ConsultingIcon,
     tagKeys: ["TYPESCRIPT", "GO", "DOCKER", "REDIS", "SUPABASE"]
   }
 ];
