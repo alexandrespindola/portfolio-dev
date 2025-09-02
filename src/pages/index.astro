@@ -6,7 +6,7 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
 import Experience from "../components/Experience.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Projects from "../components/Projects.astro";
-import Services from "../components/Services.astro";
+import Services from "../components/Services";
 import SectionContainer from "../components/SectionContainer.astro";
 import Hero from "../components/Hero.astro";
 import TitleSection from "../components/TitleSection.astro";
@@ -19,7 +19,7 @@ import TechStack from "../components/TechStack.astro";
 >
   <a id="top" class="block"></a>
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="py-16 md:py-36 px-5">
       <Hero />
     </SectionContainer>
   </main>
@@ -48,7 +48,7 @@ import TechStack from "../components/TechStack.astro";
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects">
+    <SectionContainer id="projects" class="px-3">
       <TitleSection>
         <CodeIcon class="size-7" />
         Projects

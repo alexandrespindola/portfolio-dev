@@ -2,8 +2,8 @@ interface Service {
   title: string;
   description: string;
   features: string[];
-  icon: string; // Nome do componente Astro
-  tagKeys: string[]; // Chaves das tags no objeto TAGS
+  icon: string;
+  tagKeys: string[];
 }
 
 const SERVICES: Service[] = [
