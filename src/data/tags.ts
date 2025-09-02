@@ -34,6 +34,7 @@ import Python from "../components/icons/tags/Python.astro";
 import Railway from "../components/icons/tags/Railway.astro";
 import React from "../components/icons/tags/React.astro";
 import Redis from "../components/icons/tags/Redis.astro";
+import Rust from "../components/icons/tags/Rust.astro";
 import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
@@ -229,6 +230,11 @@ const TAGS = {
     name: "Redis",
     class: "bg-rose-100 text-black",
     icon: Redis,
+  },
+  RUST: {
+    name: "Rust",
+    class: "bg-orange-900 text-white",
+    icon: Rust,
   },
   SASS: {
     name: "Sass",
