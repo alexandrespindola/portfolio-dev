@@ -1,6 +1,6 @@
 # Alexandre Spindola - Portfolio
 
-A modern, responsive portfolio website built with Astro and deployed on Deno Deploy.
+Modern, responsive portfolio built with Astro, Tailwind, and deployed to Deno Deploy.
 
 ## 🚀 Live Demo
 
@@ -8,21 +8,23 @@ Visit the live portfolio at: [https://spindola.me](https://spindola.me)
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Astro](https://astro.build/) - Static site generator with SSR capabilities
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- **Font**: [Onest Variable](https://fonts.google.com/specimen/Onest) - Modern variable font
-- **Deployment**: [Deno Deploy](https://deno.com/deploy) - Edge runtime platform
-- **Package Manager**: [Bun](https://bun.sh/) - Fast JavaScript runtime and package manager
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Font**: Onest Variable
+- **Deployment**: [Deno Deploy](https://deno.com/deploy)
+- **Package Manager**: [Bun](https://bun.sh/)
 
 ## 📦 Features
 
-- ⚡ **Lightning Fast**: Built with Astro for optimal performance
-- 📱 **Responsive Design**: Looks great on all devices
-- 🎨 **Modern UI**: Clean and professional design
-- 🔧 **Interactive Components**: Smooth animations and transitions
-- 📊 **Experience Timeline**: Detailed work experience showcase
-- 🚀 **Project Gallery**: Portfolio of development projects
-- 🏷️ **Technology Tags**: Visual representation of skills and tools
+- ⚡ **Performance-first**: Astro + Tailwind
+- 📱 **Responsive**: Mobile-first with safe side paddings
+- 🎨 **Modern UI**: Clean, green-accent theme (dark-first)
+- 🧩 **Services Section**: Data-driven cards with custom SVG icons
+- 🧰 **Tech Stack Section**: Logo badges grouped by categories
+- 🧭 **Sticky Header**: Top navigation with smooth scroll and “Home” anchor
+- 🧾 **Experience Timeline**: Clear work history
+- 🗂️ **Projects Gallery**: Real projects with tags, links, and code
+- 📣 **CTAs**: Services CTA + final minimal contact CTA
 
 ## 🏃‍♂️ Getting Started
 
@@ -58,14 +60,26 @@ bun run dev
 
 ```
 /
-├── public/           # Static assets (images, icons, etc.)
+├── public/                      # Static assets
 ├── src/
-│   ├── components/   # Reusable Astro components
-│   ├── data/        # Data files (experience, projects, etc.)
-│   ├── layouts/     # Page layouts
-│   └── pages/       # Site pages
-├── astro.config.mjs # Astro configuration
-└── package.json     # Dependencies and scripts
+│   ├── components/
+│   │   ├── Services.astro       # Services section (cards + CTA)
+│   │   ├── TechStack.astro      # Tech Stack badges
+│   │   ├── SectionContainer.astro # Section wrapper (spacing, container)
+│   │   └── icons/
+│   │       └── services/        # Custom SVG icons for services
+│   ├── data/
+│   │   ├── services.ts          # Services data (title, description, features, icon, tags)
+│   │   ├── projects.ts          # Projects data
+│   │   ├── experience.ts        # Experience data
+│   │   └── tags.ts              # Technology tags
+│   ├── layouts/
+│   │   └── Layout.astro         # App layout (dark-first)
+│   └── pages/
+│       └── index.astro          # Home (includes final contact CTA)
+├── astro.config.mjs             # Astro config
+├── tailwind.config.mjs          # Tailwind config (primary/secondary colors)
+└── package.json                 # Scripts & dependencies
 ```
 
 ## 🚀 Deployment
@@ -94,26 +108,21 @@ For detailed deployment instructions, see [DEPLOY.md](./DEPLOY.md).
 
 ### Updating Content
 
-1. **Experience**: Edit `src/data/experience.ts`
-2. **Projects**: Edit `src/data/projects.ts`
-3. **Technologies**: Edit `src/data/tags.ts`
-4. **Personal Info**: Update components in `src/components/`
+1. **Services (cards + icons)**
+   - Data: `src/data/services.ts`
+   - Ícones: `src/components/icons/services/` (cada ícone é um componente Astro que aceita `class`)
+2. **Tech Stack**: `src/components/TechStack.astro` e `src/data/tags.ts`
+3. **Projects**: `src/data/projects.ts`
+4. **Experience**: `src/data/experience.ts`
+5. **Layout/cores**: `tailwind.config.mjs` (cores `primary`/`secondary`) e `src/layouts/Layout.astro`
 
 ### Styling
 
-The project uses Tailwind CSS. You can customize the design by:
+The project uses Tailwind CSS. Customize by:
 
 - Modifying `tailwind.config.mjs`
 - Editing component styles in `.astro` files
 - Adding custom CSS classes
-
-## 🤝 Contributing
-
-Feel free to submit issues and pull requests to improve this portfolio template.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
