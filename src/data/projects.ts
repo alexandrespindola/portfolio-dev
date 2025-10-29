@@ -15,6 +15,13 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: "Gnostic Congress Spain 2026 - Full Stack Web App | 2025",
+    description: "Developed a comprehensive event registration platform for the international Gnostic Congress Spain 2026, built with a modern tech stack. The system features a responsive Nuxt.js frontend with Tailwind CSS deployed on Cloudflare Workers, powered by a Hono.js API backend with Coolify. Leverages PostgreSQL for secure attendee data management and integrates with n8n for workflow automation. Built with TypeScript for type safety and Bun for optimized performance, the platform streamlines the entire registration process while ensuring scalability for international attendees.",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/congreso.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.NUXT, TAGS.TAILWIND, TAGS.CLOUDFLARE, TAGS.BUN, TAGS.HONO, TAGS.POSTGRE, TAGS.N8N],
+    link: "https://congreso.gnosis.is"
+  },
+  {
     title: "Content Alchemist - AI-Augmented Campaigns | 2025",
     description:
       "Built an AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram, and LinkedIn. The system orchestrates Deno Deploy (text sanitization) and Google Gemini (generation) via n8n, uses Google Sheets + Apps Script as the human interface, and delivers organized assets to Google Drive. Optional Valkey/Redis caching prevents duplicate processing and controls costs, while structured JSON prompts ensure deterministic, platform-optimized output.",
