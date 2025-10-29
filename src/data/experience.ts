@@ -8,7 +8,7 @@ const EXPERIENCE = [
     link: "https://poropo.es",
   },
   {
-    date: "Oct 2024 - Present",
+    date: "Oct 2024 - Aug 2025",
     title: "Full-Stack & Automation Developer",
     company: "Titans Dev",
     description:
