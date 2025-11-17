@@ -4,8 +4,6 @@ import DashboardIcon from "../components/icons/services/DashboardIcon.astro";
 import IntegrationIcon from "../components/icons/services/IntegrationIcon.astro";
 import AIIcon from "../components/icons/services/AIIcon.astro";
 import APIIcon from "../components/icons/services/APIIcon.astro";
-import DistributedIcon from "../components/icons/services/DistributedIcon.astro";
-import ConsultingIcon from "../components/icons/services/ConsultingIcon.astro";
 
 type AstroIconComponent = (props: { class?: string }) => unknown;
 
@@ -69,58 +67,6 @@ const SERVICES: Service[] = [
     ],
     icon: IntegrationIcon,
     tagKeys: ["N8N", "SUPABASE", "REDIS", "DOCKER", "TYPESCRIPT"]
-  },
-  {
-    title: "AI-Powered Solutions",
-    description: "Implementation of AI features to automate processes, improve user experience and extract valuable insights from data.",
-    features: [
-      "AI-powered content automation",
-      "Chatbots and virtual assistants",
-      "Predictive data analysis",
-      "Natural language processing",
-      "Integration with modern AI models"
-    ],
-    icon: AIIcon,
-    tagKeys: ["N8N", "CLAUDE", "GEMINI", "TYPESCRIPT", "DENO"]
-  },
-  {
-    title: "High-Performance APIs",
-    description: "Development of ultra-fast, scalable APIs using Go and modern architectural patterns to handle high traffic loads with minimal latency.",
-    features: [
-      "Go-based REST and GraphQL APIs",
-      "Microservices architecture",
-      "High-throughput data processing",
-      "Real-time communication protocols",
-      "Performance monitoring and optimization"
-    ],
-    icon: APIIcon,
-    tagKeys: ["GO", "DOCKER", "REDIS", "TYPESCRIPT", "RAILWAY"]
-  },
-  {
-    title: "Distributed Systems & Microservices",
-    description: "Architecture and development of distributed systems using microservices patterns, ensuring scalability, reliability, and maintainability across cloud platforms.",
-    features: [
-      "Microservices architecture design",
-      "Service mesh implementation",
-      "Distributed data management",
-      "Load balancing and auto-scaling",
-      "Cross-platform deployment strategies"
-    ],
-    icon: DistributedIcon,
-    tagKeys: ["DOCKER", "GO", "TYPESCRIPT", "CLOUDFLARE", "REDIS"]
-  },
-  {
-    title: "Technical Consulting",
-    description: "Strategic guidance for software architecture, technology selection and development process optimization to maximize results.",
-    features: [
-      "Scalable system architecture",
-      "Code review and best practices",
-      "Technology migration strategy",
-      "Performance optimization",
-      "Development mentoring"
-    ],
-    icon: ConsultingIcon,
-    tagKeys: ["TYPESCRIPT", "GO", "DOCKER", "REDIS", "SUPABASE"]
   }
 ];
 

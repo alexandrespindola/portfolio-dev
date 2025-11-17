@@ -33,8 +33,8 @@ const PROJECTS: Project[] = [
     tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.TAILWIND, TAGS.FIREBASE, TAGS.CLOUDFLARE, TAGS.BUN]
   },
      {
-    title: "Envirometrics - Full Stack Web App | 2025",
-    description: "Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, the project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
+    title: "Envirometrics - Portfolio Project | 2025",
+    description: "Portfolio project: Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, this project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
     image: "https://flash-cdn.pages.dev/assets/portfolio/envirometrics.webp",
     tags: [TAGS.TYPESCRIPT, TAGS.VUE, TAGS.TAILWIND, TAGS.DAISYUI, TAGS.CLOUDFLARE, TAGS.BUN],
     link: "https://envirometrics.pages.dev",
