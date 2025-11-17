@@ -51,7 +51,7 @@ import TechStack from "../components/TechStack.astro";
     <SectionContainer id="projects" class="px-3">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Projects
+        Key Projects
       </TitleSection>
       <Projects />
     </SectionContainer>
@@ -65,14 +65,43 @@ import TechStack from "../components/TechStack.astro";
     </SectionContainer>
 
     <SectionContainer id="contact-cta">
-      <div class="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-800 dark:bg-gray-900">
-        <h3 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">Let's build something great.</h3>
-        <div class="flex justify-center">
+      <!-- Call to Action Section -->
+      <div
+        id="services-cta"
+        class="mt-16 rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm dark:border-gray-800 dark:bg-gray-900"
+      >
+        <h3 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
+          Ready to turn your ideas into reality?
+        </h3>
+        <p class="mb-6 text-gray-600 dark:text-gray-300">
+          Let's discuss how I can help boost your business with innovative
+          technological solutions.
+        </p>
+        <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
             href="mailto:alexandre@spindola.me"
             class="inline-flex items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary px-6 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:shadow-xl"
           >
-            Contact
+            <svg
+              class="mr-2 h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Get in Touch
+          </a>
+          <a
+            href="#projects"
+            class="inline-flex items-center justify-center rounded-xl border-2 border-gray-300 px-6 py-3 font-semibold text-gray-700 transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:bg-primary dark:hover:text-white"
+          >
+            View Projects
           </a>
         </div>
       </div>

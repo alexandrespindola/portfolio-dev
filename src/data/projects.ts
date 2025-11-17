@@ -22,6 +22,25 @@ const PROJECTS: Project[] = [
     link: "https://congreso.gnosis.is"
   },
   {
+    title: "Gentlecan - Mobile App | 2025",
+    description: "Developed a modern dog grooming salon mobile app using FlutterFlow and Firebase, enabling clients to book appointments, manage pet profiles, and track grooming history through photo galleries. Features real-time scheduling with dynamic pricing, instant messaging with the salon team, and automated appointment reminders. Built with Firebase Authentication and Firestore for seamless data synchronization, delivering a polished mobile experience for iOS and Android that streamlines the entire customer journey.",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/gentlecan-mobile.webp",
+    tags: [TAGS.FLUTTER, TAGS.FIREBASE]
+  },{
+    title: "Gentlecan - Full Stack Web App (Admin Dashboard) | 2025",
+    description: "Engineered a comprehensive admin dashboard for dog grooming salon operations using SvelteKit and Firebase, featuring advanced calendar management with real-time occupancy indicators and multi-groomer scheduling. Implements intelligent client management with photo galleries, automated customer segmentation, and dynamic service pricing. Includes real-time chat, detailed analytics, and automated workflow triggers for appointments and customer engagement, transforming salon operations through intelligent automation and responsive design.",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/gentlecan-admin.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.TAILWIND, TAGS.FIREBASE, TAGS.CLOUDFLARE, TAGS.BUN]
+  },
+     {
+    title: "Envirometrics - Full Stack Web App | 2025",
+    description: "Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, the project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/envirometrics.webp",
+    tags: [TAGS.TYPESCRIPT, TAGS.VUE, TAGS.TAILWIND, TAGS.DAISYUI, TAGS.CLOUDFLARE, TAGS.BUN],
+    link: "https://envirometrics.pages.dev",
+    github: "https://github.com/alexandrespindola/envirometrics"
+  },
+  {
     title: "Content Alchemist - AI-Augmented Campaigns | 2025",
     description:
       "Built an AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram, and LinkedIn. The system orchestrates Deno Deploy (text sanitization) and Google Gemini (generation) via n8n, uses Google Sheets + Apps Script as the human interface, and delivers organized assets to Google Drive. Optional Valkey/Redis caching prevents duplicate processing and controls costs, while structured JSON prompts ensure deterministic, platform-optimized output.",

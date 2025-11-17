@@ -6,12 +6,15 @@ import BunnyCDN from "../components/icons/tags/BunnyCDN.astro";
 import Calcom from "../components/icons/tags/Calcom.astro";
 import Cloudflare from "../components/icons/tags/Cloudflare.astro";
 import Claude from "../components/icons/tags/Claude.astro";
+import DaisyUI from "../components/icons/tags/DaisyUI.astro"
 import DigitalOcean from "../components/icons/tags/DigitalOcean.astro";
 import Django from "../components/icons/tags/Django.astro";
 import Deno from "../components/icons/tags/Deno.astro";
 import Docker from "../components/icons/tags/Docker.astro";
 import Elementor from "../components/icons/tags/Elementor.astro";
 import Evolution from "../components/icons/tags/Evolution.astro";
+import Firebase from "../components/icons/tags/Firebase.astro"
+import Flutter from "../components/icons/tags/Flutter.astro";
 import Fly from "../components/icons/tags/Fly.astro";
 import Gemini from "../components/icons/tags/Gemini.astro";
 import Go from "../components/icons/tags/Go.astro";
@@ -91,6 +94,11 @@ const TAGS = {
     class: "bg-orange-100 text-black",
     icon: Claude
   },
+  DAISYUI: {
+    name: "DaisyUI",
+    class: "bg-orange-800 text-white",
+    icon: DaisyUI
+  },
   DENO: {
     name: "Deno",
     class: "bg-steel-700 text-white",
@@ -120,6 +128,16 @@ const TAGS = {
     name: "Evolution API",
     class: "bg-green-200 text-black",
     icon: Evolution,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-orange-100 text-black",
+    icon: Firebase
+  },
+  FLUTTER: {
+    name: "Flutter",
+    class: "bg-blue-100 text-black",
+    icon: Flutter
   },
   FLY: {
     name: "Fly.io",

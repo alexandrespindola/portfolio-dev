@@ -4,7 +4,11 @@ const EXPERIENCE = [
     title: "Integration Specialist & Full-Stack Developer",
     company: "Poropo (Partner)",
     description:
-      "Architected and implemented complex integration workflows connecting e-commerce platforms with ERP systems (Holded). Developed custom web applications and advanced n8n nodes, creating event-driven patterns with Supabase. Optimized data synchronization processes in collaboration with stakeholders, significantly reducing manual data entry and resolving critical technical issues.",
+      "• Deliver full-stack solutions for client projects from concept to production deployment<br>" +
+      "• Built enterprise e-commerce integration platform connecting Magento 2, Shopify, and Holded ERP with real-time bidirectional synchronization<br>" +
+      "• Developed custom TypeScript applications using modern stack (Bun, Hono, Nuxt.js, PostgreSQL)<br>" +
+      "• Implemented n8n automation workflows reducing manual work<br>" +
+      "• Architected cloud infrastructure using Cloudflare services and self-hosted solutions (Coolify, Hetzner VPS).",
     link: "https://poropo.es",
   },
   {
@@ -12,7 +16,9 @@ const EXPERIENCE = [
     title: "Full-Stack & Automation Developer",
     company: "Titans Dev",
     description:
-      "Architected and built custom backend services and dynamic frontends for client projects, enabling real-time data flow and enhanced operational efficiency.",
+      "• Developed custom web applications and automation solutions for client projects<br>" +
+      "• Built scalable backend services (Node.js, Hono) and responsive frontends (Nuxt.js, Vue.js)<br>" +
+      "• Implemented workflow automation using n8n, reducing manual processes",
     link: "https://titansdev.es",
   },
   {
@@ -28,7 +34,9 @@ const EXPERIENCE = [
     title: "Freelance Web Developer & Consultant",
     company: "Self-Employed",
     description:
-      "Developed and maintained high-performance, responsive, and SEO-optimized websites, enhancing site functionality with custom HTML, CSS, and JavaScript.",
+      "• Delivered 20+ projects: websites, landing pages, web applications, e-commerce stores, mobile apps<br>" +
+      "• Modern Web: JAMstack sites with Astro, Vue.js, Nuxt.js, and headless CMS (WordPress, Strapi, Directus)<br>" +
+      "• Performance: Core Web Vitals optimization, CDN implementation",
   },
   {
     date: "Feb 2021 - Jun 2023",
