@@ -6,9 +6,10 @@
       "dependencies": {
         "@astrojs/deno": "^5.0.1",
         "@astrojs/tailwind": "6.0.2",
-        "@fontsource-variable/onest": "^5.1.0",
+        "@fontsource-variable/onest": "^5.2.11",
         "astro": "5.15.2",
-        "tailwindcss": "^3.4.16",
+        "i": "^0.3.7",
+        "tailwindcss": "^3.4.18",
       },
     },
   },
@@ -444,6 +445,8 @@
     "html-void-elements": ["html-void-elements@3.0.0", "", {}, "sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg=="],
 
     "http-cache-semantics": ["http-cache-semantics@4.2.0", "", {}, "sha512-dTxcvPXqPvXBQpq5dUr6mEMJX4oIEFv6bwom3FDwKRDsuIjjJGANqhBuoAn9c1RQJIdAKav33ED65E2ys+87QQ=="],
+
+    "i": ["i@0.3.7", "", {}, "sha512-FYz4wlXgkQwIPqhzC5TdNMLSE5+GS1IIDJZY/1ZiEPCT2S3COUVZeT5OW4BmW4r5LHLQuOosSwsvnroG9GR59Q=="],
 
     "import-meta-resolve": ["import-meta-resolve@4.2.0", "", {}, "sha512-Iqv2fzaTQN28s/FwZAoFq0ZSs/7hMAHJVX+w8PZl3cY19Pxk6jFFalxQoIfW2826i/fDLXv8IiEZRIT0lDuWcg=="],
 

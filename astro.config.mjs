@@ -15,15 +15,7 @@ export default defineConfig({
   },
   vite: {
     build: {
-      rollupOptions: {
-        onwarn(warning, warn) {
-          // Ignorar warnings sobre importações não utilizadas em node_modules
-          if (warning.code === 'UNUSED_EXTERNAL_IMPORT' && warning.id?.includes('node_modules')) {
-            return;
-          }
-          warn(warning);
-        }
-      }
+      rollupOptions: {}
     }
   }
 });
