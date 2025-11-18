@@ -8,9 +8,12 @@ interface LayoutProps {
   title: string;
   description: string;
   image?: string;
+  author?: string;
+  publishDate?: string;
 }
 
-const { description, title, image } = Astro.props as LayoutProps;
+const { description, title, image, author, publishDate } =
+  Astro.props as LayoutProps;
 
 const ogImage = image;
 ---
@@ -32,12 +35,19 @@ const ogImage = image;
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
+    {author && <meta property="article:author" content={author} />}
+    {
+      publishDate && (
+        <meta property="article:published_time" content={publishDate} />
+      )
+    }
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    {author && <meta name="twitter:creator" content={author} />}
 
     <title>{title}</title>
     <script
