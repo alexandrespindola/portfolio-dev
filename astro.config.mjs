@@ -12,5 +12,18 @@ export default defineConfig({
     service: {
       entrypoint: 'astro/assets/services/noop'
     }
+  },
+  vite: {
+    build: {
+      rollupOptions: {
+        onwarn(warning, warn) {
+          // Ignorar warnings sobre importações não utilizadas em node_modules
+          if (warning.code === 'UNUSED_EXTERNAL_IMPORT' && warning.id?.includes('node_modules')) {
+            return;
+          }
+          warn(warning);
+        }
+      }
+    }
   }
 });

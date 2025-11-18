@@ -12,7 +12,6 @@ interface LayoutProps {
 
 const { description, title, image } = Astro.props as LayoutProps;
 
-// Para URLs externas, use diretamente. Para caminhos relativos, converta em absoluto
 const ogImage = image || 'https://flash-cdn.pages.dev/assets/portfolio/og.webp';
 ---
 
