@@ -8,7 +8,7 @@ import TAGS from "../data/tags";
     <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
       <h3 class="mb-4 text-lg font-semibold text-white">Frontend</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.SVELTE, TAGS.ASTRO, TAGS.VUE, TAGS.NUXT, TAGS.TAILWIND, TAGS.REACT, TAGS.ALPINE, TAGS.VITE, TAGS.TYPESCRIPT].map((tag) => (
+        {[TAGS.VUE, TAGS.NUXT, TAGS.ANGULAR, TAGS.SVELTE, TAGS.ASTRO, TAGS.TAILWIND, TAGS.REACT, TAGS.VITE, TAGS.TYPESCRIPT].map((tag) => (
           <li>
             <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
               <tag.icon class="h-4 w-4" />
@@ -23,7 +23,7 @@ import TAGS from "../data/tags";
     <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
       <h3 class="mb-4 text-lg font-semibold text-white">Backend & APIs</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.NODE, TAGS.TYPESCRIPT, TAGS.GO, TAGS.RUST, TAGS.N8N, TAGS.JSON, TAGS.HONO, TAGS.DJANGO, TAGS.PYTHON].map((tag) => (
+        {[TAGS.JAVA, TAGS.SPRING, TAGS.KOTLIN, TAGS.NODE, TAGS.TYPESCRIPT, TAGS.N8N, TAGS.JSON, TAGS.HONO, TAGS.DJANGO, TAGS.PYTHON].map((tag) => (
           <li>
             <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
               <tag.icon class="h-4 w-4" />
@@ -53,7 +53,7 @@ import TAGS from "../data/tags";
     <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
       <h3 class="mb-4 text-lg font-semibold text-white">Databases & Realtime</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.SUPABASE, TAGS.POSTGRE, TAGS.REDIS].map((tag) => (
+        {[TAGS.POSTGRE, TAGS.REDIS, TAGS.SUPABASE].map((tag) => (
           <li>
             <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
               <tag.icon class="h-4 w-4" />

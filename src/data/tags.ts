@@ -1,4 +1,5 @@
 import Alpine from "../components/icons/tags/Alpine.astro";
+import Angular from "../components/icons/tags/Angular.astro";
 import AstroIcon from "../components/icons/tags/AstroIcon.astro";
 import AWS from "../components/icons/tags/AWS.astro";
 import Bun from "../components/icons/tags/Bun.astro";
@@ -22,6 +23,8 @@ import GoogleCloud from "../components/icons/tags/GoogleCloud.astro";
 import Heroku from "../components/icons/tags/Heroku.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
 import Hono from "../components/icons/tags/Hono.astro";
+import Java from "../components/icons/tags/Java.astro";
+import Kotlin from "../components/icons/tags/Kotlin.astro";
 import Json from "../components/icons/tags/Json.astro";
 import Kubernetes from "../components/icons/tags/Kubernetes.astro";
 import Laravel from "../components/icons/tags/Laravel.astro";
@@ -40,6 +43,7 @@ import Redis from "../components/icons/tags/Redis.astro";
 import Rust from "../components/icons/tags/Rust.astro";
 import Sass from "../components/icons/tags/Sass.astro";
 import Sevalla from "../components/icons/tags/Sevalla.astro";
+import Spring from "../components/icons/tags/Spring.astro";
 import Strapi from "../components/icons/tags/Strapi.astro";
 import Supabase from "../components/icons/tags/Supabase.astro";
 import Svelte from "../components/icons/tags/Svelte.astro";
@@ -58,6 +62,11 @@ const TAGS = {
     name: "Alpine.js",
     class: "bg-gray-100 text-black",
     icon: Alpine,
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-gray-100 text-black",
+    icon: Angular,
   },
   ASTRO: {
     name: "Astro",
@@ -164,10 +173,20 @@ const TAGS = {
     class: "bg-purple-100 text-black",
     icon: Heroku,
   },
+  JAVA: {
+    name: "Java",
+    class: "bg-gray-100 text-black",
+    icon: Java,
+  },
   JSON: {
     name: "JSON",
     class: "bg-gray-100 text-black",
     icon: Json,
+  },
+  KOTLIN: {
+    name: "Kotlin",
+    class: "bg-gray-100 text-black",
+    icon: Kotlin,
   },
   KUBERNETES: {
     name: "Kubernetes",
@@ -268,6 +287,11 @@ const TAGS = {
     name: "Strapi",
     class: "bg-indigo-100 text-black",
     icon: Strapi,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-gray-100 text-black",
+    icon: Spring,
   },
   SUPABASE: {
     name: "Supabase",
