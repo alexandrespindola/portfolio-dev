@@ -1,23 +1,21 @@
 const EXPERIENCE = [
   {
     date: "Jan 2025 - Present",
-    title: "Full-Stack Developer & Technical Consultant",
+    title: "Software Engineer (Full-Stack & Integration)",
     company: "Poropo (Remote)",
     description:
-      "• <b>Cross-Platform Dev:</b> Built a solution featuring an Admin Dashboard in Svelte and Client App in FlutterFlow, unified by a scalable Firebase backend.<br>" +
-      "• <b>System Integration:</b> Developed TypeScript/Node.js scripts to synchronize data between ERPs (Holded) and E-commerce platforms.<br>" +
-      "• <b>Automation:</b> Implemented n8n workflows to automate administrative tasks, significantly reducing manual data entry.<br>" +
-      "• <b>Support:</b> Provided technical troubleshooting for API connectivity and database management.",
+      "• <b>Integration Architecture:</b> Developing a middleware using NestJS and Angular to sync data between Magento 2 and Holded ERP, ensuring type safety with TypeScript.<br>" +
+      "• <b>Product Development:</b> Building a cross-platform solution featuring an Admin Dashboard (Svelte) and Client App (FlutterFlow), unified by a scalable Firebase backend.<br>" +
+      "• <b>Automation:</b> Orchestrating complex business logic using n8n workflows to reduce manual tasks.",
     link: "https://poropo.es",
   },
   {
     date: "Oct 2024 - Aug 2025",
-    title: "Full-Stack Developer (Vue.js/Node.js)",
+    title: "Full-Stack Developer",
     company: "Titans Dev",
     description:
-      "• Built and maintained responsive web applications using Vue.js and Nuxt.js.<br>" +
-      "• Managed backend services and databases, ensuring high availability and data integrity.<br>" +
-      "• Acted as the primary technical point of contact for client projects, handling bug fixes and user support.",
+      "• Built responsive web applications using Vue.js and Nuxt.js backed by Node.js services, focusing on component reusability.<br>" +
+      "• Acted as the primary technical point of contact for bug fixes, feature requirements, and deployment pipelines.",
     link: "https://titansdev.es",
   },
   {
@@ -25,9 +23,9 @@ const EXPERIENCE = [
     title: "Freelance Web Developer & Consultant",
     company: "Self-Employed",
     description:
-      "• Delivered 10+ web projects for international clients, transitioning from psychology to full-time tech.<br>" +
-      "• <b>Technical SEO:</b> Optimized websites for Core Web Vitals and speed, involving code refactoring and server configuration.<br>" +
-      "• <b>CMS Management:</b> Customized WordPress/Headless CMS (Strapi) environments for non-technical users.",
+      "• Delivered 10+ web solutions for SMBs, specializing in CMS customization, Headless architectures (Strapi, Directus), and e-commerce integrations.<br>" +
+      "• <b>Infrastructure:</b> Managed hosting infrastructure (Linux/VPS), DNS configurations, and migrations to ensure high availability.<br>" +
+      "• <b>Performance:</b> Optimized site performance (Core Web Vitals) and SEO through code refactoring, caching strategies, and asset optimization.",
   },
   {
     date: "Jun 2020 - Dec 2022",
@@ -41,9 +39,8 @@ const EXPERIENCE = [
     title: "Digital Operations & Data Analyst",
     company: "Banrisul (State Bank)",
     description:
-      "• <b>Platform Management:</b> Managed technical configuration and budget allocation for Google Ads and Meta Ads platforms.<br>" +
-      "• <b>Data Analysis:</b> Extracted and processed large datasets from ad platforms into Excel/Google Sheets to generate ROI reports for management.<br>" +
-      "• <b>Technical Implementation:</b> Liaised with IT teams to implement tracking pixels (GTM), resolve tag errors, and ensure accurate data collection.",
+      "• <b>Data Analysis:</b> Processed large datasets via SQL/Excel to generate ROI reports for digital marketing operations.<br>" +
+      "• <b>Tech Implementation:</b> Liaised with IT teams to implement tracking pixels (GTM) and troubleshoot data collection errors.",
     link: "https://banrisul.com.br",
   },
   {

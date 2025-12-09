@@ -16,16 +16,16 @@ interface Service {
 const SERVICES: Service[] = [
   {
     title: "Enterprise & Web App Development",
-    description: "Building scalable, production-ready applications combining modern frontend frameworks with robust backend architectures (Java/Node.js).",
+    description: "Building scalable, production-ready applications combining modern frontend frameworks with robust backend architectures (Node.js & NestJS).",
     features: [
-      "Enterprise Backend (Java/Spring Boot & Node.js)",
+      "Enterprise Backend (NestJS & Node.js)",
       "Modern Frontend (Vue.js, Nuxt & Angular)",
       "Cloud-Native Architectures (GCP Certified)",
       "RESTful API Design & Implementation",
       "Secure & Scalable Database Design"
     ],
     icon: FullStackIcon,
-    tagKeys: ["JAVA", "SPRING", "ANGULAR", "TYPESCRIPT", "POSTGRE"]
+    tagKeys: ["NEST", "NUXT", "ANGULAR", "TYPESCRIPT", "POSTGRE"]
   },
   {
     title: "Business Automation (n8n)",
@@ -45,13 +45,13 @@ const SERVICES: Service[] = [
     description: "Developing custom administrative interfaces and control panels to empower support teams and improve operational decision-making.",
     features: [
       "Real-time Data Visualization",
-      "Custom Admin Panels (Vue/React)",
+      "Custom Admin Panels (Vue/Svelte)",
       "Role-Based Access Control (RBAC)",
       "Interactive Reporting Tools",
       "User-Centric UI/UX Design"
     ],
     icon: DashboardIcon,
-    tagKeys: ["VUE", "NUXT", "TAILWIND", "SUPABASE", "TYPESCRIPT"]
+    tagKeys: ["SVELTE", "VUE", "NUXT", "TAILWIND", "SUPABASE", "TYPESCRIPT"]
   },
   {
     title: "System Integration & Cloud Ops",

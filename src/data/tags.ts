@@ -31,6 +31,7 @@ import Laravel from "../components/icons/tags/Laravel.astro";
 import Livewire from "../components/icons/tags/Livewire.astro";
 import n8n from "../components/icons/tags/n8n.astro";
 import Netlify from "../components/icons/tags/Netlify.astro";
+import Nest from "../components/icons/tags/Nest.astro";
 import Node from "../components/icons/tags/Node.astro";
 import Nuxt from "../components/icons/tags/Nuxt.astro";
 import PHP from "../components/icons/tags/PHP.astro";
@@ -217,6 +218,11 @@ const TAGS = {
     name: "n8n",
     class: "bg-pink-100 text-black",
     icon: n8n,
+  },
+  NEST: {
+    name: "NestJS",
+    class: "bg-red-200 text-black",
+    icon: Nest,
   },
   NETLIFY: {
     name: "Netlify",
