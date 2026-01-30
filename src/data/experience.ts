@@ -1,31 +1,31 @@
 const EXPERIENCE = [
   {
     date: "Jan 2025 - Present",
-    title: "Software Engineer (Full-Stack & Integration)",
+    title: "Full-Stack Developer (Backend-Focused)",
     company: "Poropo (Remote)",
     description:
-      "• <b>Integration Architecture:</b> Developing a middleware using NestJS and Angular to sync data between Magento 2 and Holded ERP, ensuring type safety with TypeScript.<br>" +
-      "• <b>Product Development:</b> Building a cross-platform solution featuring an Admin Dashboard (Svelte) and Client App (FlutterFlow), unified by a scalable Firebase backend.<br>" +
-      "• <b>Automation:</b> Orchestrating complex business logic using n8n workflows to reduce manual tasks.",
+      "• <b>Integration Architecture:</b> Developing NestJS-based middleware system integrating Magento 2, Shopify and Holded ERP with PostgreSQL/Drizzle ORM.<br>" +
+      "• <b>API Development:</b> Building RESTful APIs with Fastify achieving >80% test coverage and asynchronous processing with BullMQ/Redis.<br>" +
+      "• <b>Mobile Development:</b> Building Flutter mobile app with SvelteKit admin dashboard and Firebase integration.",
     link: "https://poropo.es",
   },
   {
-    date: "Oct 2024 - Aug 2025",
+    date: "Feb 2024 - Dec 2025",
     title: "Full-Stack Developer",
     company: "Titans Dev",
     description:
-      "• Built responsive web applications using Vue.js and Nuxt.js backed by Node.js services, focusing on component reusability.<br>" +
-      "• Acted as the primary technical point of contact for bug fixes, feature requirements, and deployment pipelines.",
+      "• Frontend development: Built responsive web applications using Vue.js and Nuxt.js with component reusability focus.<br>" +
+      "• Backend & data layer: Managed Node.js backend services and databases with testing suites and debugging strategies.<br>",
     link: "https://titansdev.es",
   },
   {
-    date: "Dec 2022 - Jan 2025",
+    date: "Feb 2024 - Dec 2025",
     title: "Freelance Web Developer & Consultant",
     company: "Self-Employed",
     description:
-      "• Delivered 10+ web solutions for SMBs, specializing in CMS customization, Headless architectures (Strapi, Directus), and e-commerce integrations.<br>" +
-      "• <b>Infrastructure:</b> Managed hosting infrastructure (Linux/VPS), DNS configurations, and migrations to ensure high availability.<br>" +
-      "• <b>Performance:</b> Optimized site performance (Core Web Vitals) and SEO through code refactoring, caching strategies, and asset optimization.",
+      "• End-to-end delivery: Delivered 10+ web projects for international clients with full lifecycle management.<br>" +
+      "• Performance & SEO: Optimized websites for Core Web Vitals and page speed through advanced caching strategies.<br>" +
+      "• CMS enablement: Customized WordPress and headless CMS setups (Strapi, Directus) with API-first architecture.",
   },
   {
     date: "Jun 2020 - Dec 2022",
@@ -52,7 +52,7 @@ const EXPERIENCE = [
       "• <b>Operations:</b> Handled sensitive documentation, fraud prevention checks, and system data entry with high accuracy.<br>" +
       "• <b>Problem Solving:</b> Acted as the first point of contact for complex client complaints, requiring diplomacy and quick resolution.",
     link: "https://banrisul.com.br",
-  }
+  },
 ];
 
 export default EXPERIENCE;

@@ -1,0 +1,46 @@
+💻 Full-Stack Developer | Building scalable web & mobile systems with TypeScript, Vue, and Flutter
+
+🎓 MBA in Software Engineering (USP) | GCP Certified Associate Cloud Engineer
+
+🇪🇺 EU Citizen (Spanish) – no visa required | Immediate availability for On-site, Hybrid, or Remote EU
+
+Specializing in E-commerce/ERP Integration, AI-Powered Automation, and Cross-Platform Mobile Development. 3+ years of experience delivering production-grade applications that bridge technical excellence with business strategy.
+
+🎯 Core Expertise
+
+FULL-STACK ECOSYSTEM
+Backend: NestJS, Hono, Node.js, Fastify – REST API design, Webhooks, Microservices, and Scalable Architectures
+Frontend: Vue.js/Nuxt.js, Svelte/SvelteKit, Astro – SSR/SSG, Reactive UI, and Modern Component Architecture
+Mobile: Flutter & Dart – Cross-platform apps (iOS/Android) integrated with Firebase/Supabase
+Databases: PostgreSQL, Drizzle ORM, Supabase, Firebase/Firestore, Redis – Migration Management & Query Optimization
+Queue Systems: BullMQ, Redis – Asynchronous Processing, Job Scheduling, and Background Tasks
+
+CLOUD & DEVOPS
+Infrastructure: GCP (Certified Associate), Oracle Cloud, AWS, Docker, Linux
+CI/CD: Automated pipelines, Testing strategies, Infrastructure as Code
+Testing: Vitest, Unit/Integration/E2E Testing – Achieving >80% coverage
+
+AI & AUTOMATION
+AI Orchestration: LLM/Multi-Agent systems, Claude Code, Gemini, Jules, Vector Databases
+Workflow Automation: n8n (Complex ETL/ERP workflows), Synchronous and Asynchronous AI Integration
+Prompt Engineering: Advanced AI-powered content generation and automation pipelines
+
+E-COMMERCE & INTEGRATIONS
+Platforms: Magento 2, Shopify – Custom module development, Payment gateway integration
+ERP Systems: Holded synchronization, Real-time data processing, and Business logic automation
+CMS: Headless Architecture (Directus, Strapi) and API-First Design
+Authentication: Better Auth, 2FA/TOTP, Session Management, GDPR Compliance
+
+📚 Education & Certifications
+
+MBA in Software Engineering (USP) | Postgraduate in Full-Stack Development (In Progress) | GCP Associate Cloud Engineer
+
+🌍 Working Arrangements
+
+Contracting: Available for B2B (Autónomo) contracts or permanent/full-time employment across the EU
+Location: Immediate start for On-site, Hybrid, or Remote roles
+Education: MBA in Software Engineering (USP) + Postgraduate in Full-Stack (In Progress)
+
+🗣️ Languages
+
+Spanish (C2), Portuguese (C2), English (B2), Italian (B1), German (A1-A2)
