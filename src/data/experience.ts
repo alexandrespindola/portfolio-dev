@@ -1,57 +1,65 @@
 const EXPERIENCE = [
   {
     date: "Jan 2025 - Present",
-    title: "Full-Stack Developer (Backend-Focused)",
-    company: "Poropo (Remote)",
+    title: "Full-Stack Developer (Backend-Focused) | Independent Contractor",
+    company: "POROPO | Desarrollo de Software · Contract",
+    location: "Barcelona · Remote",
     description:
-      "• <b>Integration Architecture:</b> Developing NestJS-based middleware system integrating Magento 2, Shopify and Holded ERP with PostgreSQL/Drizzle ORM.<br>" +
-      "• <b>API Development:</b> Building RESTful APIs with Fastify achieving >80% test coverage and asynchronous processing with BullMQ/Redis.<br>" +
-      "• <b>Mobile Development:</b> Building Flutter mobile app with SvelteKit admin dashboard and Firebase integration.",
+      "• <b>Cross-platform delivery:</b> Designed and implemented an admin dashboard in Svelte and a client-facing app in Flutter, both backed by a scalable Firebase backend to support multi-tenant growth and rapid feature delivery.<br>" +
+      "• <b>E-commerce/ERP integrations:</b> Developed robust TypeScript/Node.js services to synchronize data between ERP systems (Holded) and e-commerce platforms (Magento/Shopify), ensuring consistent, reliable and auditable data flows.<br>" +
+      "• <b>Automation at scale:</b> Orchestrated n8n workflows to automate repetitive administrative and operational processes, drastically reducing manual data entry and lowering the risk of human error.<br>" +
+      "• <b>Technical ownership:</b> Provided hands-on support for API connectivity, authentication flows and database management, proactively troubleshooting production issues to keep integrations stable and performant.",
     link: "https://poropo.es",
   },
   {
-    date: "Feb 2024 - Dec 2025",
-    title: "Full-Stack Developer",
-    company: "Titans Dev",
+    date: "Oct 2023 - Dec 2024",
+    title: "Full-Stack Developer (Vue.js/Node.js) | Independent Contractor",
+    company: "TitansDev · Contract",
+    location: "Ourense, Galicia, Spain · Remote",
     description:
-      "• Frontend development: Built responsive web applications using Vue.js and Nuxt.js with component reusability focus.<br>" +
-      "• Backend & data layer: Managed Node.js backend services and databases with testing suites and debugging strategies.<br>",
+      "• <b>Frontend engineering:</b> Built and maintained responsive web applications using Vue.js and Nuxt.js, focusing on performance, accessibility and clean component architecture.<br>" +
+      "• <b>Backend & data layer:</b> Managed Node.js backend services and databases, ensuring high availability, data integrity and secure API communication for client projects.<br>" +
+      "• <b>Client-facing delivery:</b> Acted as the primary technical point of contact, handling bug fixing, small feature requests and user support to keep production environments stable.",
     link: "https://titansdev.es",
   },
   {
-    date: "Feb 2024 - Dec 2025",
+    date: "Dec 2021 - Sep 2023",
     title: "Freelance Web Developer & Consultant",
-    company: "Self-Employed",
+    company: "Self-employed",
+    location: "International Clients · Remote",
     description:
-      "• End-to-end delivery: Delivered 10+ web projects for international clients with full lifecycle management.<br>" +
-      "• Performance & SEO: Optimized websites for Core Web Vitals and page speed through advanced caching strategies.<br>" +
-      "• CMS enablement: Customized WordPress and headless CMS setups (Strapi, Directus) with API-first architecture.",
+      "• <b>End-to-end delivery:</b> Delivered 10+ web projects for international clients, leading the full lifecycle from requirements and architecture to deployment and ongoing maintenance.<br>" +
+      "• <b>Performance & SEO:</b> Optimized websites for Core Web Vitals and page speed, including code refactoring, asset optimization and server configuration to improve search rankings and conversion.<br>" +
+      "• <b>CMS & no-code enablement:</b> Customized WordPress and headless CMS setups (e.g., Strapi, Directus) to provide non-technical stakeholders with intuitive content management workflows.",
   },
   {
-    date: "Jun 2020 - Dec 2022",
+    date: "Jan 2015 - Dec 2021",
     title: "Licensed Clinical Psychologist",
-    company: "Private Practice",
+    company: "Self-employed",
+    location: "Remote",
     description:
-      "Developed advanced soft skills in client management, active listening, and confidential record keeping. Managed administrative scheduling and client documentation autonomously.",
+      "• Developed advanced skills in active listening, complex problem diagnostics, and structured communication under pressure: directly applicable to stakeholder management, technical discovery, and cross-functional collaboration in software teams.<br>" +
+      "• Independent practice alongside other professional roles (2018–2020).",
   },
   {
-    date: "Feb 2019 - Jun 2020",
+    date: "Feb 2018 - Jun 2020",
     title: "Digital Operations & Data Analyst",
-    company: "Banrisul (State Bank)",
+    company: "State Bank",
+    location: "On-site",
     description:
-      "• <b>Data Analysis:</b> Processed large datasets via SQL/Excel to generate ROI reports for digital marketing operations.<br>" +
-      "• <b>Tech Implementation:</b> Liaised with IT teams to implement tracking pixels (GTM) and troubleshoot data collection errors.",
-    link: "https://banrisul.com.br",
+      "• <b>Ad platform operations:</b> Managed configuration and budget allocation for Google Ads and Meta Ads, ensuring campaigns followed technical and compliance requirements.<br>" +
+      "• <b>Data analysis & reporting:</b> Consolidated large datasets from ad platforms into Excel/Google Sheets to generate ROI and performance reports for management decision-making.<br>" +
+      "• <b>Tracking & instrumentation:</b> Collaborated with IT teams to implement and debug GTM tags and tracking pixels, securing accurate attribution and analytics data.",
   },
   {
     date: "Sep 2017 - Feb 2019",
     title: "Corporate & Retail Banking Agent",
-    company: "Banrisul (State Bank)",
+    company: "State Bank",
+    location: "On-site",
     description:
-      "• <b>Client Support:</b> Managed accounts for Corporate (PJ) and Individual (PF) clients, resolving administrative and financial issues under strict SLAs.<br>" +
-      "• <b>Operations:</b> Handled sensitive documentation, fraud prevention checks, and system data entry with high accuracy.<br>" +
-      "• <b>Problem Solving:</b> Acted as the first point of contact for complex client complaints, requiring diplomacy and quick resolution.",
-    link: "https://banrisul.com.br",
+      "• <b>Client relationship management:</b> Managed accounts for corporate (PJ) and individual (PF) clients, resolving operational and financial requests under strict SLAs.<br>" +
+      "• <b>Risk and compliance operations:</b> Handled sensitive documentation, performed fraud-prevention checks and executed system data entry with high accuracy.<br>" +
+      "• <b>Frontline problem solving:</b> Served as first point of contact for complex client issues, requiring diplomacy, clear communication and fast, reliable resolution.",
   },
 ];
 
