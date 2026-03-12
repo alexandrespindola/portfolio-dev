@@ -16,44 +16,59 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     title: "Gnostic Congress Spain 2026 - Full Stack Web App | 2025",
-    description: "Developed a comprehensive event registration platform for the international Gnostic Congress Spain 2026, built with a modern tech stack. The system features a responsive Nuxt.js frontend with Tailwind CSS deployed on Cloudflare Workers, powered by a Hono.js API backend with Coolify. Leverages PostgreSQL for secure attendee data management and integrates with n8n for workflow automation. Built with TypeScript for type safety and Bun for optimized performance, the platform streamlines the entire registration process while ensuring scalability for international attendees.",
+    description:
+      "Developed a comprehensive event registration platform for the international Gnostic Congress Spain 2026, built with a modern tech stack. The system features a responsive Nuxt.js frontend with Tailwind CSS deployed on Cloudflare Workers, powered by a Hono.js API backend with Coolify. Leverages PostgreSQL for secure attendee data management and integrates with n8n for workflow automation. Built with TypeScript for type safety and Bun for optimized performance, the platform streamlines the entire registration process while ensuring scalability for international attendees.",
     image: "https://flash-cdn.pages.dev/assets/portfolio/congreso.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.NUXT, TAGS.TAILWIND, TAGS.CLOUDFLARE, TAGS.BUN, TAGS.HONO, TAGS.POSTGRE, TAGS.N8N],
-    link: "https://congreso.gnosis.is"
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.NUXT,
+      TAGS.TAILWIND,
+      TAGS.CLOUDFLARE,
+      TAGS.BUN,
+      TAGS.HONO,
+      TAGS.POSTGRE,
+      TAGS.N8N,
+    ],
+    link: "https://congreso.gnosis.is",
   },
   {
-    title: "Gentlecan - Mobile App | 2025",
-    description: "Developed a modern dog grooming salon mobile app using FlutterFlow and Firebase, enabling clients to book appointments, manage pet profiles, and track grooming history through photo galleries. Features real-time scheduling with dynamic pricing, instant messaging with the salon team, and automated appointment reminders. Built with Firebase Authentication and Firestore for seamless data synchronization, delivering a polished mobile experience for iOS and Android that streamlines the entire customer journey.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/gentlecan-mobile.webp",
-    tags: [TAGS.FLUTTER, TAGS.FIREBASE]
-  },{
-    title: "Gentlecan - Full Stack Web App (Admin Dashboard) | 2025",
-    description: "Engineered a comprehensive admin dashboard for dog grooming salon operations using SvelteKit and Firebase, featuring advanced calendar management with real-time occupancy indicators and multi-groomer scheduling. Implements intelligent client management with photo galleries, automated customer segmentation, and dynamic service pricing. Includes real-time chat, detailed analytics, and automated workflow triggers for appointments and customer engagement, transforming salon operations through intelligent automation and responsive design.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/gentlecan-admin.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.SVELTE, TAGS.TAILWIND, TAGS.FIREBASE, TAGS.CLOUDFLARE, TAGS.BUN]
-  },
-     {
     title: "Envirometrics - Portfolio Project | 2025",
-    description: "Portfolio project: Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, this project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
+    description:
+      "Portfolio project: Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, this project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
     image: "https://flash-cdn.pages.dev/assets/portfolio/envirometrics.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.VUE, TAGS.TAILWIND, TAGS.DAISYUI, TAGS.CLOUDFLARE, TAGS.BUN],
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.VUE,
+      TAGS.TAILWIND,
+      TAGS.DAISYUI,
+      TAGS.CLOUDFLARE,
+      TAGS.BUN,
+    ],
     link: "https://envirometrics.pages.dev",
-    github: "https://github.com/alexandrespindola/envirometrics"
+    github: "https://github.com/alexandrespindola/envirometrics",
   },
   {
     title: "Content Alchemist - AI-Augmented Campaigns | 2025",
     description:
       "Built an AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram, and LinkedIn. The system orchestrates Deno Deploy (text sanitization) and Google Gemini (generation) via n8n, uses Google Sheets + Apps Script as the human interface, and delivers organized assets to Google Drive. Optional Valkey/Redis caching prevents duplicate processing and controls costs, while structured JSON prompts ensure deterministic, platform-optimized output.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/content-alchemist.webp",
-    tags: [TAGS.TYPESCRIPT, TAGS.N8N, TAGS.DENO, TAGS.REDIS, TAGS.TAILWIND, TAGS.JSON, TAGS.GOOGLECLOUD],
+    image:
+      "https://flash-cdn.pages.dev/assets/portfolio/content-alchemist.webp",
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.N8N,
+      TAGS.DENO,
+      TAGS.REDIS,
+      TAGS.TAILWIND,
+      TAGS.JSON,
+      TAGS.GOOGLECLOUD,
+    ],
     github: "https://github.com/alexandrespindola/content-alchemist",
   },
   {
     title: "HeroChat - Heroku Go Chat | 2025",
     description:
       "Developed a Go CLI tool for interacting with advanced AI models via Heroku, enabling developers to send prompts and receive real-time responses from Claude 4 Sonnet in the terminal. Features include persistent conversation history, tagging, and interactive navigation. Built with Cobra for user-friendly commands and colorized output, Heroku Go Chat showcases expertise in Go, API integration, and developer-focused tool-building.",
-    image:
-      "https://flash-cdn.pages.dev/assets/portfolio/herochat.webp",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/herochat.webp",
     tags: [TAGS.GO, TAGS.HEROKU, TAGS.CLAUDE, TAGS.JSON],
     github: "https://github.com/alexandrespindola/heroku-go-chat",
   },
@@ -76,35 +91,11 @@ const PROJECTS: Project[] = [
     github: "https://github.com/alexandrespindola/job-tracker-mono",
   },
   {
-    title: "Enterprise E-commerce Integration Dashboard | 2025",
-    description:
-      "Solved the lack of visibility and control in complex e-commerce operations by delivering a custom administrative dashboard. This central control panel provides real-time monitoring of the automated workflows connecting multiple sales channels and an ERP system. It empowers administrators to manually oversee and intervene in critical processes, ensuring data integrity, reducing errors, and minimizing the need for technical support when managing inventory and order synchronization.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/dashboard.webp",
-    tags: [
-      TAGS.TYPESCRIPT,
-      TAGS.VUE,
-      TAGS.NUXT,
-      TAGS.TAILWIND,
-      TAGS.BUN,
-      TAGS.NETLIFY,
-      TAGS.SUPABASE,
-      TAGS.N8N,
-    ],
-  },
-  {
     title: "Enterprise E-commerce Integration Platform | 2025",
     description:
-      "Resolved critical data inconsistencies for an e-commerce business operating across multiple platforms (Magento 2, Shopify) and an ERP. The solution is an event-driven integration architecture that ensures real-time, bidirectional synchronization of inventory, orders, and product data. This automation eliminates manual data entry, prevents overselling, and streamlines operations by implementing complex business logic for inventory management and automated invoicing, leading to significant gains in operational efficiency.",
-    image:
-      "https://flash-cdn.pages.dev/assets/portfolio/ecommerce-erp2.webp",
-    tags: [
-      TAGS.N8N,
-      TAGS.POSTGRE,
-      TAGS.SUPABASE,
-      TAGS.NUXT,
-      TAGS.REDIS,
-      TAGS.DOCKER,
-    ],
+      "Developed robust TypeScript/Node.js services to synchronize data between ERP systems (Holded) and e-commerce platforms (Magento/Shopify), ensuring consistent, reliable and auditable data flows. The solution implements an event-driven integration architecture that provides real-time, bidirectional synchronization of inventory, orders, and product data. This automation eliminates manual data entry, prevents overselling, and streamlines operations by implementing complex business logic for inventory management and automated invoicing, leading to significant gains in operational efficiency.",
+    image: "https://flash-cdn.pages.dev/assets/portfolio/ecommerce-erp2.webp",
+    tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
   },
   {
     title: "AI-Powered Multilingual Content Automation | 2025",
