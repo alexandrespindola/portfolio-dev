@@ -19,13 +19,13 @@ const SERVICES: Service[] = [
     description: "Building scalable, production-ready applications combining modern frontend frameworks with robust backend architectures (Node.js & NestJS).",
     features: [
       "Enterprise Backend (NestJS & Node.js)",
-      "Modern Frontend (Vue.js, Nuxt & Angular)",
+      "Modern Frontend (Vue.js, Nuxt & Svelte)",
       "Cloud-Native Architectures (GCP Certified)",
       "RESTful API Design & Implementation",
       "Secure & Scalable Database Design"
     ],
     icon: FullStackIcon,
-    tagKeys: ["NEST", "NUXT", "ANGULAR", "TYPESCRIPT", "POSTGRE"]
+    tagKeys: ["NEST", "NUXT", "SVELTE", "TYPESCRIPT", "POSTGRE"]
   },
   {
     title: "Business Automation (n8n)",

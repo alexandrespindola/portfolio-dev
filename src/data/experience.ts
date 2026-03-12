@@ -9,7 +9,7 @@ const EXPERIENCE = [
       "• <b>Full-stack automation solutions:</b> Building comprehensive browser automation with Puppeteer, integrating with TypeScript/Node.js backends and Vue.js frontends for complete automation pipelines.<br>" +
       "• <b>AI-powered workflows:</b> Developing intelligent automation systems using LLM integrations (Claude, Gemini, OpenAI) for classification, data extraction, text processing, and automated decision support.<br>" +
       "• <b>Enterprise integrations:</b> Creating robust REST, SOAP, and webhook integrations with strong OAuth2 handling, connecting disparate systems while maintaining full-stack architecture standards.",
-    link: "https://value.ag",
+    link: "https://value.ag/home",
   },
   {
     date: "Jan 2025 - Mar 2026",
