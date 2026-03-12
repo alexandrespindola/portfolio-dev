@@ -1,6 +1,18 @@
 const EXPERIENCE = [
   {
-    date: "Jan 2025 - Present",
+    date: "Mar 2026 - Present",
+    title: "Senior n8n Developer / Automation Engineer",
+    company: "VALUE AG (via Upper) · Contract",
+    location: "Cologne, North Rhine-Westphalia, Germany · Remote",
+    description:
+      "• <b>Complex n8n workflows:</b> Designing and implementing production-grade automation workflows using self-hosted n8n with Docker, workers, and Cloudflare Tunnel for enterprise clients.<br>" +
+      "• <b>Full-stack automation solutions:</b> Building comprehensive browser automation with Puppeteer, integrating with TypeScript/Node.js backends and Vue.js frontends for complete automation pipelines.<br>" +
+      "• <b>AI-powered workflows:</b> Developing intelligent automation systems using LLM integrations (Claude, Gemini, OpenAI) for classification, data extraction, text processing, and automated decision support.<br>" +
+      "• <b>Enterprise integrations:</b> Creating robust REST, SOAP, and webhook integrations with strong OAuth2 handling, connecting disparate systems while maintaining full-stack architecture standards.",
+    link: "https://value.ag",
+  },
+  {
+    date: "Jan 2025 - Mar 2026",
     title: "Full-Stack Developer (Backend-Focused) | Independent Contractor",
     company: "POROPO | Desarrollo de Software · Contract",
     location: "Barcelona · Remote",

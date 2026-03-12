@@ -1,0 +1,79 @@
+Senior n8n Developer / Automation EngineerJob Closed
+Application Process
+Job Description
+Engagement:
+Start date:
+Jan 1, 2026 (6-12 months)
+Language:
+German, English
+Location:
+Remote
+Must have skills:
+Automation
+Robotic Process Automation (RPA)
+n8n
+JavaScript
+Node.js
+Puppeteer
+RESTful APIs
+API
+Analytical Skills
+Large Language Models (LLM)
+Good to have skills:
+Selenium
+UiPath
+Rate:
+We use your own rate
+Team:
+1
+Project description:
+We are looking for an experienced automation specialist to design and implement complex workflows using n8n, browser automation (Puppeteer/Selenium), and increasingly AI-powered automation.
+
+Responsibilities:
+
+Build, extend, and maintain complex n8n workflows
+Implement browser automation using Puppeteer or Selenium:
+automated logins, form interactions, file downloads
+interaction with complex or dynamic web UIs
+robust selector strategies & error handling
+Integrate external APIs (e.g., REST, SOAP, Webhooks)
+Develop AI-powered workflows, such as:
+classification & data extraction (OCR, PDFs, images, emails)
+text processing, summary, decision support
+automated routing & enrichment
+lightweight agent logic, tools & memory flows
+embedding-based search & matching
+Build modular sub-workflows and scalable architecture
+Implement logging, monitoring, retry mechanisms
+Develop custom code nodes and integrations (JavaScript/Node.js)
+Document workflows & hand over to internal teams
+
+
+Your Profile:
+
+Strong experience with n8n (cloud or self-hosted) in production environments
+Solid JavaScript/Node.js skills
+Experience with browser automation (Puppeteer, Selenium, or Playwright), including:
+DOM analysis/parsing, CSS selectors, XPath, Shadow DOM
+headless browser operations
+session/cookie handling
+Experience with LLM/AI integrations, such as:
+OpenAI, Anthropic, Google Gemini, Azure OpenAI
+prompt engineering & structured output
+JSON mode, function calling, tool building
+(Optional) RAG, embeddings, vector databases
+Strong understanding of REST APIs, OAuth2 & token handling
+Solid knowledge of data modeling, regex, JSON
+Analytical mindset, structured working style & clean documentation
+German is mandatory
+Nice to Have:
+
+Experience with:
+
+SaaS integrations (Odoo, MS Teams, Notion)
+Databases (MySQL, PostgreSQL, MongoDB)
+Docker / Ubuntu Server / GitOps
+Building AI agents or automated decision systems
+Basic understanding of process modeling (e.g. BPMN)
+About the client:
+Our client is a leading German software SME organisation in the real estate market. They offer multiple operative services that we aim to automate as much as possible through technology.
