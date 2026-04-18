@@ -1,0 +1,9 @@
+name = "portfolio-dev"
+compatibility_date = "2026-04-18"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[vars]
+NODE_ENV = "production"
+NODE_VERSION = "24"
+BUN_VERSION = "1.3.12"
