@@ -4,6 +4,9 @@ dist/
 # generated types
 .astro/
 
+# turborepo
+.turbo/
+
 # dependencies
 node_modules/
 
