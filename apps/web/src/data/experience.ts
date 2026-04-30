@@ -64,7 +64,7 @@ const EXPERIENCE = [
       "• <b>Tracking & instrumentation:</b> Collaborated with IT teams to implement and debug GTM tags and tracking pixels, securing accurate attribution and analytics data.",
   },
   {
-    date: "Sep 2017 - Feb 2019",
+    date: "Sep 2017 - Feb 2018",
     title: "Corporate & Retail Banking Agent",
     company: "State Bank",
     location: "On-site",
