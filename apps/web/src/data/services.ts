@@ -15,56 +15,56 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    title: "Enterprise & Web App Development",
-    description: "Building scalable, production-ready applications combining modern frontend frameworks with robust backend architectures (Node.js & NestJS).",
+    title: "AI-Enabled Product Engineering",
+    description: "Building reliable products and web platforms with Go, TypeScript, Svelte, Vue and modern API architecture.",
     features: [
-      "Enterprise Backend (NestJS & Node.js)",
-      "Modern Frontend (Vue.js, Nuxt & Svelte)",
-      "Cloud-Native Architectures (GCP Certified)",
-      "RESTful API Design & Implementation",
-      "Secure & Scalable Database Design"
+      "Go, NestJS, Hono and REST/OpenAPI services",
+      "SvelteKit, Astro, Vue and Nuxt frontends",
+      "RAG, semantic retrieval and AI-assisted workflows",
+      "PostgreSQL, pgvector and full-text search",
+      "Cloudflare and GCP-ready delivery"
     ],
     icon: FullStackIcon,
-    tagKeys: ["NEST", "NUXT", "SVELTE", "TYPESCRIPT", "POSTGRE"]
+    tagKeys: ["GO", "NEST", "SVELTE", "TYPESCRIPT"]
   },
   {
-    title: "Business Automation (n8n)",
-    description: "Orchestrating complex workflows to reduce manual operational overhead, integrating ERPs, CRMs, and internal systems.",
+    title: "AI & Workflow Automation",
+    description: "Replacing manual and legacy RPA processes with observable n8n, browser and LLM-powered workflows.",
     features: [
-      "Workflow Orchestration with n8n",
-      "Reduction of manual data entry tasks",
-      "ERP & E-commerce Synchronization",
-      "Automated Reporting & Alerting",
-      "Error Handling & Retry Mechanisms"
+      "Self-hosted n8n, Docker workers and Cloudflare Tunnel",
+      "Puppeteer browser automation and DOM extraction",
+      "LLM classification, extraction and content pipelines",
+      "Queued jobs, retries and operational visibility",
+      "ERP, webhook and OAuth2 integrations"
     ],
     icon: AutomationIcon,
-    tagKeys: ["N8N", "NODE", "DOCKER", "JSON", "GOOGLECLOUD"]
+    tagKeys: ["N8N", "NODE", "DOCKER", "JSON"]
   },
   {
-    title: "Internal Tools & Dashboards",
-    description: "Developing custom administrative interfaces and control panels to empower support teams and improve operational decision-making.",
+    title: "Platform Modernisation",
+    description: "Migrating WordPress and legacy products to multilingual, serverless platforms that are fast to operate and easy to maintain.",
     features: [
-      "Real-time Data Visualization",
-      "Custom Admin Panels (Vue/Svelte)",
-      "Role-Based Access Control (RBAC)",
-      "Interactive Reporting Tools",
-      "User-Centric UI/UX Design"
+      "Astro content collections and Markdown workflows",
+      "Multilingual routing and international SEO",
+      "Svelte/Vue operational dashboards with SSE",
+      "Role-based administration and secure authentication",
+      "CDN-first delivery and optimised assets"
     ],
     icon: DashboardIcon,
-    tagKeys: ["SVELTE", "VUE", "NUXT", "TAILWIND", "SUPABASE", "TYPESCRIPT"]
+    tagKeys: ["ASTRO", "SVELTE", "VUE", "CLOUDFLARE"]
   },
   {
-    title: "System Integration & Cloud Ops",
-    description: "Connecting disparate systems into a unified ecosystem, ensuring data integrity and leveraging Google Cloud Platform services.",
+    title: "E-commerce & Systems Integration",
+    description: "Connecting commerce, ERP and internal systems through resilient middleware, queues and auditable data flows.",
     features: [
-      "Legacy System Integration",
-      "Cloud Infrastructure Management (GCP)",
-      "Data Migration & Synchronization",
-      "Serverless Functions Deployment",
-      "Continuous Integration/Deployment (CI/CD)"
+      "Magento 2, Shopify and Holded ERP synchronisation",
+      "Event-driven processing and adaptive schedules",
+      "Async jobs with Redis/Valkey and BullMQ",
+      "Data migrations, testing and health checks",
+      "Docker, GCP, Linux and CI/CD operations"
     ],
     icon: IntegrationIcon,
-    tagKeys: ["GOOGLECLOUD", "KUBERNETES", "TERRAFORM", "REDIS", "DOCKER"]
+    tagKeys: ["NEST", "POSTGRE", "REDIS", "DOCKER"]
   }
 ];
 

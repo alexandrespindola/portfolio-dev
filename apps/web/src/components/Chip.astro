@@ -1,0 +1,15 @@
+---
+import type { Tag } from "../data/tags";
+
+interface Props {
+  tag: Tag;
+}
+
+const { tag } = Astro.props as Props;
+const Icon = tag.icon;
+---
+
+<span class="inline-flex items-center gap-1.5 rounded-full border border-[#3b3b3b] bg-[#202020] px-2.5 py-1 text-xs font-medium text-gray-100">
+  <Icon class="h-3.5 w-3.5" />
+  {tag.name}
+</span>

@@ -1,109 +1,109 @@
-import TAGS from "./tags.ts";
+import TAGS, { type Tag } from "./tags.ts";
 
-interface Project {
+export interface Project {
   title: string;
+  category: string;
   description: string;
   link?: string;
-  image: string;
-  tags: {
-    name: string;
-    class: string;
-    icon: any;
-  }[];
+  image?: string;
+  featured?: boolean;
+  featuredOrder?: number;
+  caseStudy?: string;
+  proof?: string;
+  tags: Tag[];
   github?: string;
 }
 
 const PROJECTS: Project[] = [
   {
-    title: "Gnostic Congress Spain 2026 - Full Stack Web App | 2025",
+    title: "Gnosis Congress",
+    category: "Event management platform",
     description:
-      "Developed a comprehensive event registration platform for the international Gnostic Congress Spain 2026, built with a modern tech stack. The system features a responsive Nuxt.js frontend with Tailwind CSS deployed on Cloudflare Workers, powered by a Hono.js API backend with Coolify. Leverages PostgreSQL for secure attendee data management and integrates with n8n for workflow automation. Built with TypeScript for type safety and Bun for optimized performance, the platform streamlines the entire registration process while ensuring scalability for international attendees.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/congreso.webp",
+      "Event-registration platform with a responsive Nuxt frontend, Tailwind CSS and PostgreSQL. The Hono API, deployed with Coolify, supports secure authentication, registration workflows and scalable delivery for international attendees.",
+    image: "/projects/congreso.webp",
+    featured: true,
+    featuredOrder: 3,
+    caseStudy: "/projects/gnosis-congress/",
+    proof: "Secure registration for international attendees",
     tags: [
       TAGS.TYPESCRIPT,
       TAGS.NUXT,
+      TAGS.HONO,
       TAGS.TAILWIND,
       TAGS.CLOUDFLARE,
       TAGS.BUN,
-      TAGS.HONO,
       TAGS.POSTGRE,
       TAGS.N8N,
     ],
     link: "https://congreso.gnosis.is",
   },
   {
-    title: "Envirometrics - Portfolio Project | 2025",
+    title: "Gnosis International Websites",
+    category: "Multilingual websites · Germany, Netherlands & Romania",
     description:
-      "Portfolio project: Developed a modern environmental monitoring dashboard with Vue 3 and TypeScript, featuring a clean, responsive interface for tracking weather conditions across multiple locations. The application displays real-time metrics including temperature, humidity, pressure, and precipitation through intuitive data visualization components. Built with Tailwind CSS and DaisyUI for a polished UI, Pinia for state management, and integrates seamlessly with the Open-Meteo API. Optimized for performance with Bun and Vite, this project demonstrates expertise in creating modern, data-driven web applications with smooth interactions and professional design.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/envirometrics.webp",
+      "Migrated two legacy websites and built a third from scratch on a reusable multilingual Astro architecture. The result is a serverless, low-maintenance content platform for German, Dutch and Romanian audiences.",
     tags: [
       TAGS.TYPESCRIPT,
-      TAGS.VUE,
+      TAGS.ASTRO,
       TAGS.TAILWIND,
-      TAGS.DAISYUI,
+      TAGS.SUPABASE,
       TAGS.CLOUDFLARE,
-      TAGS.BUN,
     ],
-    link: "https://envirometrics.pages.dev",
-    github: "https://github.com/alexandrespindola/envirometrics",
   },
   {
-    title: "Content Alchemist - AI-Augmented Campaigns | 2025",
+    title: "RPA Migration",
+    category: "UiPath to n8n + Puppeteer",
     description:
-      "Built an AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram, and LinkedIn. The system orchestrates Deno Deploy (text sanitization) and Google Gemini (generation) via n8n, uses Google Sheets + Apps Script as the human interface, and delivers organized assets to Google Drive. Optional Valkey/Redis caching prevents duplicate processing and controls costs, while structured JSON prompts ensure deterministic, platform-optimized output.",
-    image:
-      "https://flash-cdn.pages.dev/assets/portfolio/content-alchemist.webp",
+      "Designed a phased migration of 11 UiPath processes and 38 sub-processes to versioned n8n workflows. The Docker-based architecture uses three n8n workers, isolated runners, RabbitMQ and PostgreSQL, with parallel validation and a UiPath rollback path for the pilot.",
+    featured: true,
+    featuredOrder: 2,
+    caseStudy: "/projects/rpa-migration/",
+    proof: "11 processes · 38 sub-processes",
     tags: [
-      TAGS.TYPESCRIPT,
-      TAGS.N8N,
-      TAGS.DENO,
-      TAGS.REDIS,
-      TAGS.TAILWIND,
-      TAGS.JSON,
-      TAGS.GOOGLECLOUD,
-    ],
-    github: "https://github.com/alexandrespindola/content-alchemist",
-  },
-  {
-    title: "HeroChat - Heroku Go Chat | 2025",
-    description:
-      "Developed a Go CLI tool for interacting with advanced AI models via Heroku, enabling developers to send prompts and receive real-time responses from Claude 4 Sonnet in the terminal. Features include persistent conversation history, tagging, and interactive navigation. Built with Cobra for user-friendly commands and colorized output, Heroku Go Chat showcases expertise in Go, API integration, and developer-focused tool-building.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/herochat.webp",
-    tags: [TAGS.GO, TAGS.HEROKU, TAGS.CLAUDE, TAGS.JSON],
-    github: "https://github.com/alexandrespindola/heroku-go-chat",
-  },
-  {
-    title: "Job Tracker Deutschland | 2025",
-    description:
-      "Addressed the challenge of a fragmented job market by creating a centralized platform that aggregates opportunities directly from the German Federal Employment Agency. The solution provides job seekers with a single, reliable source for tech roles, featuring an intuitive, modern interface with advanced search filters to simplify and accelerate the job search process. The platform enhances user experience by offering clear application pathways, even for listings without direct links, ensuring a seamless journey from discovery to application.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/job-tracker.webp",
-    tags: [
-      TAGS.TYPESCRIPT,
-      TAGS.REACT,
-      TAGS.TAILWIND,
       TAGS.HONO,
+      TAGS.N8N,
       TAGS.BUN,
-      TAGS.VITE,
-      TAGS.RAILWAY,
-      TAGS.NETLIFY,
+      TAGS.DOCKER,
+      TAGS.POSTGRE,
     ],
-    link: "https://german-job-tracker.netlify.app",
-    github: "https://github.com/alexandrespindola/job-tracker-mono",
   },
   {
-    title: "Enterprise E-commerce Integration Platform | 2025",
+    title: "Gnosis Platform",
+    category: "Multilingual digital library",
     description:
-      "Developed robust TypeScript/Node.js services to synchronize data between ERP systems (Holded) and e-commerce platforms (Magento/Shopify), ensuring consistent, reliable and auditable data flows. The solution implements an event-driven integration architecture that provides real-time, bidirectional synchronization of inventory, orders, and product data. This automation eliminates manual data entry, prevents overselling, and streamlines operations by implementing complex business logic for inventory management and automated invoicing, leading to significant gains in operational efficiency.",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/ecommerce-erp2.webp",
+      "A 60-language platform for reading, searching and managing digital content. Built with Go, SvelteKit, PostgreSQL, Valkey and Meilisearch; it includes typed REST APIs and workers, Azure OpenAI RAG with pgvector, Azure AI Speech narration and an offline-ready PWA with role-based administration.",
+    featured: true,
+    featuredOrder: 1,
+    caseStudy: "/projects/gnosis-platform/",
+    proof: "60 languages supported",
+    tags: [TAGS.GO, TAGS.SVELTE, TAGS.POSTGRE, TAGS.REDIS, TAGS.CLOUDFLARE],
+  },
+  {
+    title: "Gentlecan",
+    category: "Dog grooming management system",
+    description:
+      "Full-stack operations platform for a dog-grooming salon, with Flutter and SvelteKit clients backed by Firebase. It provides calendar management, live occupancy indicators, customer segmentation, booking, pet profiles, galleries and automated reminders.",
+    tags: [TAGS.FLUTTER, TAGS.SVELTE, TAGS.FIREBASE, TAGS.TYPESCRIPT],
+  },
+  {
+    title: "Holded Core",
+    category: "Enterprise resource integration",
+    description:
+      "NestJS integration foundation connecting Magento 2, Shopify and Holded ERP through event-driven and adaptive-CRON processing. It establishes cross-store stock synchronization, reservations and asynchronous workflows with BullMQ, Redis and PostgreSQL.",
+    featured: true,
+    featuredOrder: 4,
+    caseStudy: "/projects/holded-core/",
+    proof: "Integration foundation with automated stock-sync tests",
     tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
   },
   {
-    title: "AI-Powered Multilingual Content Automation | 2025",
+    title: "Multilingual Content Automation",
+    category: "Gnosis content workflow",
     description:
-      "Overcame the language barrier for a global audience by building an intelligent platform to translate and publish a vast collection of gnostic manuscripts. The solution automates the localization process for over 100 languages using AI, making scholarly content accessible worldwide. This approach drastically reduces manual translation efforts and costs, ensuring that new and updated content is efficiently distributed to a global community of researchers and readers through a high-performance, easy-to-navigate website.",
+      "AI-supported localisation and publishing workflow for a large collection of Gnostic texts. The platform makes content accessible across languages while reducing manual translation and publication effort.",
     link: "https://books.gnosisdeutschland.org",
     github: "https://github.com/alexandrespindola/gnosisapp",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/gnosis.webp",
+    image: "/projects/gnosis.webp",
     tags: [
       TAGS.ASTRO,
       TAGS.TAILWIND,
@@ -114,33 +114,38 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "TitansDev Agency Website | 2024",
+    title: "IFV",
+    category: "WordPress migration & institutional platform",
     description:
-      "Established a strong digital presence for a software development agency by creating a modern, high-performance website to showcase its services. The site was designed to attract and convert potential clients with a bold, professional aesthetic and a seamless user experience. To streamline client acquisition, an integrated scheduling system with automated notifications was implemented, allowing leads to book consultations directly, improving the lead-to-client conversion funnel.",
-    link: "https://titansdev.es",
-    github: "https://github.com/alexandrespindola/titansdev",
-    image: "https://flash-cdn.pages.dev/assets/portfolio/titansdev.webp",
+      "Migrated a legacy WordPress website to a zero-maintenance Astro platform deployed on Cloudflare Pages. The four-language institutional site includes SEO-ready content and a Supabase-backed contact pipeline.",
     tags: [
-      TAGS.NUXT,
-      TAGS.TAILWIND,
-      TAGS.SASS,
-      TAGS.STRAPI,
-      TAGS.YARN,
-      TAGS.TYPESCRIPT,
+      TAGS.ASTRO,
+      TAGS.CLOUDFLARE,
       TAGS.SUPABASE,
-      TAGS.N8N,
-      TAGS.CALCOM,
-      TAGS.EVOLUTION,
-      TAGS.NETLIFY,
     ],
   },
   {
-    title: "Portfolio Alexandre Spindola | 2024",
+    title: "Content Alchemist",
+    category: "AI-augmented campaigns",
+    description:
+      "AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram and LinkedIn. It orchestrates Deno Deploy and Google Gemini through n8n, with Google Sheets and Apps Script as the human interface, Google Drive delivery, optional Valkey/Redis caching, and structured JSON prompts for deterministic, platform-optimised output.",
+    tags: [
+      TAGS.N8N,
+      TAGS.TYPESCRIPT,
+      TAGS.DENO,
+      TAGS.GEMINI,
+      TAGS.REDIS,
+      TAGS.ALPINE,
+      TAGS.TAILWIND,
+    ],
+  },
+  {
+    title: "Portfolio Alexandre Spindola",
+    category: "Personal portfolio",
     description:
       "Showcased development expertise by building a modern, responsive, and high-performance personal portfolio. The project demonstrates proficiency in creating visually appealing and technically sound web applications, serving as a practical example of skills in contemporary web development practices and providing a central hub for professional information and project showcases.",
     link: "/",
-    image:
-      "https://flash-cdn.pages.dev/assets/portfolio/alexandreportfolio.webp",
+    image: "/projects/alexandreportfolio.webp",
     tags: [
       TAGS.ASTRO,
       TAGS.TAILWIND,

@@ -1,14 +1,11 @@
 // @ts-check
 import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "static",
-  integrations: [tailwind()],
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/noop",
-    },
-  },
+	site: "https://spindola.me",
+	output: "static",
+	integrations: [tailwind(), sitemap()],
 });

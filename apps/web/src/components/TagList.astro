@@ -1,0 +1,19 @@
+---
+import Chip from "./Chip.astro";
+import type { Tag } from "../data/tags";
+
+interface Props {
+  tags: Tag[];
+  max?: number;
+}
+
+const { tags, max = tags.length } = Astro.props as Props;
+const visibleTags = tags.slice(0, max);
+---
+
+<ul class="flex flex-wrap gap-2" aria-label="Technologies used">
+  {visibleTags.map((tag) => <li><Chip {tag} /></li>)}
+  {tags.length > max && (
+    <li><span class="inline-flex items-center rounded-full bg-[#202020] px-2.5 py-1 text-xs font-medium text-gray-300">+{tags.length - max}</span></li>
+  )}
+</ul>

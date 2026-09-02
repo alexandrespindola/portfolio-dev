@@ -1,97 +1,81 @@
 ---
 import TAGS from "../data/tags";
+import Card from "./Card.astro";
+import Chip from "./Chip.astro";
 ---
 
 <div class="mt-16">
   <div class="grid gap-6 md:grid-cols-3">
     {/* Frontend */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+    <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">Frontend</h3>
       <ul class="flex flex-wrap gap-2">
         {[TAGS.VUE, TAGS.NUXT, TAGS.SVELTE, TAGS.ASTRO, TAGS.TAILWIND, TAGS.VITE, TAGS.TYPESCRIPT].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
 
     {/* Backend & APIs */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
-      <h3 class="mb-4 text-lg font-semibold text-white">Backend & APIs</h3>
+    <Card class="p-6">
+      <h3 class="mb-4 text-lg font-semibold text-white">Backend, Data & APIs</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.NEST, TAGS.NODE, TAGS.TYPESCRIPT, TAGS.N8N, TAGS.JSON, TAGS.HONO, TAGS.POSTGRE].map((tag) => (
+        {[TAGS.GO, TAGS.NEST, TAGS.HONO, TAGS.NODE, TAGS.TYPESCRIPT, TAGS.POSTGRE, TAGS.REDIS].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
 
     {/* DevOps & Infra */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+    <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">DevOps & Infra</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.DOCKER, TAGS.DIGITALOCEAN, TAGS.GOOGLECLOUD, TAGS.AWS, TAGS.CLOUDFLARE, TAGS.RAILWAY, TAGS.NETLIFY, ].map((tag) => (
+        {[TAGS.DOCKER, TAGS.GOOGLECLOUD, TAGS.CLOUDFLARE, TAGS.AWS, TAGS.DIGITALOCEAN, TAGS.RAILWAY].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
 
     {/* Databases & Realtime */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
-      <h3 class="mb-4 text-lg font-semibold text-white">Databases & Realtime</h3>
+    <Card class="p-6">
+      <h3 class="mb-4 text-lg font-semibold text-white">Search, Queues & Realtime</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.POSTGRE, TAGS.REDIS, TAGS.SUPABASE].map((tag) => (
+        {[TAGS.POSTGRE, TAGS.REDIS, TAGS.SUPABASE, TAGS.N8N].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
 
     {/* AI & Automation */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+    <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">AI & Automation</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.CLAUDE, TAGS.GEMINI, TAGS.N8N].map((tag) => (
+        {[TAGS.CLAUDE, TAGS.GEMINI, TAGS.N8N, TAGS.GO, TAGS.POSTGRE].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
 
     {/* Tooling */}
-    <section class="rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+    <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">Tooling</h3>
       <ul class="flex flex-wrap gap-2">
         {[TAGS.NODE, TAGS.BUN, TAGS.PNPM, TAGS.YARN].map((tag) => (
           <li>
-            <span class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}>
-              <tag.icon class="h-4 w-4" />
-              {tag.name}
-            </span>
+            <Chip {tag} />
           </li>
         ))}
       </ul>
-    </section>
+    </Card>
   </div>
 </div>

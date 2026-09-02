@@ -4,53 +4,60 @@ import LinkInline from "../components/LinkInline.astro";
 interface Props {
   title: string;
   company: string;
-  description: string;
+  highlights: { label: string; text: string }[];
   link?: string;
   date: string;
   location?: string;
 }
 
-const { title, company, description, link, date, location } =
+const { title, company, highlights, link, date, location } =
   Astro.props as Props;
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 grid pb-12 before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10"
 >
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
       <span
-        class="text-secondary dark:text-primary -left-[42px] absolute rounded-full text-5xl"
+        class="absolute -left-[42px] rounded-full text-5xl text-primary"
         >&bull;</span
       >
 
-      <h3 class="text-xl font-bold text-secondary dark:text-primary">
+      <h3 class="text-xl font-bold text-primary">
         {title}
       </h3>
-      <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+      <h4 class="text-xl font-semibold text-white">
         {company}
       </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80"
+      <time class="m-0 p-0 text-sm text-white/80"
         >{date}</time
       >
       {
         location && (
-          <p class="text-sm text-gray-600/60 dark:text-white/60">{location}</p>
+          <p class="text-sm text-white/60">{location}</p>
         )
       }
     </div>
   </div>
   <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+    class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3"
   >
-    <div set:html={description} />
+    <ul class="space-y-4">
+      {highlights.map((highlight) => (
+        <li class="flex gap-3">
+          <span class="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true"></span>
+          <span><strong class="text-white">{highlight.label}:</strong> {highlight.text}</span>
+        </li>
+      ))}
+    </ul>
     {
       link && (
         <LinkInline href={link}>
           More info{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right mt-0.5 text-secondary dark:text-primary"
+            class="icon icon-tabler icon-tabler-chevron-right mt-0.5 w-5 text-primary"
             width="24"
             height="24"
             viewBox="0 0 24 24"

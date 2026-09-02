@@ -1,15 +1,17 @@
 ---
 import SERVICES from "../data/services";
 import TAGS from "../data/tags";
+import Card from "./Card.astro";
+import TagList from "./TagList.astro";
 ---
 
 <div class="grid gap-8 mt-16 md:grid-cols-2">
   {
     SERVICES.map((service) => {
       return (
-        <div class="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:border-gray-800 dark:bg-gray-900">
+        <Card hover class="group relative overflow-hidden p-8">
           {/* Background gradient effect */}
-          <div class="absolute inset-0 bg-gradient-to-br from-green-50/50 to-emerald-50/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-green-900/20 dark:to-emerald-900/20" />
+          <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 to-emerald-900/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
           {/* Content */}
           <div class="relative z-10">
@@ -19,19 +21,19 @@ import TAGS from "../data/tags";
             </div>
 
             {/* Title */}
-            <h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">
+            <h3 class="mb-4 text-xl font-bold text-white">
               {service.title}
             </h3>
 
             {/* Description */}
-            <p class="mb-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p class="mb-6 leading-relaxed text-gray-300">
               {service.description}
             </p>
 
             {/* Features */}
             <ul class="mb-6 space-y-3">
               {service.features.map((feature) => (
-                <li class="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
+                <li class="flex items-start gap-3 text-sm text-gray-300">
                   <div class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
                   <span>{feature}</span>
                 </li>
@@ -40,34 +42,16 @@ import TAGS from "../data/tags";
 
             {/* Tags */}
             <div class="mb-6">
-              <div class="flex flex-wrap gap-2">
-                {service.tagKeys.slice(0, 4).map((tagKey) => {
-                  const tag = TAGS[tagKey as keyof typeof TAGS];
-                  const TagIcon = tag.icon;
-
-                  return (
-                    <span
-                      class={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium ${tag.class}`}
-                    >
-                      <TagIcon class="h-3 w-3" />
-                      {tag.name}
-                    </span>
-                  );
-                })}
-                {service.tagKeys.length > 4 && (
-                  <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-gray-800 dark:text-gray-300">
-                    +{service.tagKeys.length - 4} more
-                  </span>
-                )}
-              </div>
+              <TagList tags={service.tagKeys.map((tagKey) => TAGS[tagKey as keyof typeof TAGS])} max={4} />
             </div>
 
             {/* Contact CTA */}
             <div class="flex items-center justify-between">
-              <span class="text-sm font-medium text-gray-600 dark:text-gray-400">
+              <span class="text-sm font-medium text-gray-400">
                 Let's discuss your project
               </span>
               <button
+                aria-label={`Discuss ${service.title}`}
                 onclick="document.getElementById('services-cta').scrollIntoView({ behavior: 'smooth' })"
                 class="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110 cursor-pointer"
               >
@@ -93,7 +77,7 @@ import TAGS from "../data/tags";
             class="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-br from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20"
             style="mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor;"
           />
-        </div>
+        </Card>
       );
     })
   }

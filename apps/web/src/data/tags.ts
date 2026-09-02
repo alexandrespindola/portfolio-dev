@@ -58,6 +58,14 @@ import WooCommerce from "../components/icons/tags/WooCommerce.astro";
 import WordPress from "../components/icons/tags/WordPress.astro";
 import Yarn from "../components/icons/tags/Yarn.astro";
 
+export type AstroIconComponent = (props: { class?: string }) => unknown;
+
+export interface Tag {
+  name: string;
+  class: string;
+  icon: AstroIconComponent;
+}
+
 const TAGS = {
   ALPINE: {
     name: "Alpine.js",
@@ -76,7 +84,7 @@ const TAGS = {
   },
   AWS: {
     name: "AWS",
-    class: "bg-steel-100 text-white",
+    class: "bg-zinc-700 text-white",
     icon: AWS,
   },
   BUNNY: {
@@ -91,7 +99,7 @@ const TAGS = {
   },
   CALCOM: {
     name: "Cal.com",
-    class: "bg-gray-100 text-black dark:bg-white dark:text-black",
+    class: "bg-white text-black",
     icon: Calcom,
   },
   CLOUDFLARE: {
@@ -111,7 +119,7 @@ const TAGS = {
   },
   DENO: {
     name: "Deno",
-    class: "bg-steel-700 text-white",
+    class: "bg-zinc-700 text-white",
     icon: Deno,
   },
   DIGITALOCEAN: {
@@ -261,7 +269,7 @@ const TAGS = {
   },
   RAILWAY: {
     name: "Railway",
-    class: "bg-grey-400 text-white",
+    class: "bg-zinc-500 text-white",
     icon: Railway,
   },
   REACT: {

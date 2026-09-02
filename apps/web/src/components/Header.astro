@@ -1,117 +1,44 @@
 ---
 const navItems = [
-  {
-    title: "Services",
-    label: "services",
-    url: "/#services",
-  },
-  {
-    title: "Experience",
-    label: "experience",
-    url: "/#experience",
-  },
-  {
-    title: "Projects",
-    label: "projects",
-    url: "/#projects",
-  },
-  {
-    title: "About",
-    label: "about",
-    url: "/#about",
-  },
-  {
-    title: "Contact",
-    label: "contact",
-    url: "mailto:alexandre@spindola.me",
-  },
-]
+  { title: "Projects", label: "projects", url: "/#projects" },
+  { title: "Services", label: "services", url: "/#services" },
+  { title: "Experience", label: "experience", url: "/#experience" },
+  { title: "Tech Stack", label: "tech-stack", url: "/#tech-stack" },
+  { title: "About", label: "about", url: "/#about" },
+  { title: "Contact", label: "contact-cta", url: "/#contact-cta" },
+];
 ---
 
-<header
-  class="fixed top-0 z-50 flex items-center justify-center w-full mx-auto mt-2"
->
-  <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
-  >
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block px-2 py-2 transition hover:text-green-700 dark:hover:text-primary"
-          aria-label={link.label}
-          href={link.url}
-        >
-          {link.title}
-        </a>
-      ))
-    }
+<header class="fixed top-0 z-50 mt-2 flex w-full justify-center px-3">
+  <nav class="hidden items-center justify-center rounded-full bg-gray-800/90 px-3 text-sm font-medium text-gray-200 shadow-sm backdrop-blur md:flex">
+    {navItems.map((link) => (
+      <a class="relative block px-2 py-2 transition hover:text-primary" aria-label={link.label} href={link.url}>{link.title}</a>
+    ))}
   </nav>
+  <details class="relative w-full max-w-xs md:hidden">
+    <summary class="cursor-pointer rounded-full bg-gray-800/90 px-4 py-2 text-center text-sm font-medium text-gray-200 shadow-sm backdrop-blur marker:content-none">Menu</summary>
+    <nav class="absolute right-0 mt-2 flex w-full flex-col rounded-2xl border border-gray-700 bg-gray-900 p-2 shadow-xl">
+      {navItems.map((link) => (
+        <a class="rounded-xl px-3 py-2 text-sm font-medium text-gray-200 transition hover:bg-gray-800 hover:text-primary" aria-label={link.label} href={link.url}>{link.title}</a>
+      ))}
+    </nav>
+  </details>
 </header>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
-
-    const callback = (entries: any[]) => {
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll("header nav a");
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("dark:text-primary")
-              item.classList.add("text-secondary")
-            } else {
-              item.classList.remove("dark:text-primary")
-              item.classList.remove("text-secondary")
-            }
-          })
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
-    })
-
-    sections.forEach((section) => {
-      observer.observe(section)
-    })
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect()
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section)
-        })
-      }
-    }
-  })
+        if (!entry.isIntersecting) return;
+        navItems.forEach((item) => {
+          const active = item.getAttribute("aria-label") === entry.target.id;
+          item.classList.toggle("text-primary", active);
+          item.toggleAttribute("aria-current", active);
+        });
+      });
+    }, { root: null, rootMargin: "0px", threshold: 0.3 });
+    sections.forEach((section) => observer.observe(section));
+  });
 </script>
-
-<style>
-  nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
-  }
-
-  nav {
-    @apply dark:bg-gray-800/90 bg-white/50;
-  }
-
-  @keyframes nav-shadown {
-    0% {
-      background-color: transparent;
-      backdrop-filter: none;
-    }
-    to {
-      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgb(255 255 255 / 0.1);
-    }
-  }
-</style>

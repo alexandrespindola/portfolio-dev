@@ -2,20 +2,29 @@
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ClientRouter } from "astro:transitions";
+import personalImage from "../assets/images/me.webp";
 
 interface LayoutProps {
   title: string;
   description: string;
   image?: string;
-  author?: string;
-  publishDate?: string;
 }
 
-const { description, title, image, author, publishDate } =
+const { description, title, image } =
   Astro.props as LayoutProps;
 
-const ogImage = image;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const ogImage = image ? new URL(image, canonicalURL).href : undefined;
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Alexandre Spindola",
+  url: canonicalURL.href,
+  image: new URL(personalImage.src, canonicalURL).href,
+  jobTitle: "AI-Native Full-Stack Engineer",
+  address: { "@type": "PostalAddress", addressLocality: "Cologne", addressCountry: "DE" },
+  sameAs: ["https://www.linkedin.com/in/alexspindola", "https://github.com/alexandrespindola/"],
+};
 ---
 
 <!doctype html>
@@ -24,6 +33,8 @@ const ogImage = image;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
@@ -34,33 +45,27 @@ const ogImage = image;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
-    {author && <meta property="article:author" content={author} />}
-    {
-      publishDate && (
-        <meta property="article:published_time" content={publishDate} />
-      )
-    }
+    <meta property="og:url" content={canonicalURL} />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    {author && <meta name="twitter:creator" content={author} />}
 
     <title>{title}</title>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
     <script
       is:inline
       src="https://analytics.ahrefs.com/analytics.js"
       data-key="1/G/DyqnRLLiKO3BVbgSmg"
       async></script>
-    <ClientRouter />
   </head>
 
-  <body class="relative text-white">
+  <body class="relative bg-background text-white">
+    <a href="#main-content" class="sr-only fixed left-4 top-4 z-[60] rounded bg-primary px-4 py-2 font-semibold text-black focus:not-sr-only">Skip to content</a>
     <div
-      class="top-0 bottom-0 min-h-screen w-full bg-gray-950
+      class="top-0 bottom-0 min-h-screen w-full bg-background
     bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(150,150,150,0.3),rgba(255,255,255,0))]"
     >
       <Header />
