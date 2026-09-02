@@ -19,7 +19,7 @@ const tags = data.tagKeys.map((key) => TAGS[key as keyof typeof TAGS]);
 ---
 
 <Layout title={`${data.title} | Alexandre Spindola`} description={data.summary} image="/og.jpg">
-  <main id="main-content" class="px-4 pb-20 pt-20 md:pt-24">
+  <main id="main-content" class="pb-20 pt-20 md:pt-24">
     <SectionContainer>
       <a href="/#projects" class="text-sm font-semibold text-primary transition hover:text-white">← Back to selected work</a>
       <p class="mt-5 text-xs font-medium uppercase tracking-[0.2em] text-primary">Case study · {data.category} · {data.visibility === "private" ? "Private project" : "Public product"}</p>
