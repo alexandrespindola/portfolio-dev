@@ -34,7 +34,7 @@ const tags = data.tagKeys.map((key) => TAGS[key as keyof typeof TAGS]);
         </div>
       </div>
       <div class="relative mt-10 aspect-[16/7] overflow-hidden rounded-2xl border border-gray-800 bg-gray-900">
-        {data.cover ? <img src={data.cover} alt={`${data.title} preview`} width="1200" height="525" class="h-full w-full object-cover" /> : <div class="flex h-full items-center justify-center bg-[radial-gradient(circle_at_75%_20%,rgba(64,234,30,0.18),transparent_38%)] p-6 text-center text-sm font-medium uppercase tracking-[0.18em] text-gray-500">Case study visual pending</div>}
+        {data.cover ? <img src={data.cover} alt={`${data.title} preview`} width="1200" height="525" class="h-full w-full object-cover" /> : <div class="flex h-full items-center justify-center bg-[radial-gradient(circle_at_75%_20%,rgba(64,234,30,0.18),transparent_38%)] p-6 text-center text-sm font-medium uppercase tracking-[0.18em] text-gray-500">Case study visual coming soon</div>}
       </div>
 
       <div class="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(18rem,0.6fr)]">
@@ -61,7 +61,7 @@ const tags = data.tagKeys.map((key) => TAGS[key as keyof typeof TAGS]);
               <div class="relative aspect-[4/3] overflow-hidden">
                 {image.src ? <img src={image.src} alt={image.alt} width="800" height="600" loading="lazy" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" /> : <div class="flex h-full flex-col justify-between bg-[radial-gradient(circle_at_80%_15%,rgba(64,234,30,0.16),transparent_35%),linear-gradient(145deg,#1c1c1c,#0d0d0d)] p-5"><span class="font-mono text-xs text-primary">0{index + 1}</span><div class="space-y-2"><div class="h-2 w-20 rounded bg-primary/70"></div><div class="h-2 w-full rounded bg-gray-700"></div><div class="h-2 w-4/5 rounded bg-gray-800"></div></div></div>}
               </div>
-              <figcaption class="border-t border-gray-800 px-4 py-3 text-sm text-gray-400">{image.label}</figcaption>
+              <figcaption class="border-t border-gray-800 px-4 py-3 text-sm text-gray-400"><span>{image.label}</span>{!image.src && <span class="mt-1 block text-xs font-medium uppercase tracking-[0.12em] text-primary/80">Visual coming soon</span>}</figcaption>
             </figure>
           ))}
         </div>

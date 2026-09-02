@@ -27,7 +27,7 @@ const projectId = `project-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, 
           <div class="relative flex h-full flex-col justify-between rounded-lg border border-[#343434] bg-[#151515]/80 p-4">
             <div class="flex items-center justify-between"><span class="h-2 w-16 rounded-full bg-primary/70"></span><span class="size-2 rounded-full bg-[#4a4a4a]"></span></div>
             <div class="space-y-2"><span class="block h-3 w-3/4 rounded bg-[#4a4a4a]/70"></span><span class="block h-2 w-full rounded bg-[#363636]"></span><span class="block h-2 w-4/5 rounded bg-[#363636]"></span></div>
-            <span class="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">Project preview</span>
+            <span class="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">{project.image ? "Project preview" : "Visual coming soon"}</span>
           </div>
         </div>
         {project.image && <img
@@ -76,7 +76,7 @@ const projectId = `project-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, 
       </div>
       <div class="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(18rem,0.8fr)]">
         <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-[#090909]">
-          <span class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm font-medium text-gray-500">Full project preview</span>
+          <span class="absolute inset-0 flex items-center justify-center p-6 text-center text-sm font-medium text-gray-500">{project.image ? "Full project preview" : "Project visual coming soon"}</span>
           {project.image && <img src={project.image} alt={`${project.title} full preview`} width="1200" height="900" loading="lazy" class="absolute inset-0 h-full w-full object-contain" />}
         </div>
         <div>
