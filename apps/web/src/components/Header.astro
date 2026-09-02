@@ -1,4 +1,7 @@
 ---
+import MenuIcon from "./icons/MenuIcon.astro";
+import CloseIcon from "./icons/CloseIcon.astro";
+
 const navItems = [
   { title: "Projects", label: "projects", url: "/#projects" },
   { title: "Services", label: "services", url: "/#services" },
@@ -9,15 +12,21 @@ const navItems = [
 ];
 ---
 
-<header class="fixed top-0 z-50 mt-2 flex w-full justify-center px-3">
+<header class="fixed top-0 z-50 mt-3 flex w-full justify-end px-4 md:mt-2 md:justify-center md:px-3">
   <nav class="hidden items-center justify-center rounded-full bg-gray-800/90 px-3 text-sm font-medium text-gray-200 shadow-sm backdrop-blur md:flex">
     {navItems.map((link) => (
       <a class="relative block px-2 py-2 transition hover:text-primary" aria-label={link.label} href={link.url}>{link.title}</a>
     ))}
   </nav>
-  <details class="relative w-full max-w-xs md:hidden">
-    <summary class="cursor-pointer rounded-full bg-gray-800/90 px-4 py-2 text-center text-sm font-medium text-gray-200 shadow-sm backdrop-blur marker:content-none">Menu</summary>
-    <nav class="absolute right-0 mt-2 flex w-full flex-col rounded-2xl border border-gray-700 bg-gray-900 p-2 shadow-xl">
+  <details class="group relative md:hidden">
+    <summary
+      class="flex size-11 cursor-pointer list-none items-center justify-center rounded-full border border-gray-700 bg-gray-800/90 text-gray-200 shadow-sm backdrop-blur transition group-open:text-primary marker:content-none"
+      aria-label="Toggle menu"
+    >
+      <MenuIcon class="size-5 group-open:hidden" />
+      <CloseIcon class="hidden size-5 group-open:block" />
+    </summary>
+    <nav class="absolute right-0 mt-2 flex w-44 flex-col gap-1 rounded-2xl border border-gray-700 bg-gray-900/95 p-2 shadow-xl backdrop-blur">
       {navItems.map((link) => (
         <a class="rounded-xl px-3 py-2 text-sm font-medium text-gray-200 transition hover:bg-gray-800 hover:text-primary" aria-label={link.label} href={link.url}>{link.title}</a>
       ))}
@@ -40,5 +49,17 @@ const navItems = [
       });
     }, { root: null, rootMargin: "0px", threshold: 0.3 });
     sections.forEach((section) => observer.observe(section));
+
+    const menu = document.querySelector("header details");
+    if (menu) {
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => menu.removeAttribute("open"));
+      });
+      document.addEventListener("click", (event) => {
+        if (menu.hasAttribute("open") && !menu.contains(event.target as Node)) {
+          menu.removeAttribute("open");
+        }
+      });
+    }
   });
 </script>

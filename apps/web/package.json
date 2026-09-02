@@ -9,7 +9,10 @@
     "preview": "astro preview",
     "check": "astro check",
     "clean": "rm -rf dist .astro",
-    "astro": "astro"
+    "astro": "astro",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report"
   },
   "dependencies": {
     "@astrojs/tailwind": "6.0.2",
@@ -23,6 +26,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@astrojs/sitemap": "^3.7.4",
+    "@playwright/test": "^1.62.1",
     "@portfolio/tsconfig": "workspace:*",
     "typescript": "5.9.3"
   }
