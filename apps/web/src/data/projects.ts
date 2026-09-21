@@ -22,7 +22,7 @@ const PROJECTS: Project[] = [
       "Event-registration platform with a responsive Nuxt frontend, Tailwind CSS and PostgreSQL. The Hono API, deployed with Coolify, supports secure authentication, registration workflows and scalable delivery for international attendees.",
     image: "/projects/congreso.webp",
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 4,
     caseStudy: "/projects/gnosis-congress/",
     proof: "Secure registration for international attendees",
     tags: [
@@ -54,9 +54,9 @@ const PROJECTS: Project[] = [
     title: "RPA Migration",
     category: "UiPath to n8n + Puppeteer",
     description:
-      "Designed a phased migration of 11 UiPath processes and 38 sub-processes to versioned n8n workflows. The Docker-based architecture uses three n8n workers, isolated runners, RabbitMQ and PostgreSQL, with parallel validation and a UiPath rollback path for the pilot.",
+      "Migrated 11 UiPath processes and 38 sub-processes to reusable n8n workflows and Puppeteer/API patterns. Built a containerized TypeScript/Bun backend with Hono, isolated Chrome runners, typed APIs, export orchestration and an HTMX/SSE operations dashboard.",
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
     caseStudy: "/projects/rpa-migration/",
     proof: "11 processes · 38 sub-processes",
     tags: [
@@ -71,12 +71,22 @@ const PROJECTS: Project[] = [
     title: "Gnosis Platform",
     category: "Multilingual digital library",
     description:
-      "A 60-language platform for reading, searching and managing digital content. Built with Go, SvelteKit, PostgreSQL, Valkey and Meilisearch; it includes typed REST APIs and workers, Azure OpenAI RAG with pgvector, Azure AI Speech narration and an offline-ready PWA with role-based administration.",
+      "A multilingual platform for reading, searching and managing digital content. Built with Rust, Axum, SvelteKit, PostgreSQL, Valkey and Meilisearch; it includes REST APIs and background workers, Azure OpenAI RAG with pgvector, Azure AI Speech narration and an offline-ready PWA with role-based administration.",
     featured: true,
     featuredOrder: 1,
     caseStudy: "/projects/gnosis-platform/",
-    proof: "60 languages supported",
-    tags: [TAGS.GO, TAGS.SVELTE, TAGS.POSTGRE, TAGS.REDIS, TAGS.CLOUDFLARE],
+    proof: "Planned launch: October 2026",
+    tags: [TAGS.RUST, TAGS.SVELTE, TAGS.POSTGRE, TAGS.REDIS, TAGS.CLOUDFLARE],
+  },
+  {
+    title: "Live Event Interpretation Platform",
+    category: "Real-time speech interpretation · Planned launch October 2026",
+    description:
+      "Real-time platform that converts WebM/Opus audio into text, translates it into seven languages and creates per-sentence MP3 audio in parallel. A single Rust binary serves the Svelte frontend, API, metrics and WebSockets, designed for Oracle Cloud with a p95 latency target of up to five seconds.",
+    featured: true,
+    featuredOrder: 2,
+    proof: "Seven languages · p95 target: ≤5 seconds",
+    tags: [TAGS.RUST, TAGS.SVELTE, TAGS.TYPESCRIPT, TAGS.POSTGRE],
   },
   {
     title: "Gentlecan",
@@ -91,7 +101,7 @@ const PROJECTS: Project[] = [
     description:
       "NestJS integration foundation connecting Magento 2, Shopify and Holded ERP through event-driven and adaptive-CRON processing. It establishes cross-store stock synchronization, reservations and asynchronous workflows with BullMQ, Redis and PostgreSQL.",
     featured: true,
-    featuredOrder: 4,
+    featuredOrder: 5,
     caseStudy: "/projects/holded-core/",
     proof: "Integration foundation with automated stock-sync tests",
     tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],

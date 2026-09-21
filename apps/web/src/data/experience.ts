@@ -6,7 +6,8 @@ const EXPERIENCE = [
     location: "Cologne, Germany · Remote",
     highlights: [
       { label: "Full-stack automation", text: "Building production n8n workflows, Puppeteer browser automations and a real-time operational dashboard with Hono, HTMX and SSE." },
-      { label: "LLM-enabled workflows", text: "Developing classification, data-extraction and text-processing flows, integrating REST and webhook APIs with OAuth2." },
+      { label: "LLM-enabled workflows", text: "Developing classification, data-extraction and text-processing flows, integrating REST APIs, OAuth2 webhooks and external enterprise systems." },
+      { label: "Workflow tooling", text: "Using Windmill alongside n8n for internal automation and developer tooling." },
       { label: "AI-native delivery", text: "Applying Claude, Codex and OpenCode to planning, debugging, code review and documentation." },
     ],
     link: "https://value.ag/home",
@@ -17,7 +18,7 @@ const EXPERIENCE = [
     company: "POROPO | Desarrollo de Software · Contract",
     location: "Spain · Remote",
     highlights: [
-      { label: "Merchant infrastructure", text: "Built NestJS middleware integrating Magento 2, Shopify and Holded ERP, plus Svelte and Flutter applications backed by Firebase." },
+      { label: "Merchant infrastructure", text: "Built NestJS middleware integrating Magento 2, Shopify and Holded ERP, plus Svelte applications backed by Firebase." },
       { label: "Reliable data flows", text: "Designed PostgreSQL/Drizzle architecture and asynchronous processing with BullMQ and Redis." },
       { label: "Tested services", text: "Developed Fastify REST APIs with more than 80% test coverage." },
     ],

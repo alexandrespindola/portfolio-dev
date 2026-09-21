@@ -17,8 +17,8 @@
     "clean": "turbo run clean && rm -rf node_modules"
   },
   "devDependencies": {
-    "turbo": "^2.9.6",
-    "wrangler": "^4.94.0"
+    "turbo": "^2.11.2",
+    "wrangler": "^4.136.0"
   },
   "packageManager": "bun@1.3.12",
   "engines": {

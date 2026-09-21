@@ -18,7 +18,6 @@ import Firebase from "../components/icons/tags/Firebase.astro"
 import Flutter from "../components/icons/tags/Flutter.astro";
 import Fly from "../components/icons/tags/Fly.astro";
 import Gemini from "../components/icons/tags/Gemini.astro";
-import Go from "../components/icons/tags/Go.astro";
 import GoogleCloud from "../components/icons/tags/GoogleCloud.astro";
 import Heroku from "../components/icons/tags/Heroku.astro";
 import Hestia from "../components/icons/tags/Hestia.astro";
@@ -63,7 +62,7 @@ export type AstroIconComponent = (props: { class?: string }) => unknown;
 export interface Tag {
   name: string;
   class: string;
-  icon: AstroIconComponent;
+  icon?: AstroIconComponent;
 }
 
 const TAGS = {
@@ -166,11 +165,6 @@ const TAGS = {
     name: "Gemini",
     class: "bg-purple-200 text-black",
     icon: Gemini,
-  },
-  GO: {
-    name: "Go",
-    class: "bg-blue-700 text-white",
-    icon: Go,
   },
   GOOGLECLOUD: {
     name: "Google Cloud",
@@ -341,6 +335,10 @@ const TAGS = {
     name: "Vue.js",
     class: "bg-green-100 text-black",
     icon: Vue
+  },
+  WINDMILL: {
+    name: "Windmill",
+    class: "bg-amber-100 text-black",
   },
   WIREUI: {
     name: "WireUI",

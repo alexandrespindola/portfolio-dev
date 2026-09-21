@@ -16,16 +16,16 @@ interface Service {
 const SERVICES: Service[] = [
   {
     title: "AI-Enabled Product Engineering",
-    description: "Building reliable products and web platforms with Go, TypeScript, Svelte, Vue and modern API architecture.",
+    description: "Building reliable products and web platforms with Rust, TypeScript, Svelte, Vue and modern API architecture.",
     features: [
-      "Go, NestJS, Hono and REST/OpenAPI services",
+      "Rust, Axum, NestJS, Hono and REST/OpenAPI services",
       "SvelteKit, Astro, Vue and Nuxt frontends",
       "RAG, semantic retrieval and AI-assisted workflows",
       "PostgreSQL, pgvector and full-text search",
       "Cloudflare and GCP-ready delivery"
     ],
     icon: FullStackIcon,
-    tagKeys: ["GO", "NEST", "SVELTE", "TYPESCRIPT"]
+    tagKeys: ["RUST", "NEST", "SVELTE", "TYPESCRIPT"]
   },
   {
     title: "AI & Workflow Automation",

@@ -1,16 +1,16 @@
 ---
 title: RPA Migration
 category: UiPath to n8n + Puppeteer
-summary: A staged modernization path from legacy UiPath automation to versioned n8n workflows and browser automation services.
+summary: A migration of legacy UiPath automation to reusable n8n workflows, browser automation services and a real-time operations dashboard.
 role: Automation architecture and delivery
-status: Foundation delivered; migration work in progress
-period: Planning and infrastructure · 2026
-challenge: Modernize a business-critical UiPath estate while maintaining a safe path for operations that depend on it. The work began with process inventory, prioritization and a delivery model that allows validation before any production cutover.
-solution: "Defined the phased migration approach and built the core automation environment: n8n in queue mode with three workers and isolated task runners, PostgreSQL and RabbitMQ. A separate Bun, Hono and Puppeteer service provides containerized browser automation. The first export automation was validated locally; its remaining external integration dependencies were explicitly tracked rather than presented as complete."
+status: Migration delivered
+period: "2026"
+challenge: Modernize a business-critical UiPath estate while retaining dependable, reusable patterns for browser and API automation.
+solution: "Migrated 11 UiPath processes and 38 sub-processes to n8n workflows with reusable Puppeteer and API patterns. Built a containerized TypeScript/Bun backend with Hono and Puppeteer, including isolated Chrome runners, typed APIs, export orchestration and an HTMX/SSE operations dashboard."
 outcomes:
-  - Produced a prioritized migration plan and a reversible rollout model for the automation portfolio.
-  - Delivered reusable n8n and Puppeteer foundations with versioned workflows and isolated execution.
-  - Established a local validation path for the first export automation while documenting outstanding access and integration dependencies.
+  - Migrated the process estate into reusable n8n workflows and automation patterns.
+  - Delivered containerized browser runners, typed APIs and export orchestration.
+  - Created an HTMX/SSE dashboard for real-time operational visibility.
 metrics:
   - "Migration scope assessed: 11 active processes"
   - "38 sub-processes mapped in the operating estate"
