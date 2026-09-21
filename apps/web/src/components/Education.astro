@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Card from "./Card.astro";
+import descomplicaLogo from "../assets/images/education/descomplica.png";
+import mbaUspEsalqLogo from "../assets/images/education/mba-usp-esalq.jpg";
+import uspLogo from "../assets/images/education/usp.jpeg";
+
+const education = [
+  {
+    degree: "Postgraduate in Full-Stack Development",
+    institution: "Descomplica College",
+    period: "Nov 2025 – Sep 2026",
+    focus: "Node.js, REST APIs, SQL, microservices, Docker/Kubernetes, CI/CD, AWS & DevOps",
+    logo: descomplicaLogo,
+    logoAlt: "Descomplica College logo",
+  },
+  {
+    degree: "MBA in Software Engineering",
+    institution: "University of São Paulo (USP)",
+    period: "Oct 2023 – Aug 2025",
+    focus: "Software Architecture, Full-Stack Development, DevOps, CI/CD & Cloud Computing",
+    logo: mbaUspEsalqLogo,
+    logoAlt: "MBA USP ESALQ logo",
+  },
+  {
+    degree: "Bachelor in Psychology",
+    institution: "University of São Paulo (USP)",
+    period: "Feb 2008 – Dec 2014",
+    logo: uspLogo,
+    logoAlt: "University of São Paulo logo",
+  },
+];
+---
+
+<div class="grid gap-6 lg:grid-cols-3">
+  {education.map(({ degree, institution, period, focus, logo, logoAlt }) => (
+    <Card class="flex h-full flex-col p-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{period}</p>
+          <h3 class="mt-3 text-lg font-semibold leading-snug text-white">{degree}</h3>
+        </div>
+        <div class="size-14 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-white/15">
+          <Image src={logo} alt={logoAlt} width={56} height={56} class="size-full rounded-full object-cover" />
+        </div>
+      </div>
+      <p class="mt-2 text-sm font-medium text-gray-300">{institution}</p>
+      {focus && <p class="mt-5 text-sm leading-relaxed text-gray-400"><span class="font-medium text-gray-300">Focus:</span> {focus}</p>}
+    </Card>
+  ))}
+</div>

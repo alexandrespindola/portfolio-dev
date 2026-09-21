@@ -27,6 +27,7 @@ import Kotlin from "../components/icons/tags/Kotlin.astro";
 import Json from "../components/icons/tags/Json.astro";
 import Kubernetes from "../components/icons/tags/Kubernetes.astro";
 import Laravel from "../components/icons/tags/Laravel.astro";
+import Linux from "../components/icons/tags/Linux.astro";
 import Livewire from "../components/icons/tags/Livewire.astro";
 import n8n from "../components/icons/tags/n8n.astro";
 import Netlify from "../components/icons/tags/Netlify.astro";
@@ -210,6 +211,11 @@ const TAGS = {
     name: "Laravel",
     class: "bg-red-200 text-black",
     icon: Laravel,
+  },
+  LINUX: {
+    name: "Linux",
+    class: "bg-slate-100 text-black",
+    icon: Linux,
   },
   LIVEWIRE: {
     name: "Livewire",
