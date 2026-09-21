@@ -32,9 +32,9 @@ const SERVICES: Service[] = [
     description: "Replacing manual and legacy RPA processes with observable n8n, browser and LLM-powered workflows.",
     features: [
       "Self-hosted n8n, Docker workers and Cloudflare Tunnel",
+      "Windmill for internal automation and developer tooling",
       "Puppeteer browser automation and DOM extraction",
       "LLM classification, extraction and content pipelines",
-      "Queued jobs, retries and operational visibility",
       "ERP, webhook and OAuth2 integrations"
     ],
     icon: AutomationIcon,
