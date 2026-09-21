@@ -38,19 +38,6 @@ const PROJECTS: Project[] = [
     link: "https://congreso.gnosis.is",
   },
   {
-    title: "Gnosis International Websites",
-    category: "Multilingual websites · Germany, Netherlands & Romania",
-    description:
-      "Migrated two legacy websites and built a third from scratch on a reusable multilingual Astro architecture. The result is a serverless, low-maintenance content platform for German, Dutch and Romanian audiences.",
-    tags: [
-      TAGS.TYPESCRIPT,
-      TAGS.ASTRO,
-      TAGS.TAILWIND,
-      TAGS.SUPABASE,
-      TAGS.CLOUDFLARE,
-    ],
-  },
-  {
     title: "RPA Migration",
     category: "UiPath to n8n + Puppeteer",
     description:
@@ -89,6 +76,15 @@ const PROJECTS: Project[] = [
     tags: [TAGS.RUST, TAGS.SVELTE, TAGS.TYPESCRIPT, TAGS.POSTGRE],
   },
   {
+    title: "Holded Core",
+    category: "Enterprise resource integration",
+    description:
+      "NestJS integration foundation connecting Magento 2, Shopify and Holded ERP through event-driven and adaptive-CRON processing. It establishes cross-store stock synchronization, reservations and asynchronous workflows with BullMQ, Redis and PostgreSQL.",
+    caseStudy: "/projects/holded-core/",
+    proof: "Integration foundation with automated stock-sync tests",
+    tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
+  },
+  {
     title: "Gentlecan",
     category: "Dog grooming management system",
     description:
@@ -96,15 +92,17 @@ const PROJECTS: Project[] = [
     tags: [TAGS.FLUTTER, TAGS.SVELTE, TAGS.FIREBASE, TAGS.TYPESCRIPT],
   },
   {
-    title: "Holded Core",
-    category: "Enterprise resource integration",
+    title: "Gnosis International Websites",
+    category: "Multilingual websites · Germany, Netherlands & Romania",
     description:
-      "NestJS integration foundation connecting Magento 2, Shopify and Holded ERP through event-driven and adaptive-CRON processing. It establishes cross-store stock synchronization, reservations and asynchronous workflows with BullMQ, Redis and PostgreSQL.",
-    featured: true,
-    featuredOrder: 5,
-    caseStudy: "/projects/holded-core/",
-    proof: "Integration foundation with automated stock-sync tests",
-    tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.NUXT, TAGS.REDIS, TAGS.DOCKER],
+      "Migrated two legacy websites and built a third from scratch on a reusable multilingual Astro architecture. The result is a serverless, low-maintenance content platform for German, Dutch and Romanian audiences.",
+    tags: [
+      TAGS.TYPESCRIPT,
+      TAGS.ASTRO,
+      TAGS.TAILWIND,
+      TAGS.SUPABASE,
+      TAGS.CLOUDFLARE,
+    ],
   },
   {
     title: "Multilingual Content Automation",

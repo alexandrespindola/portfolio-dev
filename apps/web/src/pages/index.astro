@@ -2,6 +2,8 @@
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
+import Languages from "../components/Languages.astro";
+import Certifications from "../components/Certifications.astro";
 import BriefcaseIcon from "../components/icons/BriefcaseIcon.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
@@ -56,6 +58,22 @@ import Card from "../components/Card.astro";
         Tech Stack
       </TitleSection>
       <TechStack />
+    </SectionContainer>
+
+    <SectionContainer id="languages">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Languages
+      </TitleSection>
+      <Languages />
+    </SectionContainer>
+
+    <SectionContainer id="certifications">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Certifications
+      </TitleSection>
+      <Certifications />
     </SectionContainer>
 
     <SectionContainer id="about">

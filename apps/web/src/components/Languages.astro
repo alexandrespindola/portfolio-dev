@@ -1,0 +1,21 @@
+---
+import Card from "./Card.astro";
+
+const languages = [
+  { emoji: "🇬🇧", language: "English", level: "B2", proficiency: "Professional" },
+  { emoji: "🇪🇸", language: "Spanish", level: "C2", proficiency: "Fluent" },
+  { emoji: "🇧🇷", language: "Portuguese", level: "C2", proficiency: "Native" },
+  { emoji: "🇮🇹", language: "Italian", level: "B1", proficiency: "Conversational" },
+];
+---
+
+<Card class="p-6">
+  <dl class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {languages.map(({ emoji, language, level, proficiency }) => (
+      <div class="rounded-xl border border-[#343434] bg-[#181818] px-4 py-3">
+        <dt class="font-medium text-gray-100"><span aria-hidden="true">{emoji}</span> {language}</dt>
+        <dd class="mt-1 text-sm text-gray-400"><span class="font-semibold text-primary">{level}</span> · {proficiency}</dd>
+      </div>
+    ))}
+  </dl>
+</Card>

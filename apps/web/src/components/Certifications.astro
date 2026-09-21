@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import Card from "./Card.astro";
+import gcpAceBadge from "../assets/images/certifications/gcp-ace.png";
+import githubFoundationsBadge from "../assets/images/certifications/github-foundations.png";
+
+const certifications = [
+  {
+    title: "Associate Cloud Engineer Certification",
+    issuer: "Google Cloud",
+    issued: "11 Jul 2024",
+    expires: "11 Jul 2028",
+    credentialId: "743f73b3-22b1-4be3-91cd-9a2985ef2c59",
+    url: "https://www.credly.com/earner/earned/badge/743f73b3-22b1-4be3-91cd-9a2985ef2c59",
+    badge: gcpAceBadge,
+    alt: "Google Cloud Associate Cloud Engineer certification badge",
+  },
+  {
+    title: "GitHub Foundations",
+    issuer: "GitHub",
+    issued: "25 Jun 2025",
+    expires: "25 Jun 2028",
+    credentialId: "04e3ca20-be9c-4abf-ae56-87ccf84d503a",
+    url: "https://www.credly.com/earner/earned/badge/04e3ca20-be9c-4abf-ae56-87ccf84d503a",
+    badge: githubFoundationsBadge,
+    alt: "GitHub Foundations certification badge",
+  },
+];
+---
+
+<div class="grid gap-6 md:grid-cols-2">
+  {certifications.map((certification) => (
+    <Card class="flex h-full flex-col p-6">
+      <div class="flex items-center gap-5">
+        <div class="flex size-24 shrink-0 items-center justify-center rounded-xl bg-white/5 p-2">
+          <Image src={certification.badge} alt={certification.alt} width={80} height={80} class="max-h-20 w-auto object-contain" />
+        </div>
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{certification.issuer}</p>
+          <h3 class="mt-1 text-lg font-semibold text-white">{certification.title}</h3>
+        </div>
+      </div>
+      <dl class="mt-6 grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
+        <div><dt class="text-gray-500">Issued</dt><dd class="mt-1 text-gray-200">{certification.issued}</dd></div>
+        <div><dt class="text-gray-500">Expires</dt><dd class="mt-1 text-gray-200">{certification.expires}</dd></div>
+      </dl>
+      <p class="mt-5 break-all text-xs text-gray-500">Credential ID: {certification.credentialId}</p>
+      <a href={certification.url} target="_blank" rel="noreferrer" class="mt-5 inline-flex w-fit items-center gap-2 text-sm font-semibold text-primary transition hover:text-white">
+        View credential <span aria-hidden="true">↗</span>
+      </a>
+    </Card>
+  ))}
+</div>
