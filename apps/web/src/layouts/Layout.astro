@@ -2,7 +2,6 @@
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import personalImage from "../assets/images/me.webp";
 
 interface LayoutProps {
   title: string;
@@ -20,9 +19,8 @@ const personSchema = {
   "@type": "Person",
   name: "Alexandre Spindola",
   url: canonicalURL.href,
-  image: new URL(personalImage.src, canonicalURL).href,
-  jobTitle: "AI-Native Full-Stack Engineer",
-  address: { "@type": "PostalAddress", addressLocality: "Cologne", addressCountry: "DE" },
+  jobTitle: "Senior Full-Stack, Applied AI & Forward Deployed Engineer",
+  address: { "@type": "PostalAddress", addressLocality: "Bucharest", addressCountry: "RO" },
   sameAs: ["https://www.linkedin.com/in/alexspindola", "https://github.com/alexandrespindola/"],
 };
 ---

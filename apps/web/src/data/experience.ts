@@ -1,14 +1,14 @@
 const EXPERIENCE = [
   {
     date: "Mar 2026 - Present",
-    title: "Senior Software Automation Engineer",
+    title: "Senior Full-Stack & Automation Engineer",
     company: "Value AG · Contract",
-    location: "Cologne, Germany · Remote",
+    location: "Germany · Remote",
     highlights: [
-      { label: "Full-stack automation", text: "Building production n8n workflows, Puppeteer browser automations and a real-time operational dashboard with Hono, HTMX and SSE." },
-      { label: "LLM-enabled workflows", text: "Developing classification, data-extraction and text-processing flows, integrating REST APIs, OAuth2 webhooks and external enterprise systems." },
-      { label: "Workflow tooling", text: "Using Windmill alongside n8n for internal automation and developer tooling." },
-      { label: "AI-native delivery", text: "Applying Claude, Codex and OpenCode to planning, debugging, code review and documentation." },
+      { label: "RPA modernisation", text: "Migrating UiPath RPA processes to self-hosted n8n and a custom browser automation service for a German real estate valuation company." },
+      { label: "Browser automation service", text: "Built with TypeScript, Bun, Hono, Puppeteer, PostgreSQL and a SvelteKit UI, with pg-boss queues, SSE logs, RBAC, encrypted vault and audit logging." },
+      { label: "Self-hosted n8n & infra", text: "Running n8n in Queue Mode (Docker Compose, workers, task runners, Redis, RabbitMQ) with Azure DevOps CI/CD; Rust validators check output parity." },
+      { label: "Enterprise & AI integrations", text: "Microsoft Graph, REST APIs, OAuth2 and LLM workflows (OpenAI, Anthropic) for classification and data extraction, using AI agents under explicit guidelines." },
     ],
     link: "https://value.ag/home",
   },

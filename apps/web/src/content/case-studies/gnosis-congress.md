@@ -17,12 +17,4 @@ metrics:
 tagKeys: [TYPESCRIPT, NUXT, TAILWIND, CLOUDFLARE, BUN, HONO, POSTGRE, N8N]
 visibility: public
 liveUrl: https://congreso.gnosis.is
-cover: /projects/congreso.webp
-gallery:
-  - label: Public registration journey
-    alt: Placeholder for the registration flow
-  - label: Participant and payment operations
-    alt: Placeholder for participant operations
-  - label: Country-scoped administration
-    alt: Placeholder for the administration dashboard
 ---

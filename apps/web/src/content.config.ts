@@ -16,17 +16,9 @@ const caseStudies = defineCollection({
     outcomes: z.array(z.string()),
     metrics: z.array(z.string()),
     tagKeys: z.array(z.string()),
-    cover: z.string().optional(),
     visibility: z.enum(["public", "private"]),
     liveUrl: z.url().optional(),
     repositoryUrl: z.url().optional(),
-    gallery: z.array(
-      z.object({
-        label: z.string(),
-        alt: z.string(),
-        src: z.string().optional(),
-      }),
-    ).length(3),
   }),
 });
 

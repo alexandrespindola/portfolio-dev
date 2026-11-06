@@ -1,26 +1,20 @@
 ---
-title: RPA Migration
+title: RPA Modernisation
 category: UiPath to n8n + Puppeteer
-summary: A migration of legacy UiPath automation to reusable n8n workflows, browser automation services and a real-time operations dashboard.
+summary: A migration of legacy UiPath automation to self-hosted n8n and a custom browser automation service with queues, observability and output-parity validation.
 role: Automation architecture and delivery
-status: Migration delivered
+status: In progress
 period: "2026"
 challenge: Modernize a business-critical UiPath estate while retaining dependable, reusable patterns for browser and API automation.
-solution: "Migrated 11 UiPath processes and 38 sub-processes to n8n workflows with reusable Puppeteer and API patterns. Built a containerized TypeScript/Bun backend with Hono and Puppeteer, including isolated Chrome runners, typed APIs, export orchestration and an HTMX/SSE operations dashboard."
+solution: "Migrating UiPath processes to self-hosted n8n in Queue Mode (Docker Compose with workers, external task runners, PostgreSQL, Redis and RabbitMQ) and a custom browser automation service built with TypeScript, Bun, Hono, Puppeteer, PostgreSQL/Drizzle and a SvelteKit UI. The service uses pg-boss queues with per-process locks, real-time SSE logs, Better Auth with service tokens, an encrypted secret vault and audit logging; Rust CLI validators check output parity against the legacy RPA files."
 outcomes:
-  - Migrated the process estate into reusable n8n workflows and automation patterns.
-  - Delivered containerized browser runners, typed APIs and export orchestration.
-  - Created an HTMX/SSE dashboard for real-time operational visibility.
+  - Each legacy process gets its own automations, run-engine lock and completion webhook, so processes never block each other.
+  - Rust validators confirm whole-workbook parity between the legacy UiPath outputs and the new pipelines.
+  - n8n owns schedules, business rules, SharePoint lists and e-mails via Microsoft Graph; the service drives the web portals and writes the files.
+  - Azure DevOps CI/CD with dev/prod promotion on Linux VMs.
 metrics:
-  - "Migration scope assessed: 11 active processes"
-  - "38 sub-processes mapped in the operating estate"
-tagKeys: [HONO, N8N, BUN, DOCKER, POSTGRE]
+  - "n8n Queue Mode with 3 workers"
+  - "Rust output-parity validators"
+tagKeys: [TYPESCRIPT, HONO, N8N, BUN, SVELTE, DOCKER, POSTGRE, RUST]
 visibility: private
-gallery:
-  - label: Migration architecture
-    alt: Placeholder for the n8n and browser automation architecture
-  - label: Versioned workflow operations
-    alt: Placeholder for the workflow environment
-  - label: Browser automation validation
-    alt: Placeholder for the Puppeteer automation output
 ---

@@ -16,11 +16,4 @@ metrics:
   - Automated tests for stock synchronization and reservation services
 tagKeys: [NEST, POSTGRE, NUXT, REDIS, DOCKER]
 visibility: private
-gallery:
-  - label: Integration architecture
-    alt: Placeholder for the integration architecture diagram
-  - label: Stock synchronization workflow
-    alt: Placeholder for the stock synchronization view
-  - label: Operational queue visibility
-    alt: Placeholder for the queue or operational dashboard
 ---
