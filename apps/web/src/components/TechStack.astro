@@ -58,7 +58,7 @@ import Chip from "./Chip.astro";
     <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">AI & Automation</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.CLAUDE, TAGS.GEMINI, TAGS.N8N, TAGS.WINDMILL, TAGS.POSTGRE].map((tag) => (
+        {[TAGS.CLAUDE, TAGS.GEMINI, TAGS.N8N, TAGS.POSTGRE].map((tag) => (
           <li>
             <Chip {tag} />
           </li>
@@ -70,7 +70,7 @@ import Chip from "./Chip.astro";
     <Card class="p-6">
       <h3 class="mb-4 text-lg font-semibold text-white">Tooling</h3>
       <ul class="flex flex-wrap gap-2">
-        {[TAGS.NODE, TAGS.BUN, TAGS.PNPM, TAGS.YARN].map((tag) => (
+        {[TAGS.NODE, TAGS.BUN, TAGS.PNPM].map((tag) => (
           <li>
             <Chip {tag} />
           </li>

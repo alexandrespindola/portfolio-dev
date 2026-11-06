@@ -7,7 +7,7 @@ import GitHubIcon from "./icons/GitHubIcon.astro";
 import LinkedInIcon from "./icons/LinkedInIcon.astro";
 ---
 
-<div class="relative">
+<div class="relative grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.7fr)] lg:items-center lg:gap-14">
   <div class="absolute -left-5 top-2 hidden h-32 w-px bg-gradient-to-b from-primary via-primary/30 to-transparent md:block"></div>
   <div class="min-w-0">
     <div class="flex flex-wrap items-center gap-3">
@@ -17,17 +17,18 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
     <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">Alexandre Spindola</h1>
     <p class="mt-3 max-w-xl text-2xl font-semibold leading-tight text-gray-200 sm:text-3xl">From stakeholder discovery to <span class="text-primary">production AI systems.</span></p>
     <ul class="mt-6 flex flex-wrap gap-3 text-sm font-medium text-gray-300" aria-label="Selected proof points">
-      <li class="rounded-full border border-gray-700 px-3 py-1.5"><span class="text-primary">3,905</span> registrations in production</li>
+      <li class="rounded-full border border-gray-700 px-3 py-1.5">AI analytics on <span class="text-primary">~1M calls/day</span></li>
       <li class="rounded-full border border-gray-700 px-3 py-1.5">Live AI captions in <span class="text-primary">11</span> languages</li>
       <li class="rounded-full border border-gray-700 px-3 py-1.5">UiPath → <span class="text-primary">n8n</span> RPA modernisation</li>
+      <li class="rounded-full border border-gray-700 px-3 py-1.5">RAG &amp; AI subtitles in <span class="text-primary">30</span> languages</li>
     </ul>
     <p class="mt-7 max-w-2xl text-lg leading-relaxed text-gray-300">
-      <strong>Senior Full-Stack, Applied AI &amp; Forward Deployed Engineer</strong> with ~5 years of professional experience, mainly in <strong>TypeScript</strong> and more recently <strong>Rust</strong>. Works with stakeholders from discovery to production: <strong>LLM/MCP</strong> features, <strong>n8n</strong> and browser automation, real-time <strong>STT/TTS</strong> and REST APIs on <strong>PostgreSQL</strong>.
+      <strong>Senior Full-Stack, Applied AI &amp; Forward Deployed Engineer</strong> with ~5 years of professional experience. Core stack: <strong>TypeScript</strong> and <strong>Rust</strong>. Works with stakeholders from discovery to production: <strong>LLM/MCP</strong> features, <strong>n8n</strong> and browser automation, real-time <strong>STT/TTS</strong> and REST APIs on <strong>PostgreSQL</strong>.
     </p>
     <div class="mt-8 flex flex-wrap gap-3">
       <SocialPill href="mailto:alexandre@spindola.me?subject=Portfolio%20enquiry"><MailIcon class="size-4" />Start a conversation</SocialPill>
-      <SocialPill href="https://bucket.spindola.me/cv/CV-EN-ALEXANDRE-SPINDOLA-Senior-Full-Stack-Applied-AI-Engineer-06-11-2026.pdf">🇬🇧 CV English</SocialPill>
-      <SocialPill href="https://bucket.spindola.me/cv/CV-ES-ALEXANDRE-SPINDOLA-Senior-Full-Stack-Applied-AI-Engineer-06-11-2026.pdf">🇪🇸 CV Español</SocialPill>
+      <SocialPill href="https://bucket.spindola.me/cv/CV-EN-ALEXANDRE-SPINDOLA-Senior-Full-Stack-Applied-AI-Engineer-06112026.pdf">🇬🇧 CV English</SocialPill>
+      <SocialPill href="https://bucket.spindola.me/cv/CV-ES-ALEXANDRE-SPINDOLA-Senior-Full-Stack-Applied-AI-Engineer-06112026.pdf">🇪🇸 CV Español</SocialPill>
     </div>
     <nav class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-400" aria-label="Professional profiles">
       <a class="inline-flex items-center gap-2 transition hover:text-primary" href="https://www.linkedin.com/in/alexspindola" target="_blank" rel="noreferrer"><LinkedInIcon class="size-4" />LinkedIn</a>
@@ -36,6 +37,22 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
     </nav>
   </div>
 
+  <aside class="hidden rounded-2xl border border-[#343434] bg-[#121212]/90 font-mono text-sm shadow-2xl lg:block" aria-label="How a project ships">
+    <div class="flex items-center gap-2 border-b border-[#2a2a2a] px-5 py-3">
+      <span class="size-2.5 rounded-full bg-[#4a4a4a]"></span><span class="size-2.5 rounded-full bg-[#4a4a4a]"></span><span class="size-2.5 rounded-full bg-primary/80"></span>
+      <span class="ml-3 text-xs text-gray-500">forward-deployed.ts</span>
+    </div>
+    <ol class="space-y-4 p-6">
+      <li><p class="text-primary">01 · discover</p><p class="mt-1 text-gray-300">End to end, starting with stakeholders: map the real workflow and the metric that matters.</p></li>
+      <li><p class="text-primary">02 · prototype</p><p class="mt-1 text-gray-300">LLM, MCP tools and data checks running on real inputs within days.</p></li>
+      <li><p class="text-primary">03 · ship</p><p class="mt-1 text-gray-300">Typed services, queues, tests and CI/CD in TypeScript or Rust.</p></li>
+      <li><p class="text-primary">04 · deploy</p><p class="mt-1 text-gray-300">Cloud VMs or managed services on GCP, Azure, Oracle Cloud, Cloudflare or Railway, with Docker.</p></li>
+      <li><p class="text-primary">05 · operate</p><p class="mt-1 text-gray-300">Logs, audit trails and human approval where AI makes decisions.</p></li>
+    </ol>
+    <div class="border-t border-[#2a2a2a] px-6 py-4 text-xs text-gray-500">
+      <span class="text-primary">$</span> stack: TypeScript · Rust · PostgreSQL · n8n · Claude · Docker
+    </div>
+  </aside>
 </div>
 
 <style>
