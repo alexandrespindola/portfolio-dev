@@ -1,7 +1,7 @@
-import FullStackIcon from "../components/icons/services/FullStackIcon.astro";
+import AIIcon from "../components/icons/services/AIIcon.astro";
 import AutomationIcon from "../components/icons/services/AutomationIcon.astro";
-import DashboardIcon from "../components/icons/services/DashboardIcon.astro";
-import IntegrationIcon from "../components/icons/services/IntegrationIcon.astro";
+import DistributedIcon from "../components/icons/services/DistributedIcon.astro";
+import FullStackIcon from "../components/icons/services/FullStackIcon.astro";
 
 type AstroIconComponent = (props: { class?: string }) => unknown;
 
@@ -15,56 +15,56 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    title: "AI-Enabled Product Engineering",
-    description: "Building reliable products and web platforms with Rust, TypeScript, Svelte, Vue and modern API architecture.",
+    title: "Forward Deployed AI Engineering",
+    description: "Working directly with stakeholders to turn a business problem into an AI system running in production, from discovery to rollout.",
     features: [
-      "Rust, Axum, NestJS, Hono and REST/OpenAPI services",
-      "SvelteKit, Astro, Vue and Nuxt frontends",
-      "RAG, semantic retrieval and AI-assisted workflows",
-      "PostgreSQL, pgvector and full-text search",
-      "Cloudflare and GCP-ready delivery"
+      "Stakeholder discovery, scoping and fast prototypes",
+      "LLM features with Claude, OpenAI and Azure OpenAI",
+      "MCP servers, tool calling and structured outputs",
+      "RAG with pgvector, embeddings and streaming chat",
+      "Human-in-the-loop approval, audit logs and privacy by design"
     ],
-    icon: FullStackIcon,
-    tagKeys: ["RUST", "NEST", "SVELTE", "TYPESCRIPT"]
+    icon: AIIcon,
+    tagKeys: ["CLAUDE", "TYPESCRIPT", "RUST", "POSTGRE"]
   },
   {
-    title: "AI & Workflow Automation",
-    description: "Replacing manual and legacy RPA processes with observable n8n, browser and LLM-powered workflows.",
+    title: "Workflow & RPA Automation",
+    description: "Replacing manual work and legacy RPA with observable n8n, browser and LLM-powered workflows.",
     features: [
-      "Self-hosted n8n, Docker workers and Cloudflare Tunnel",
-      "pg-boss job queues, SSE logs, RBAC and audit trails",
-      "Puppeteer browser automation and DOM extraction",
-      "LLM classification, extraction and content pipelines",
-      "ERP, webhook and OAuth2 integrations"
+      "UiPath to n8n migration with output-parity validation",
+      "Self-hosted n8n in Queue Mode on Docker",
+      "Puppeteer browser automation for complex web portals",
+      "pg-boss queues, SSE logs, RBAC and audit trails",
+      "Microsoft Graph, REST APIs, webhooks and OAuth2"
     ],
     icon: AutomationIcon,
-    tagKeys: ["N8N", "NODE", "DOCKER", "JSON"]
+    tagKeys: ["N8N", "BUN", "HONO", "DOCKER"]
   },
   {
-    title: "Platform Modernisation",
-    description: "Migrating WordPress and legacy products to multilingual, serverless platforms that are fast to operate and easy to maintain.",
+    title: "Real-time AI & Data Systems",
+    description: "Streaming speech, translation and analytics pipelines that stay fast and measurable in production.",
     features: [
-      "Astro content collections and Markdown workflows",
-      "Multilingual routing and international SEO",
-      "Svelte/Vue operational dashboards with SSE",
-      "Role-based administration and secure authentication",
-      "CDN-first delivery and optimised assets"
+      "Speech-to-Text and Text-to-Speech with Azure AI Speech",
+      "Live LLM translation with automatic fallback",
+      "WebSockets and SSE streaming to many clients",
+      "DuckDB/DuckLake batch ingestion and analytics",
+      "Anomaly detection, A/B and switchback experiments"
     ],
-    icon: DashboardIcon,
-    tagKeys: ["ASTRO", "SVELTE", "VUE", "CLOUDFLARE"]
+    icon: DistributedIcon,
+    tagKeys: ["RUST", "SVELTE", "POSTGRE", "REDIS"]
   },
   {
-    title: "E-commerce & Systems Integration",
-    description: "Connecting commerce, ERP and internal systems through resilient middleware, queues and auditable data flows.",
+    title: "Full-Stack Product Engineering",
+    description: "Typed, tested products and integrations in TypeScript and Rust, from API design to multilingual frontends.",
     features: [
-      "Magento 2, Shopify and Holded ERP synchronisation",
-      "Event-driven processing and adaptive schedules",
-      "Async jobs with Redis/Valkey and BullMQ",
-      "Data migrations, testing and health checks",
-      "Docker, GCP, Linux and CI/CD operations"
+      "TypeScript (Node.js, Bun, Hono, NestJS) and Rust (Axum, SQLx)",
+      "SvelteKit, Nuxt and Astro frontends in many languages",
+      "PostgreSQL design, query tuning and OpenAPI contracts",
+      "ERP and e-commerce sync (Magento 2, Shopify, Holded)",
+      "Docker, Cloudflare, GCP, Railway and CI/CD"
     ],
-    icon: IntegrationIcon,
-    tagKeys: ["NEST", "POSTGRE", "REDIS", "DOCKER"]
+    icon: FullStackIcon,
+    tagKeys: ["TYPESCRIPT", "SVELTE", "NEST", "CLOUDFLARE"]
   }
 ];
 
