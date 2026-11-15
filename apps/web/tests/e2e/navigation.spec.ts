@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 const MOBILE_BREAKPOINT = 768; // Tailwind `md`
+const NAV_LINKS = 9; // `navItems` in src/components/Header.astro
 
 test.describe("Header navigation", () => {
   test.beforeEach(async ({ page }) => {
@@ -35,7 +36,7 @@ test.describe("Header navigation", () => {
     await expect(details).toHaveAttribute("open", "");
 
     const links = details.locator("nav a");
-    await expect(links).toHaveCount(6);
+    await expect(links).toHaveCount(NAV_LINKS);
 
     await links.first().click();
     await expect(details).not.toHaveAttribute("open", "");
@@ -58,6 +59,6 @@ test.describe("Header navigation", () => {
     test.skip(!viewport || viewport!.width < MOBILE_BREAKPOINT, "desktop-only test");
 
     const nav = page.locator("header nav.md\\:flex");
-    await expect(nav.locator("a")).toHaveCount(6);
+    await expect(nav.locator("a")).toHaveCount(NAV_LINKS);
   });
 });
