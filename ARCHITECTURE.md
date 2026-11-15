@@ -1,186 +1,139 @@
 # Architecture
 
-This document describes the architecture of the portfolio project, including the monorepo structure, build system, and deployment configuration.
+Architecture of the portfolio at `https://spindola.me`: monorepo structure, build, application design and deployment.
 
 ## Overview
 
-The portfolio is a modern, static site built with Astro and deployed to Cloudflare Pages. It uses a monorepo structure managed by Turborepo for efficient development and builds.
+A static site built with Astro 7 (Vite 8) and Tailwind CSS 4. Every page is pre-rendered at build time and served by Cloudflare Pages. The build runs on a local machine and the result is uploaded with Wrangler.
+
+**Toolchain**: Bun 1.4.4, Node.js 26 LTS (`.nvmrc`), Turborepo 2, TypeScript 6, Astro 7, Tailwind CSS 4. Hosted on GitHub (`alexandrespindola/portfolio-dev`).
+
+```text
+┌──────────────────────────── Build (local machine) ────────────────────────────┐
+│  turbo run build → astro build → apps/web/dist                                │
+│  5 static pages · Tailwind CSS 4 · optimized images · sitemap                 │
+└───────────────────────────────────┬───────────────────────────────────────────┘
+                                    │ op run (1Password) → wrangler pages deploy
+                                    ▼
+┌──────────────── Cloudflare Pages: project portfolio-dev ───────────────────────┐
+│  branch main → spindola.me · branch preview → preview.portfolio-dev-eva.pages.dev │
+└───────────────────────────────────────────────────────────────────────────────┘
+```
 
 ## Monorepo Structure
 
-```
+```text
 portfolio-dev/
 ├── apps/
-│   └── web/                     # Main Astro application
-├── packages/
-│   └── tsconfig/               # Shared TypeScript configuration
-├── turbo.json                  # Turborepo configuration
-├── wrangler.toml               # Cloudflare Pages configuration
-└── package.json                # Root workspace configuration
+│   └── web/          # @portfolio/web — the Astro site (the only workspace)
+├── .nvmrc            # Node version (26)
+├── turbo.json        # Turborepo pipeline
+└── package.json      # Workspaces (`apps/*`) and root scripts
 ```
 
-### Workspaces
-
-The project uses Bun workspaces to manage dependencies:
-
-- **apps/web**: The main Astro application containing the portfolio
-- **packages/tsconfig**: Shared TypeScript configuration for consistency across the project
+There are no shared packages: with a single app, TypeScript is configured in `apps/web/tsconfig.json`, which extends `astro/tsconfigs/strict`.
 
 ## Build System
 
-### Turborepo
+### Turborepo tasks (`turbo.json`)
 
-Turborepo is used for:
-- **Task orchestration**: Running dev, build, and test commands across workspaces
-- **Caching**: Intelligent caching to speed up builds
-- **Dependency management**: Automatic task dependency resolution
+| Task | Behavior |
+|------|----------|
+| `build` | Depends on `^build`; outputs `dist/**` and `.astro/**` are cached |
+| `dev` | Persistent, never cached |
+| `preview` | Depends on `build`; persistent, never cached |
+| `check` | Depends on `^build`; runs `astro check` |
+| `clean` | Never cached |
 
-#### Tasks
+The build reads no environment variables, so no env inputs are declared.
 
-- `dev`: Start development server (no cache, persistent)
-- `build`: Build for production (depends on other builds, outputs cached)
-- `preview`: Preview production build (depends on build, no cache, persistent)
-- `check`: Run type checking (depends on build)
-- `clean`: Clean build artifacts (no cache)
+### Astro configuration (`apps/web/astro.config.mjs`)
 
-### Astro Configuration
-
-The Astro app is configured for static site generation:
-- **Output mode**: `static` - generates HTML/CSS/JS files
-- **Integration**: Tailwind CSS for styling
-- **Image service**: No-op service for static asset handling
+- `output: "static"`, `site: "https://spindola.me"`, no adapter
+- Integration: `@astrojs/sitemap`
+- Vite plugin: `@tailwindcss/vite`
 
 ## Application Architecture
 
-### Component Structure
-
-The portfolio follows a component-based architecture:
-
-```
+```text
 apps/web/src/
-├── components/
-│   ├── Services.astro       # Services section with data-driven cards
-│   ├── TechStack.astro      # Technology stack display
-│   ├── SectionContainer.astro # Reusable section wrapper
-│   ├── Hero.astro           # Hero section
-│   └── icons/
-│       └── services/        # Custom SVG icon components
-├── data/
-│   ├── services.ts          # Services data source
-│   ├── projects.ts          # Projects data source
-│   ├── experience.ts        # Work experience data
-│   └── tags.ts              # Technology tags
-├── layouts/
-│   └── Layout.astro         # Main layout with global styles
-└── pages/
-    └── index.astro          # Homepage composition
+├── assets/                 # Images processed by Astro (portrait, education, certifications)
+├── components/             # Sections and UI pieces
+│   ├── Hero, Projects, Experience, Services, Education, TechStack,
+│   │   Languages, Certifications, About, Header, Footer
+│   ├── Card, Badge, Chip, LinkButton, LinkInline, SocialPill, TagList,
+│   │   ProjectCard, ExperienceItem, SectionContainer, TitleSection
+│   └── icons/              # SVG icon components (general, services/, tags/)
+├── content/case-studies/   # One Markdown file per case study
+├── content.config.ts       # `caseStudies` collection
+├── data/                   # projects.ts, experience.ts, services.ts, tags.ts
+├── layouts/Layout.astro    # <head>, SEO, header, footer, global styles
+├── pages/
+│   ├── index.astro         # Home
+│   └── projects/[slug].astro   # Case study pages
+└── styles/global.css       # Tailwind import, theme tokens, base layer
 ```
 
-### Data Flow
+### Pages
 
-- **Data sources**: TypeScript files in `src/data/` export structured data
-- **Components**: Import and render data from data sources
-- **Composition**: Pages compose components together
-- **Static generation**: Astro builds everything to static HTML at build time
+| Route | Source |
+|-------|--------|
+| `/` | `pages/index.astro`: composes all sections |
+| `/projects/<slug>/` | `pages/projects/[slug].astro`: one page per entry of the `caseStudies` collection (currently four) |
 
-## Styling Architecture
+### Data flow
 
-### Tailwind CSS
-
-- **Configuration**: `apps/web/tailwind.config.mjs`
-- **Custom colors**: `primary` and `secondary` color palette
-- **Design system**: Utility-first approach with consistent spacing and typography
-- **Dark mode**: Dark-first design with green accent colors
-
-### Font
-
-- **Font family**: Onest Variable
-- **Loading**: `@fontsource-variable/onest` package
-- **Usage**: Applied globally in Layout.astro
-
-## Deployment Architecture
-
-### Cloudflare Pages
-
-The portfolio is deployed as a static site to Cloudflare Pages:
-
-#### Configuration (wrangler.toml)
-
-```toml
-name = "portfolio-dev"
-compatibility_date = "2026-04-18"
-compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = "apps/web/dist"
-
-[vars]
-NODE_ENV = "production"
-NODE_VERSION = "24"
-BUN_VERSION = "1.3.13"
+```text
+src/data/*.ts ───────────────────────┐
+                                     ├→ components → pages → static HTML
+src/content/case-studies/*.md ───────┘
+   (frontmatter validated by the Zod schema in content.config.ts)
 ```
 
-#### Deployment Process
+- **Typed data files** (`projects`, `experience`, `services`, `tags`) feed the home sections.
+- **Content collection** `caseStudies`: `glob()` loader, schema with title, summary, role, challenge, solution, outcomes, metrics, tag keys, visibility and optional links. Pages render the frontmatter fields.
+- **Images**: files in `src/assets/` go through Astro's image pipeline (Sharp); project previews are plain files in `public/images/projects/`, lazy-loaded with fixed dimensions.
 
-1. **Build**: `bun run build` generates static files in `apps/web/dist`
-2. **Upload**: Cloudflare Pages uploads the dist directory
-3. **Distribution**: Files are served from Cloudflare's global CDN
-4. **Edge caching**: Automatic caching at edge locations worldwide
+### Client-side JavaScript
 
-#### Build Settings
+No UI-framework islands. Two small scripts bundled by Vite (header: current-section highlighting and closing the mobile menu; projects: opening and closing the detail dialogs) plus the analytics script; everything else is static HTML and CSS.
 
-- **Build command**: `bun run build`
-- **Build output directory**: `apps/web/dist`
-- **Node.js compatibility**: Enabled via `nodejs_compat` flag
+## Styling
 
-### Performance Optimizations
+- **Tailwind CSS 4** through the Vite plugin; there is no `tailwind.config`.
+- **Theme tokens** in `src/styles/global.css` (`@theme`): `primary` (`#40ea1e`), `secondary`, `background` and a neutral `gray` scale that replaces Tailwind's blue-leaning default.
+- **Base layer** in the same file keeps two Tailwind 3 defaults: the default border color and the pointer cursor on buttons.
+- **Dark-only** design (`<html class="dark">`, `bg-background`).
+- **Font**: Onest Variable, imported once in `Layout.astro`.
 
-- **Static generation**: No server-side rendering overhead
-- **CDN delivery**: Global edge network for fast loading
-- **Minimal JavaScript**: Only necessary JS is included
-- **Optimized assets**: Images and fonts are optimized
-- **CSS purging**: Unused Tailwind styles are removed
+## SEO and Analytics
 
-## Development Workflow
+- `Layout.astro` sets the title, description, canonical URL, Open Graph tags (`public/og.jpg`) and a JSON-LD `Person` schema.
+- `@astrojs/sitemap` generates the sitemap; `public/robots.txt` allows everything and links it.
+- Analytics: the Ahrefs Web Analytics script, loaded asynchronously.
 
-### Local Development
+## Testing
 
-1. Install dependencies: `bun install`
-2. Start dev server: `bun run dev`
-3. Visit: `http://localhost:4321`
+Playwright end-to-end tests in `apps/web/tests/e2e` (`hero`, `layout`, `navigation`), configured in `playwright.config.ts`:
 
-### Building
+- Five viewport projects: 320, 375, 414 (mobile), 768 (tablet) and 1440 (desktop)
+- They run against the **static build** (`bun run build && bun run preview` on port 4321), not the dev server, to avoid HMR reloads during a test
 
-1. Build for production: `bun run build`
-2. Preview build: `bun run preview`
-3. Output: `apps/web/dist/`
+## Deployment
 
-### Deployment
+```text
+bun run deploy → bun run build → cd apps/web → op run … -- bunx wrangler pages deploy --branch main
+```
 
-1. Push to main branch
-2. Cloudflare Pages automatically builds and deploys
-3. Site is live on Cloudflare's global CDN
+- **Platform**: Cloudflare Pages, direct upload, static files only (no Functions, no Git-triggered builds)
+- **Project**: `portfolio-dev`; production branch `main` serves `spindola.me`; `bun run deploy:preview` publishes the `preview` branch
+- **Config**: `apps/web/wrangler.toml` holds the project name, `pages_build_output_dir = "dist"` and the compatibility date; no flags or vars
+- **Credentials**: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` come from a 1Password Environment and are injected by `op run` only while Wrangler runs; nothing is stored in files. The token is scoped to `Cloudflare Pages: Edit`
+- **Versions**: the build uses the local Node (`.nvmrc`) and Bun (`packageManager`); nothing is configured on the Cloudflare side
 
-## Technology Stack
+## Security
 
-- **Framework**: Astro 6.1.7
-- **Styling**: Tailwind CSS 3.4.18
-- **Package Manager**: Bun 1.3.12
-- **Monorepo**: Turborepo 2.9.6
-- **Deployment**: Cloudflare Pages
-- **TypeScript**: Shared configuration via workspace package
-
-## Security Considerations
-
-- **Static site**: No server-side code execution
-- **No database**: No sensitive data storage
-- **No authentication**: Public read-only content
-- **HTTPS**: Automatic SSL/TLS via Cloudflare
-- **CSP**: Content Security Policy can be added if needed
-
-## Future Architecture Considerations
-
-Potential enhancements:
-- **Image optimization**: Cloudflare Images integration
-- **Analytics**: Cloudflare Web Analytics
-- **Forms**: Cloudflare Forms for contact functionality
-- **A/B testing**: Cloudflare A/B testing features
-- **Edge functions**: Cloudflare Functions for dynamic features
+- Static site: no server-side code, no database, no authentication
+- The build embeds no secrets (it reads no environment variables)
+- Deploy credentials live only in 1Password
+- HTTPS is provided by Cloudflare

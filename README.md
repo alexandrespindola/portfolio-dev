@@ -1,152 +1,117 @@
-# Alexandre Spindola - Portfolio
+# Alexandre Spindola — Portfolio
 
-Modern, responsive portfolio built with Astro, Tailwind, and deployed to Cloudflare Pages.
+Personal portfolio, live at [spindola.me](https://spindola.me). A static site built with Astro and Tailwind CSS and deployed to Cloudflare Pages.
 
-## 🚀 Live Demo
+## Tech Stack
 
-Visit the live portfolio at: [https://spindola.me](https://spindola.me)
+- **Framework**: [Astro 7](https://astro.build/) (static output, Vite 8)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) via `@tailwindcss/vite`
+- **Language**: TypeScript 6
+- **Font**: Onest Variable (`@fontsource-variable/onest`)
+- **Tests**: Playwright (end-to-end, five viewports)
+- **Monorepo**: [Turborepo 2](https://turborepo.com/) with [Bun 1.4.4](https://bun.sh/) workspaces
+- **Hosting**: [Cloudflare Pages](https://pages.cloudflare.com/), deployed with Wrangler
 
-## 🛠️ Tech Stack
+## Features
 
-- **Framework**: [Astro](https://astro.build/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Font**: Onest Variable
-- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
-- **Monorepo**: [Turborepo](https://turbo.build/repo)
-- **Package Manager**: [Bun](https://bun.sh/)
+- Home page with hero, selected work, experience timeline, services, education, tech stack, languages, certifications, about and contact sections
+- Case study pages (`/projects/<slug>/`) generated from a content collection
+- Dark-only theme with a green accent and a neutral gray scale
+- Fixed header that highlights the current section, with a mobile menu
+- Project details in dialogs
+- SEO: canonical URL, Open Graph tags, JSON-LD `Person` schema, sitemap and `robots.txt`
 
-## 📦 Features
+## Prerequisites
 
-- ⚡ **Performance-first**: Astro + Tailwind
-- 📱 **Responsive**: Mobile-first with safe side paddings
-- 🎨 **Modern UI**: Clean, green-accent theme (dark-first)
-- 🧩 **Services Section**: Data-driven cards with custom SVG icons
-- 🧰 **Tech Stack Section**: Logo badges grouped by categories
-- 🧭 **Sticky Header**: Top navigation with smooth scroll and “Home” anchor
-- 🧾 **Experience Timeline**: Clear work history
-- 🗂️ **Projects Gallery**: Real projects with tags, links, and code
-- 📣 **CTAs**: Services CTA + final minimal contact CTA
+- [Bun](https://bun.sh/) 1.4.4
+- Node.js 26 (`nvm use` picks it up from `.nvmrc`)
+- For deploys: the [1Password CLI](https://developer.1password.com/docs/cli/) (`op`) with "Integrate with 1Password CLI" enabled in the 1Password app
 
-## 🏃‍♂️ Getting Started
-
-### Prerequisites
-
-- [Bun](https://bun.sh/) installed on your machine
-- [Git](https://git-scm.com/) for version control
-- [Cloudflare account](https://dash.cloudflare.com/) for deployment
-
-### Installation
-
-1. Clone the repository:
+## Getting Started
 
 ```bash
-git clone https://github.com/your-username/portfolio-dev.git
+git clone https://github.com/alexandrespindola/portfolio-dev.git
 cd portfolio-dev
-```
-
-2. Install dependencies:
-
-```bash
 bun install
+bun run dev      # http://localhost:4321
 ```
 
-3. Start the development server:
+The build reads no environment variables, so there is no `.env` to create.
+
+## Scripts
+
+Run from the repository root:
+
+| Command | Description |
+|---------|-------------|
+| `bun run dev` | Start the dev server (localhost:4321) |
+| `bun run build` | Build the site |
+| `bun run preview` | Preview the production build |
+| `bun run check` | Astro type checking |
+| `bun run clean` | Remove build artifacts and `node_modules` |
+| `bun run deploy` | Build and deploy to production |
+| `bun run deploy:preview` | Build and deploy to the `preview` branch |
+
+End-to-end tests:
 
 ```bash
-bun run dev
+cd apps/web && bun run test:e2e
 ```
 
-4. Open your browser and visit `http://localhost:4321`
+## Project Structure
 
-## 📁 Project Structure
-
-```
-/
+```text
+portfolio-dev/
 ├── apps/
-│   └── web/                     # Main Astro application
-│       ├── public/              # Static assets
+│   └── web/                      # @portfolio/web — the Astro site
 │       ├── src/
-│       │   ├── components/      # Astro components
-│       │   │   ├── Services.astro       # Services section (cards + CTA)
-│       │   │   ├── TechStack.astro      # Tech Stack badges
-│       │   │   ├── SectionContainer.astro # Section wrapper (spacing, container)
-│       │   │   └── icons/
-│       │   │       └── services/        # Custom SVG icons for services
-│       │   ├── data/
-│       │   │   ├── services.ts          # Services data
-│       │   │   ├── projects.ts          # Projects data
-│       │   │   ├── experience.ts        # Experience data
-│       │   │   └── tags.ts              # Technology tags
-│       │   ├── layouts/
-│       │   │   └── Layout.astro         # App layout (dark-first)
-│       │   └── pages/
-│       │       └── index.astro          # Home (includes final contact CTA)
-│       ├── astro.config.mjs             # Astro config
-│       ├── tailwind.config.mjs          # Tailwind config
-│       └── package.json                 # App dependencies
-├── packages/
-│   └── tsconfig/               # Shared TypeScript configuration
-├── turbo.json                  # Turborepo configuration
-├── wrangler.toml               # Cloudflare Pages configuration
-└── package.json                # Root workspace configuration
+│       │   ├── assets/           # Images processed by Astro
+│       │   ├── components/       # Sections, UI pieces and icons
+│       │   ├── content/case-studies/  # Case studies (Markdown frontmatter)
+│       │   ├── content.config.ts # Content collection schema
+│       │   ├── data/             # projects, experience, services, tags
+│       │   ├── layouts/          # Layout.astro (head, SEO, header, footer)
+│       │   ├── pages/            # index.astro, projects/[slug].astro
+│       │   └── styles/global.css # Tailwind import and theme tokens
+│       ├── public/               # favicon, og.jpg, robots.txt, project preview images
+│       ├── tests/e2e/            # Playwright specs
+│       ├── astro.config.mjs
+│       ├── playwright.config.ts
+│       └── wrangler.toml         # Cloudflare Pages project config
+├── .nvmrc                        # Node version (26)
+├── turbo.json                    # Turborepo pipeline
+└── package.json                  # Workspaces and root scripts
 ```
 
-## 🚀 Deployment
+## Updating Content
 
-This project is configured for deployment on Cloudflare Pages as a static site.
+| What | Where |
+|------|-------|
+| Projects (cards on the home page) | `apps/web/src/data/projects.ts`; preview images in `apps/web/public/images/projects/` |
+| Case study pages | One Markdown file per case study in `apps/web/src/content/case-studies/` |
+| Experience | `apps/web/src/data/experience.ts` |
+| Services | `apps/web/src/data/services.ts`; icons in `apps/web/src/components/icons/services/` |
+| Tech stack and tags | `apps/web/src/data/tags.ts`; icons in `apps/web/src/components/icons/tags/` |
+| Header links | `navItems` in `apps/web/src/components/Header.astro` |
+| Colors | `@theme` in `apps/web/src/styles/global.css` |
 
-### Deploy Commands
+## Deployment
 
-- **Build**: `bun run build`
-- **Preview**: `bun run preview`
+```bash
+bun run deploy           # Production (spindola.me)
+bun run deploy:preview   # Preview branch
+```
 
-### Cloudflare Pages Deployment
+Both build the site and then run `bunx wrangler pages deploy` from `apps/web`, uploading the build from your machine to the Cloudflare Pages project `portfolio-dev`. There are no Git-triggered builds.
 
-1. Connect your repository to Cloudflare Pages
-2. Set build configuration:
-   - **Build command**: `bun run build`
-   - **Build output directory**: `apps/web/dist`
-3. Deploy automatically on push to main branch
+Authentication uses a Cloudflare API token (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) stored in a 1Password Environment and injected by `op run` only while Wrangler runs, so no `wrangler login` and no `.env` file are needed. `apps/web/.env.example` lists the variable names.
 
-For detailed deployment instructions, see [ARCHITECTURE.md](./ARCHITECTURE.md).
+## Documentation
 
-## 📝 Available Scripts
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — architecture, build and deployment
+- [AGENTS.md](./AGENTS.md) — guidelines for AI coding agents (`CLAUDE.md` imports it)
 
-- `bun run dev` - Start development server
-- `bun run build` - Build for production
-- `bun run preview` - Preview production build
-- `bun run check` - Run Astro type checking
+## Contact
 
-## 🎨 Customization
-
-### Updating Content
-
-1. **Services (cards + icons)**
-   - Data: `apps/web/src/data/services.ts`
-   - Ícones: `apps/web/src/components/icons/services/` (cada ícone é um componente Astro que aceita `class`)
-2. **Tech Stack**: `apps/web/src/components/TechStack.astro` e `apps/web/src/data/tags.ts`
-3. **Projects**: `apps/web/src/data/projects.ts`
-4. **Experience**: `apps/web/src/data/experience.ts`
-5. **Layout/cores**: `apps/web/tailwind.config.mjs` (cores `primary`/`secondary`) e `apps/web/src/layouts/Layout.astro`
-
-### Styling
-
-The project uses Tailwind CSS. Customize by:
-
-- Modifying `apps/web/tailwind.config.mjs`
-- Editing component styles in `.astro` files
-- Adding custom CSS classes
-
-## 📞 Contact
-
-- **Website**: [https://spindola.me](https://spindola.me)
+- **Website**: [spindola.me](https://spindola.me)
 - **GitHub**: [@alexandrespindola](https://github.com/alexandrespindola)
-
-## 📚 Additional Documentation
-
-- [ARCHITECTURE.md](./ARCHITECTURE.md) - Project architecture and deployment details
-- [AGENTS.md](./AGENTS.md) - AI agents and development tools
-
----
-
-Built with ❤️ using Astro and deployed on Cloudflare Pages
