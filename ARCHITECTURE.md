@@ -128,7 +128,7 @@ bun run deploy → bun run build → cd apps/web → op run … -- bunx wrangler
 - **Platform**: Cloudflare Pages, direct upload, static files only (no Functions, no Git-triggered builds)
 - **Project**: `portfolio-dev`; production branch `main` serves `spindola.me`; `bun run deploy:preview` publishes the `preview` branch
 - **Config**: `apps/web/wrangler.toml` holds the project name, `pages_build_output_dir = "dist"` and the compatibility date; no flags or vars
-- **Credentials**: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` come from a 1Password Environment and are injected by `op run` only while Wrangler runs; nothing is stored in files. The token is scoped to `Cloudflare Pages: Edit`
+- **Credentials**: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` come from the 1Password Environment `portfolio-web` and are injected by `op run` only while Wrangler runs; nothing is stored in files. The token is scoped to `Cloudflare Pages: Edit`
 - **Versions**: the build uses the local Node (`.nvmrc`) and Bun (`packageManager`); nothing is configured on the Cloudflare side
 
 ## Security

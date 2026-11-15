@@ -104,7 +104,7 @@ bun run deploy:preview   # Preview branch
 
 Both build the site and then run `bunx wrangler pages deploy` from `apps/web`, uploading the build from your machine to the Cloudflare Pages project `portfolio-dev`. There are no Git-triggered builds.
 
-Authentication uses a Cloudflare API token (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) stored in a 1Password Environment and injected by `op run` only while Wrangler runs, so no `wrangler login` and no `.env` file are needed. `apps/web/.env.example` lists the variable names.
+Authentication uses a Cloudflare API token (`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`) stored in the 1Password Environment `portfolio-web` and injected by `op run` only while Wrangler runs, so no `wrangler login` and no `.env` file are needed. `apps/web/.env.example` lists the variable names.
 
 ## Documentation
 

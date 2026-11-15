@@ -99,7 +99,7 @@ apps/web/
 
 ## Secrets and Environment Variables (1Password)
 
-The build reads **no environment variables**. Only the deploy needs credentials, and there are **no `.env` files**: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` live in a 1Password Environment (account `my.1password.eu`, ID `jm36yoxgtup7rzbqcvwcsh4zoa`) and are injected by `op run --environment <id>` only while Wrangler runs.
+The build reads **no environment variables**. Only the deploy needs credentials, and there are **no `.env` files**: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` live in the 1Password Environment `portfolio-web` (account `my.1password.eu`, ID `jm36yoxgtup7rzbqcvwcsh4zoa`) and are injected by `op run --environment <id>` only while Wrangler runs.
 
 - Requires the 1Password CLI (`op`) with "Integrate with 1Password CLI" enabled in the desktop app; each deploy asks for approval when 1Password is locked.
 - The token needs `Account > Cloudflare Pages > Edit` on the account that hosts the `portfolio-dev` Pages project.
