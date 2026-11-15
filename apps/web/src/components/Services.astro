@@ -11,12 +11,12 @@ import TagList from "./TagList.astro";
       return (
         <Card hover class="group relative overflow-hidden p-8">
           {/* Background gradient effect */}
-          <div class="absolute inset-0 bg-gradient-to-br from-green-900/20 to-emerald-900/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <div class="absolute inset-0 bg-linear-to-br from-green-900/20 to-emerald-900/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
           {/* Content */}
           <div class="relative z-10">
             {/* Icon */}
-            <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg">
+            <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-linear-to-br from-primary to-secondary text-white shadow-lg">
               <service.icon class="h-8 w-8 text-white/95 group-hover:text-white" />
             </div>
 
@@ -34,7 +34,7 @@ import TagList from "./TagList.astro";
             <ul class="mb-6 space-y-3">
               {service.features.map((feature) => (
                 <li class="flex items-start gap-3 text-sm text-gray-300">
-                  <div class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                  <div class="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                   <span>{feature}</span>
                 </li>
               ))}
@@ -53,7 +53,7 @@ import TagList from "./TagList.astro";
               <button
                 aria-label={`Discuss ${service.title}`}
                 onclick="document.getElementById('services-cta').scrollIntoView({ behavior: 'smooth' })"
-                class="h-8 w-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110 cursor-pointer"
+                class="h-8 w-8 rounded-full bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white shadow-lg transition-transform duration-300 group-hover:scale-110 hover:scale-110 cursor-pointer"
               >
                 <svg
                   class="h-4 w-4"
@@ -74,7 +74,7 @@ import TagList from "./TagList.astro";
 
           {/* Hover effect border */}
           <div
-            class="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-br from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20"
+            class="absolute inset-0 rounded-2xl border-2 border-transparent bg-linear-to-br from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-20"
             style="mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; -webkit-mask-composite: xor;"
           />
         </Card>

@@ -8,14 +8,14 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
 ---
 
 <div class="relative grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.7fr)] lg:items-center lg:gap-14">
-  <div class="absolute -left-5 top-2 hidden h-32 w-px bg-gradient-to-b from-primary via-primary/30 to-transparent md:block"></div>
+  <div class="absolute -left-5 top-2 hidden h-32 w-px bg-linear-to-b from-primary via-primary/30 to-transparent md:block"></div>
   <div class="min-w-0">
     <div class="flex flex-wrap items-center gap-3">
       <Badge>Forward Deployed & Applied AI Engineer · GCP Certified · EU Citizen</Badge>
       <span class="inline-flex items-center gap-2 text-sm text-gray-400"><span class="size-2 rounded-full bg-primary shadow-[0_0_12px_#40ea1e]"></span>Available for B2B contracts</span>
     </div>
     <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">Alexandre Spindola</h1>
-    <p class="mt-3 max-w-xl text-2xl font-semibold leading-tight text-gray-200 sm:text-3xl">From stakeholder discovery to <span class="text-primary">production AI systems.</span></p>
+    <p class="mt-3 max-w-xl text-2xl font-semibold leading-tight text-gray-200 sm:text-3xl sm:leading-9">From stakeholder discovery to <span class="text-primary">production AI systems.</span></p>
     <ul class="mt-6 flex flex-wrap gap-3 text-sm font-medium text-gray-300" aria-label="Selected proof points">
       <li class="rounded-full border border-gray-700 px-3 py-1.5">AI analytics on <span class="text-primary">~1M calls/day</span></li>
       <li class="rounded-full border border-gray-700 px-3 py-1.5">Live AI captions in <span class="text-primary">11</span> languages</li>
@@ -56,5 +56,6 @@ import LinkedInIcon from "./icons/LinkedInIcon.astro";
 </div>
 
 <style>
+  @reference "../styles/global.css";
   strong { @apply font-semibold text-primary; }
 </style>

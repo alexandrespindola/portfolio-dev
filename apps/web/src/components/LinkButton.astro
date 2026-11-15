@@ -13,7 +13,7 @@ const { href, target = "_blank", class: className = "" } = Astro.props as Props;
   rel={target === "_blank" ? "noreferrer" : undefined}
   href={href}
   role="link"
-  class={`inline-flex items-center justify-center gap-2 space-x-2 rounded-xl border border-gray-600 bg-gray-800 px-3 py-2 text-base text-white transition hover:border-primary hover:bg-gray-700 focus:outline-none focus-visible:ring focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-black ${className}`}
+  class={`inline-flex items-center justify-center gap-2 space-x-2 rounded-xl border border-gray-600 bg-gray-800 px-3 py-2 text-base text-white transition hover:border-primary hover:bg-gray-700 focus:outline-hidden focus-visible:ring-3 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background active:bg-black ${className}`}
 >
   <slot />
 </a>
