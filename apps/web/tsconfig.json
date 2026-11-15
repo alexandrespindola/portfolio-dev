@@ -1,5 +1,5 @@
 {
-  "extends": ["astro/tsconfigs/strict", "@portfolio/tsconfig/astro.json"],
+  "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"]
 }
