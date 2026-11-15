@@ -20,6 +20,7 @@ const projectId = `project-${project.title.toLowerCase().replace(/[^a-z0-9]+/g, 
 <article>
   <Card hover class="flex h-full flex-col overflow-hidden">
     <div class="flex h-full flex-col">
+      {project.image && <img src={project.image} alt="" width="1200" height="800" loading="lazy" decoding="async" class="aspect-[3/2] w-full object-cover" />}
       <div class="flex flex-1 flex-col p-5 sm:p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">{project.category}</p>
         <h3 class={`mt-2 ${isFeatured ? "text-2xl" : "text-lg"} font-bold text-primary`}>{project.title}</h3>

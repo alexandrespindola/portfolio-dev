@@ -2,6 +2,7 @@ import TAGS, { type Tag } from "./tags.ts";
 
 export interface Project {
   title: string;
+  image?: string;
   category: string;
   description: string;
   link?: string;
@@ -16,6 +17,7 @@ export interface Project {
 const PROJECTS: Project[] = [
   {
     title: "Live Event AI Interpretation",
+    image: "/images/projects/live-multilingual-captioning-demo.webp",
     category: "Real-time speech translation",
     description:
       "Single Rust (Axum) + Svelte 5 binary streaming live captions in 11 languages over WebSockets. Azure Speech STT with glossary phrase lists, translation by Azure Translator or switchable LLMs (Azure OpenAI GPT-4.1, Claude Haiku/Sonnet) with automatic fallback, and per-sentence TTS. Tracing and latency metrics for the AI pipeline.",
@@ -26,6 +28,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "AI Value Loop",
+    image: "/images/projects/ai-value-loop-dashboard.webp",
     category: "Answer-rate optimisation for a call center",
     description:
       "Rust (Axum), DuckDB/DuckLake, PostgreSQL, Valkey, Meilisearch and a Svelte dashboard on Oracle Cloud. Ingests ~1M calls/day in 5-minute batches and detects answer-rate drops by route and server. An MCP server with 13 Rust tools (fixed SQL, statistics in code: Wilson intervals, MSTL baselines, switchback tests) lets Claude propose and critique hypotheses while a human approves. Privacy-first: a local model triages alerts and the LLM only sees aggregates.",
@@ -36,6 +39,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "David Platform",
+    image: "/images/projects/michelangelos-david-digital-archive.webp",
     category: "Multilingual digital library",
     description:
       "Rust API and workers (Axum, SQLx, PostgreSQL/pgvector, Valkey, Meilisearch) with OpenAPI contract tests and a SvelteKit PWA in 30 languages. AI video pipeline with automatic subtitle extraction (Azure Video Indexer), LLM subtitle translation and a web cue editor; streaming RAG chat (Claude / Azure OpenAI), Azure Speech narration and an internal CMS with per-language editors.",
@@ -47,6 +51,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "RPA Modernisation",
+    image: "/images/projects/automation-modernization-dashboard.webp",
     category: "UiPath to n8n + browser automation",
     description:
       "Migrating UiPath processes to self-hosted n8n (Queue Mode) and a custom browser automation service built with TypeScript, Bun, Hono, Puppeteer, PostgreSQL and a SvelteKit UI: pg-boss queues with per-process locks, SSE logs, RBAC, encrypted vault, audit logging and Rust validators that check output parity with the legacy files.",
@@ -58,6 +63,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Gnosis Congress 2026",
+    image: "/images/projects/toledo-registration-dashboard-ui.webp",
     category: "Event management platform",
     description:
       "Production registration platform with Nuxt, Bun, Hono, PostgreSQL (Drizzle), Better Auth and n8n. Manages visits, lunch-day selection, accommodation and transport with Redsys payments, country-level RBAC and country-filtered analytics, plus an Astro static site for the livestreams.",
@@ -70,6 +76,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Holded Core",
+    image: "/images/projects/neon-inventory-sync-hub.webp",
     category: "E-commerce ERP middleware",
     description:
       "NestJS (Fastify) middleware syncing Magento 2, Shopify and Holded ERP with an event-driven + adaptive CRON architecture, PostgreSQL/Drizzle and BullMQ/Redis asynchronous processing, with more than 80% test coverage.",
@@ -81,6 +88,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Gnosis International Websites",
+    image: "/images/projects/gnosis-websites-netherlands-germany-romania.webp",
     category: "Multilingual websites · Germany, Netherlands & Romania",
     description:
       "Astro, SvelteKit, TypeScript, Tailwind, Supabase and Cloudflare Pages: migrated legacy sites into a reusable multilingual edge architecture with zero server maintenance.",
@@ -88,6 +96,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Dog Grooming Management System",
+    image: "/images/projects/neon-pet-grooming-dashboard.webp",
     category: "Salon operations platform",
     description:
       "SvelteKit + Firebase platform for salon operations with calendar management, real-time occupancy indicators and customer segmentation.",
@@ -95,6 +104,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Multilingual Content Automation",
+    image: "/images/projects/multilingual-publishing-workflow-infographic.webp",
     category: "Gnosis content workflow",
     description:
       "AI-supported localisation and publishing workflow for a large collection of Gnostic texts. The platform makes content accessible across languages while reducing manual translation and publication effort.",
@@ -111,6 +121,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "IFV",
+    image: "/images/projects/modern-multilingual-website-redesign.webp",
     category: "WordPress migration & institutional platform",
     description:
       "Migrated a legacy WordPress website to a zero-maintenance Astro platform deployed on Cloudflare Pages. The four-language institutional site includes SEO-ready content and a Supabase-backed contact pipeline.",
@@ -122,6 +133,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Content Alchemist",
+    image: "/images/projects/ai-content-workflow-dashboard.webp",
     category: "AI-augmented campaigns",
     description:
       "AI-augmented marketing campaign generator that transforms cleaned transcripts into multi-channel content packages for Facebook, Instagram and LinkedIn. It orchestrates Deno Deploy and Google Gemini through n8n, with Google Sheets and Apps Script as the human interface, Google Drive delivery, optional Valkey/Redis caching, and structured JSON prompts for deterministic, platform-optimised output.",
@@ -137,6 +149,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Portfolio Alexandre Spindola",
+    image: "/images/projects/neon-full-stack-portfolio-dashboard.webp",
     category: "Personal portfolio",
     description:
       "Showcased development expertise by building a modern, responsive, and high-performance personal portfolio. The project demonstrates proficiency in creating visually appealing and technically sound web applications, serving as a practical example of skills in contemporary web development practices and providing a central hub for professional information and project showcases.",
