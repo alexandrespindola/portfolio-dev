@@ -20,31 +20,20 @@ const PROJECTS: Project[] = [
     image: "/images/projects/live-multilingual-captioning-demo.webp",
     category: "Real-time speech translation",
     description:
-      "Single Rust (Axum) + Svelte 5 binary streaming live captions in 11 languages over WebSockets. Azure Speech STT with glossary phrase lists, translation by Azure Translator or switchable LLMs (Azure OpenAI GPT-4.1, Claude Haiku/Sonnet) with automatic fallback, and per-sentence TTS. Tracing and latency metrics for the AI pipeline.",
+      "Single-binary Rust (Axum) + Svelte 5 app streaming live captions in 11 languages over WebSockets. Azure Speech STT with glossary phrase lists, translation by Azure Translator or switchable LLMs (Azure OpenAI GPT-4.1, Claude Haiku/Sonnet) with automatic fallback, and per-sentence TTS. Replay quality gates, tracing and latency metrics for the AI pipeline.",
     featured: true,
     featuredOrder: 1,
     proof: "11 languages · 5 days live with zero downtime",
     tags: [TAGS.RUST, TAGS.SVELTE, TAGS.TYPESCRIPT, TAGS.CLAUDE, TAGS.DOCKER],
   },
   {
-    title: "AI Value Loop",
-    image: "/images/projects/ai-value-loop-dashboard.webp",
-    category: "Answer-rate optimisation for a call center",
-    description:
-      "Rust (Axum), DuckDB/DuckLake, PostgreSQL, Valkey, Meilisearch and a Svelte dashboard on Oracle Cloud. Ingests ~1M calls/day in 5-minute batches and detects answer-rate drops by route and server. An MCP server with 13 Rust tools (fixed SQL, statistics in code: Wilson intervals, MSTL baselines, switchback tests) lets Claude propose and critique hypotheses while a human approves. Privacy-first: a local model triages alerts and the LLM only sees aggregates.",
-    featured: true,
-    featuredOrder: 2,
-    proof: "~1M calls/day · MCP tools for Claude",
-    tags: [TAGS.RUST, TAGS.SVELTE, TAGS.POSTGRE, TAGS.REDIS, TAGS.CLAUDE],
-  },
-  {
     title: "David Platform",
     image: "/images/projects/michelangelos-david-digital-archive.webp",
     category: "Multilingual digital library",
     description:
-      "Rust API and workers (Axum, SQLx, PostgreSQL/pgvector, Valkey, Meilisearch) with OpenAPI contract tests and a SvelteKit PWA in 30 languages. AI video pipeline with automatic subtitle extraction (Azure Video Indexer), LLM subtitle translation and a web cue editor; streaming RAG chat (Claude / Azure OpenAI), Azure Speech narration and an internal CMS with per-language editors.",
+      "Ported Go API/workers to Rust (Axum, SQLx, PostgreSQL/pgvector, Valkey, Meilisearch) with OpenAPI contract tests and PDF/ePub workers, paired with a Turborepo + SvelteKit PWA in 30 languages. AI video pipeline with automatic subtitle extraction (Azure Video Indexer), LLM subtitle translation and a web cue editor; streaming RAG chat (Claude / Azure OpenAI), Azure Speech TTS narration and a multi-language RBAC CMS.",
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 2,
     caseStudy: "/projects/david-platform/",
     proof: "30 languages · RAG chat · AI subtitles",
     tags: [TAGS.RUST, TAGS.SVELTE, TAGS.POSTGRE, TAGS.REDIS, TAGS.CLOUDFLARE, TAGS.CLAUDE],
@@ -54,9 +43,9 @@ const PROJECTS: Project[] = [
     image: "/images/projects/automation-modernization-dashboard.webp",
     category: "UiPath to n8n + browser automation",
     description:
-      "Migrating UiPath processes to self-hosted n8n (Queue Mode) and a custom browser automation service built with TypeScript, Bun, Hono, Puppeteer, PostgreSQL and a SvelteKit UI: pg-boss queues with per-process locks, SSE logs, RBAC, encrypted vault, audit logging and Rust validators that check output parity with the legacy files.",
+      "Migrating legacy UiPath processes to self-hosted n8n (Queue Mode, isolated JS/Python task runners) and a custom browser & document automation platform built with TypeScript, Bun, Hono, Puppeteer, PostgreSQL and a SvelteKit UI: pg-boss queues with per-process locks, SSE logs, RBAC, encrypted vault, audit logging and Rust validators that check 1:1 output parity.",
     featured: true,
-    featuredOrder: 4,
+    featuredOrder: 3,
     caseStudy: "/projects/rpa-migration/",
     proof: "n8n Queue Mode · Rust parity validators",
     tags: [TAGS.TYPESCRIPT, TAGS.HONO, TAGS.N8N, TAGS.BUN, TAGS.SVELTE, TAGS.DOCKER, TAGS.POSTGRE, TAGS.RUST],
@@ -66,9 +55,9 @@ const PROJECTS: Project[] = [
     image: "/images/projects/toledo-registration-dashboard-ui.webp",
     category: "Event management platform",
     description:
-      "Production registration platform with Nuxt, Bun, Hono, PostgreSQL (Drizzle), Better Auth and n8n. Manages visits, lunch-day selection, accommodation and transport with Redsys payments, country-level RBAC and country-filtered analytics, plus an Astro static site for the livestreams.",
+      "Production registration platform with Nuxt 3, Bun, Hono, PostgreSQL (Drizzle), Better Auth (2FA/TOTP, RBAC) and n8n. Manages visits, lunch-day selection, accommodation and transport with Redsys payments, country-level RBAC and country-filtered analytics, plus an Astro static site for the livestreams.",
     featured: true,
-    featuredOrder: 5,
+    featuredOrder: 4,
     caseStudy: "/projects/gnosis-congress/",
     proof: "3,905 registrations in production",
     tags: [TAGS.TYPESCRIPT, TAGS.NUXT, TAGS.HONO, TAGS.BUN, TAGS.POSTGRE, TAGS.N8N, TAGS.TAILWIND],
@@ -81,7 +70,7 @@ const PROJECTS: Project[] = [
     description:
       "NestJS (Fastify) middleware syncing Magento 2, Shopify and Holded ERP with an event-driven + adaptive CRON architecture, PostgreSQL/Drizzle and BullMQ/Redis asynchronous processing, with more than 80% test coverage.",
     featured: true,
-    featuredOrder: 6,
+    featuredOrder: 5,
     caseStudy: "/projects/holded-core/",
     proof: ">80% test coverage",
     tags: [TAGS.NEST, TAGS.POSTGRE, TAGS.REDIS, TAGS.DOCKER, TAGS.TYPESCRIPT],
@@ -91,7 +80,7 @@ const PROJECTS: Project[] = [
     image: "/images/projects/gnosis-websites-netherlands-germany-romania.webp",
     category: "Multilingual websites · Germany, Netherlands & Romania",
     description:
-      "Astro, SvelteKit, TypeScript, Tailwind, Supabase and Cloudflare Pages: migrated legacy sites into a reusable multilingual edge architecture with zero server maintenance.",
+      "Turborepo monorepos (Astro, SvelteKit, TypeScript, Tailwind, Supabase, Cloudflare Pages): migrated legacy sites into a reusable multilingual edge architecture with zero server maintenance.",
     tags: [TAGS.TYPESCRIPT, TAGS.ASTRO, TAGS.SVELTE, TAGS.TAILWIND, TAGS.SUPABASE, TAGS.CLOUDFLARE],
   },
   {

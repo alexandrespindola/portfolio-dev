@@ -15,8 +15,8 @@ interface Service {
 
 const SERVICES: Service[] = [
   {
-    title: "Forward Deployed AI Engineering",
-    description: "Working directly with stakeholders to turn a business problem into an AI system running in production, from discovery to rollout.",
+    title: "Applied AI & Agentic Systems",
+    description: "Turning business problems into reliable AI systems in production, from stakeholder discovery to rollout.",
     features: [
       "Stakeholder discovery, scoping and fast prototypes",
       "LLM features with Claude, OpenAI and Azure OpenAI",
@@ -41,14 +41,14 @@ const SERVICES: Service[] = [
     tagKeys: ["N8N", "BUN", "HONO", "DOCKER"]
   },
   {
-    title: "Real-time AI & Data Systems",
-    description: "Streaming speech, translation and analytics pipelines that stay fast and measurable in production.",
+    title: "Real-time AI & Media Systems",
+    description: "Streaming speech, translation and video subtitle pipelines that stay fast and measurable in production.",
     features: [
       "Speech-to-Text and Text-to-Speech with Azure AI Speech",
       "Live LLM translation with automatic fallback",
       "WebSockets and SSE streaming to many clients",
-      "DuckDB/DuckLake batch ingestion and analytics",
-      "Anomaly detection, A/B and switchback experiments"
+      "Azure Video Indexer subtitle extraction and translation",
+      "Tracing, latency metrics and replay quality gates"
     ],
     icon: DistributedIcon,
     tagKeys: ["RUST", "SVELTE", "POSTGRE", "REDIS"]
